@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jaga Anggaran - Berita Transparansi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#E52B2B",
+                        "background-dark": "#0A0A0A",
+                        "surface": "#141414",
+                    },
+                    fontFamily: {
+                        "sans": ["Manrope", "sans-serif"],
+                        "serif": ["Newsreader", "serif"],
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-slate-100 antialiased font-sans">
+<!-- Header Section -->
+<header class="sticky top-0 z-50 bg-background-dark/90 backdrop-blur-xl border-b border-white/5">
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">account_balance</span>
+<h1 class="text-xl font-extrabold tracking-tight text-white uppercase">JAGA<span class="text-primary italic">ANGGARAN</span></h1>
+</div>
+<div class="flex gap-2">
+<button class="flex items-center justify-center size-10 rounded-full bg-white/5 border border-white/10 text-white">
+<span class="material-symbols-outlined text-xl">search</span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-full bg-white/5 border border-white/10 text-white">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+</div>
+</div>
+<!-- Category Filter Chips -->
+<div class="flex gap-2 px-4 pb-4 overflow-x-auto no-scrollbar">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-5">
+<p class="text-white text-xs font-bold uppercase tracking-widest">Terbaru</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white/5 border border-white/10 px-5">
+<p class="text-white/60 text-xs font-bold uppercase tracking-widest">Infografis</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white/5 border border-white/10 px-5">
+<p class="text-white/60 text-xs font-bold uppercase tracking-widest">Kebijakan</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white/5 border border-white/10 px-5">
+<p class="text-white/60 text-xs font-bold uppercase tracking-widest">Audit</p>
+</button>
+</div>
+</header>
+<main class="p-4 pb-28 max-w-lg mx-auto space-y-4">
+<!-- Featured Card -->
+<div class="relative overflow-hidden rounded-2xl group">
+<div class="aspect-[16/10] w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Financial data charts" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAK_bv-M0eIV8Ly8bpIG3v1Qz_YWMa-eg4bO5c8HBOjvT9Kd-uEgCIuj1BKJTGmAv0-DihUh0bJYpQm5MOcJxKEB6xwkSekcqymXa45MRYT6pH3dDy6xghQkuB6vrTzQIOgrkB1IDAU8Ex1Fy4larscIkOAx9hdZJ4YI5vQ7FsEqtJEkv-sO4zLhNff_wp48Y09ZsWxB1g2YpTD1nB3iOsKKZjxyqRuXKpsCDwnyIP5Se4GpCa_U1K3vYki46Lt_jeo5tEFS5Yly5v0");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+<div class="absolute bottom-0 p-5 w-full">
+<span class="inline-block px-2 py-0.5 text-[10px] font-black uppercase tracking-widest bg-primary text-white mb-2">Breaking News</span>
+<h2 class="text-2xl font-serif italic font-bold text-white leading-tight">Laporan Realisasi APBN Kuartal II 2024: Fokus pada Ketahanan Pangan</h2>
+<div class="flex items-center gap-4 mt-3">
+<span class="text-white/60 text-[10px] font-bold uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs text-primary">schedule</span> 2 Jam lalu
+                    </span>
+<span class="text-white/60 text-[10px] font-bold uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs text-primary">visibility</span> 12.4k
+                    </span>
+</div>
+</div>
+</div>
+<!-- Horizontal News List (Tailwind 4 / Modern Style) -->
+<div class="space-y-4 mt-6">
+<!-- News Item 1 -->
+<div class="flex gap-4 p-1 bg-surface border border-white/5 rounded-xl">
+<div class="w-28 h-28 shrink-0 rounded-lg overflow-hidden border border-white/5">
+<div class="w-full h-full bg-cover bg-center" data-alt="Indonesian Rupiah" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBksh6mcBPwxD1oYH7XSGYahe3ktLpMswxgYE3LBZk2J82-LYzeZyLnAwj6VFTMircPUjCxLNtDRbBjNYoZEkJgqZZeVBo1sWt4DVED8q0Uyh4c1NT9HJlJ9umeeUc2RGNRMbvLej3rBkJwFK7TArod2BWcIxkGRBALNgN9OXA8U3oc5N4Ek4Ar0wyXTdCr3a8H2bioGwwK26YJFIsszXCIwsDYKHh6g8OrO30v_TKrZ3XIhBeRViXLEKp2Dp8CkIrm9SLF19WgBXF3");'></div>
+</div>
+<div class="flex flex-col justify-center py-1 pr-2">
+<span class="text-primary text-[10px] font-extrabold tracking-[0.2em] uppercase mb-1">Ekonomi</span>
+<h3 class="text-base font-serif font-bold text-white leading-tight line-clamp-2">Subsidi Energi Diperketat Mulai Agustus</h3>
+<p class="text-xs text-white/40 mt-1 line-clamp-1 italic">Kebijakan baru bertujuan menekan defisit.</p>
+</div>
+</div>
+<!-- News Item 2 -->
+<div class="flex gap-4 p-1 bg-surface border border-white/5 rounded-xl">
+<div class="w-28 h-28 shrink-0 rounded-lg overflow-hidden border border-white/5">
+<div class="w-full h-full bg-cover bg-center" data-alt="Signing documents" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBnn6kGxKFVRPQCom1fq0yzPHP3HXWMyKy4Op57dY9KfBlWTGogpS3AtKnFFEy4rrOFVv6ubQMXudIKJRaSt4KwZivPUBCv-EkLa7TxsC9O1rojx_zqgw0WB7ia9TPd6YmLku0KVNEQHvaSJLGtvy-lI1YNUpKp9EYTcQOs2f8rVciNXYRG7oNv3w6351EQsrNHg7RONdmHcIrGKBzm_NiqJqJLDh560Gu67PdxWoAZS1DmOf5ku191lp3rW6KkbawFdDl9CDMQLJOs");'></div>
+</div>
+<div class="flex flex-col justify-center py-1 pr-2">
+<span class="text-primary text-[10px] font-extrabold tracking-[0.2em] uppercase mb-1">Transparansi</span>
+<h3 class="text-base font-serif font-bold text-white leading-tight line-clamp-2">Open Data Portal Versi 3.0 Diluncurkan</h3>
+<p class="text-xs text-white/40 mt-1 line-clamp-1 italic">Masyarakat kini bisa lacak dana desa.</p>
+</div>
+</div>
+<!-- Spotlight Card -->
+<div class="p-5 bg-primary/5 border border-primary/20 rounded-2xl relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 opacity-10">
+<span class="material-symbols-outlined text-8xl text-primary">analytics</span>
+</div>
+<div class="relative z-10">
+<span class="bg-primary text-white text-[9px] font-black px-2 py-0.5 rounded-sm uppercase tracking-widest">Update Audit</span>
+<h3 class="text-xl font-serif font-bold text-white mt-3 leading-snug">BPK Temukan Potensi Pemborosan 5 Triliun di Sektor Konstruksi</h3>
+<div class="flex items-center justify-between mt-4">
+<span class="text-[10px] text-white/40 font-bold uppercase tracking-wider italic">Sumber: Laporan BPK RI</span>
+<button class="text-primary text-xs font-black flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                            SELENGKAPNYA <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- News Item 3 -->
+<div class="flex gap-4 p-1 bg-surface border border-white/5 rounded-xl">
+<div class="w-28 h-28 shrink-0 rounded-lg overflow-hidden border border-white/5">
+<div class="w-full h-full bg-cover bg-center" data-alt="Stock market graph" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCb6vDVJlxqdAwJPPff10uOuqHVNHj_sz7IxQUA5IAgtIGA5OfYgz2NgH6EnuzoKAOzNclBhHFMxrf0t7_oc3RcZK5d8xb_GqOO1DqaRKw2Zx7SKi2Oa9mdI4BHXCV-wArVCLspeTFOHuxX-roWq4yiF0VMScr6BEmR4yK9khbMFhtti5Bkki4JdUbZMFCPdTXS9rrBcWVlRvct_TLL1X07sLvfKTdKifYszV0vlDKsOHBgbkdvBPOkeCsKzv2ZcXUgZYs3Lo-aHSHk");'></div>
+</div>
+<div class="flex flex-col justify-center py-1 pr-2">
+<span class="text-primary text-[10px] font-extrabold tracking-[0.2em] uppercase mb-1">Investasi</span>
+<h3 class="text-base font-serif font-bold text-white leading-tight line-clamp-2">Rapor Hijau Alokasi Dana Pendidikan 2024</h3>
+<p class="text-xs text-white/40 mt-1 line-clamp-1 italic">Efektivitas meningkat hingga 12%.</p>
+</div>
+</div>
+<!-- News Item 4 -->
+<div class="flex gap-4 p-1 bg-surface border border-white/5 rounded-xl">
+<div class="w-28 h-28 shrink-0 rounded-lg overflow-hidden border border-white/5">
+<div class="w-full h-full bg-cover bg-center" data-alt="Statue of scales" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBWL-sLKxgmdelVipngzJlKC8Yh9UFH7imDrIANHcx14UTstFZ182x0LXlk9SvIklWop55qtBzayMO4kW-RuPUFbEqbjhxOXYXoOvGS0RQXB5J9CxSc2AyCpYzdg_CPbCn5jsOEzg0WYdtlKai-h1_T2keV8rF-D8gF5VGPxJ11lFA7u2q9MP2uBTRnmkG4LPYor1GTxDHpTrLz4fzKLuuJZ2N7O1VOLjFARPEQQ3Agj8HBUccGqDFBGCd5yIFhrZJp4AM0ADtkL5yE");'></div>
+</div>
+<div class="flex flex-col justify-center py-1 pr-2">
+<span class="text-primary text-[10px] font-extrabold tracking-[0.2em] uppercase mb-1">Hukum</span>
+<h3 class="text-base font-serif font-bold text-white leading-tight line-clamp-2">Sidang Dugaan Korupsi Dana Bansos Baru</h3>
+<p class="text-xs text-white/40 mt-1 line-clamp-1 italic">Saksi ahli beberkan alur manipulasi.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-background-dark/95 backdrop-blur-xl border-t border-white/5 px-6 pb-6 pt-3">
+<div class="max-w-md mx-auto flex items-center justify-between">
+<a class="flex flex-col items-center gap-1 text-white/40" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Beranda</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-1">newspaper</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Berita</span>
+</a>
+<div class="relative -top-8">
+<button class="bg-primary text-white size-14 rounded-full shadow-2xl shadow-primary/40 flex items-center justify-center border-4 border-background-dark ring-2 ring-white/5">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</div>
+<a class="flex flex-col items-center gap-1 text-white/40" href="#">
+<span class="material-symbols-outlined">pie_chart</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Anggaran</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-white/40" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Profil</span>
+</a>
+</div>
+</nav>
+</body></html>

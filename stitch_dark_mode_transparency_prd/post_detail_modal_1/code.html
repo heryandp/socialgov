@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Post Detail Modal - Jaga Anggaran</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#E32636",
+                        "background-light": "#F4F4F0",
+                        "background-dark": "#211112",
+                        surface: "#FFFFFF",
+                        text: "#111111",
+                        muted: "#737373",
+                        verified: "#059669",
+                        review: "#D97706",
+                        disputed: "#DC2626",
+                    },
+                    fontFamily: {
+                        display: ["Plus Jakarta Sans", "sans-serif"],
+                        mono: ["JetBrains Mono", "monospace"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "4px",
+                        sm: "4px",
+                        md: "4px",
+                        lg: "4px",
+                        xl: "4px",
+                        "2xl": "4px",
+                        "3xl": "4px",
+                        full: "9999px",
+                    },
+                    boxShadow: {
+                        brutal: '0 0 0 1px #E5E5E5',
+                        'brutal-heavy': '0 0 0 2px #111111',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #F4F4F0;
+            color: #111111;
+        }
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        /* Simulating the feed background behind the modal */
+        .feed-bg {
+            background-image: 
+                linear-gradient(to right, #E5E5E5 1px, transparent 1px),
+                linear-gradient(to bottom, #E5E5E5 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen feed-bg font-display overflow-hidden">
+<!-- Modal Backdrop -->
+<div aria-labelledby="modal-title" aria-modal="true" class="fixed inset-0 bg-[#111111]/80 z-50 flex items-center justify-center p-4 backdrop-blur-sm" role="dialog">
+<!-- Modal Container -->
+<div class="bg-surface w-full max-w-[900px] h-[90vh] md:h-[800px] max-h-[90vh] rounded-sm shadow-brutal flex flex-col md:flex-row overflow-hidden relative">
+<!-- Close Button -->
+<button aria-label="Close modal" class="absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center bg-surface border border-[#E5E5E5] text-text hover:bg-background-light transition-colors rounded-sm shadow-sm">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+<!-- Left Pane: Data & Document (50%) -->
+<div class="w-full md:w-1/2 h-full flex flex-col border-b md:border-b-0 md:border-r border-[#E5E5E5] bg-surface">
+<!-- Header -->
+<div class="p-6 border-b border-[#E5E5E5]">
+<div class="flex items-center gap-2 mb-3">
+<span class="inline-block px-2 py-1 bg-review/10 text-review border border-review/20 font-mono text-[11px] font-bold tracking-wider uppercase rounded-sm">
+                            Under Review
+                        </span>
+<span class="text-muted text-sm font-medium">ID: APBD-2023-JKT-042</span>
+</div>
+<h2 class="text-2xl font-extrabold leading-tight text-text mb-2" id="modal-title">
+                        Pengadaan Laptop Dinas - Kementerian X
+                    </h2>
+<p class="text-muted text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                        DKI Jakarta Raya • TA 2023
+                    </p>
+</div>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto scrollbar-hide bg-background-light">
+<!-- Document Viewer -->
+<div class="p-4">
+<div class="bg-surface border border-[#E5E5E5] rounded-sm overflow-hidden flex flex-col">
+<div class="bg-[#F4F4F0] border-b border-[#E5E5E5] px-3 py-2 flex justify-between items-center">
+<span class="text-xs font-mono font-medium text-muted">Dokumen_RKAKL_Final.pdf</span>
+<div class="flex gap-1">
+<button aria-label="Zoom out" class="p-1 text-muted hover:text-text hover:bg-[#E5E5E5] rounded-sm transition-colors">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<button aria-label="Zoom in" class="p-1 text-muted hover:text-text hover:bg-[#E5E5E5] rounded-sm transition-colors">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+<!-- Document Placeholder -->
+<div class="relative w-full aspect-[1/1.4] bg-surface p-6 flex flex-col">
+<img alt="Official government document scan" class="w-full h-full object-cover opacity-80 mix-blend-multiply filter grayscale contrast-125" data-alt="Official government budget document scan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBhwotTRaSdAb7yTv8B_yw9tCCeyF1IAIp3xYybKbW5xO3S2_vM4Er_b0TcEeFpPie5ltVGasqMt7vePD3LXMjLRSrj6_DwyCfvX2QrCcbgCWwDTnZ8Km-zfV4ye2ydUZTIG5xIBQ2ufw7iBF0vS6VE-Q5tAykx0MwbPxVf9B-PyfsJcKPcWpuXs8O4bCkaOZnSiVdIuPcDP00ywbSRDN8xIBOWIZiD3ZFI51m54yKYTylJd_A0I9rV46skuGTuHT8iYTIW_NxCxzy"/>
+<!-- Highlight overlay -->
+<div class="absolute top-[45%] left-[10%] w-[80%] h-[8%] border-2 border-primary bg-primary/10 rounded-sm pointer-events-none"></div>
+</div>
+</div>
+</div>
+<!-- Breakdown Table -->
+<div class="p-4 pt-0">
+<div class="bg-surface border border-[#E5E5E5] rounded-sm overflow-hidden">
+<div class="px-4 py-3 bg-[#111111] text-surface border-b border-[#E5E5E5]">
+<h3 class="text-sm font-bold tracking-wide uppercase">Rincian Anggaran</h3>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-[#F4F4F0] border-b border-[#E5E5E5]">
+<th class="px-4 py-2 text-xs font-mono text-muted uppercase tracking-wider font-medium">Uraian</th>
+<th class="px-4 py-2 text-xs font-mono text-muted uppercase tracking-wider font-medium text-right">Vol</th>
+<th class="px-4 py-2 text-xs font-mono text-muted uppercase tracking-wider font-medium text-right">Harga Satuan</th>
+<th class="px-4 py-2 text-xs font-mono text-muted uppercase tracking-wider font-medium text-right">Jumlah</th>
+</tr>
+</thead>
+<tbody class="font-mono text-[13px] divide-y divide-[#E5E5E5]">
+<tr class="hover:bg-background-light transition-colors">
+<td class="px-4 py-3 text-text">Laptop High-End 14"</td>
+<td class="px-4 py-3 text-right text-text">50</td>
+<td class="px-4 py-3 text-right text-disputed font-bold">50.000.000</td>
+<td class="px-4 py-3 text-right text-text">2.500.000.000</td>
+</tr>
+<tr class="hover:bg-background-light transition-colors">
+<td class="px-4 py-3 text-text">Lisensi OS &amp; Office</td>
+<td class="px-4 py-3 text-right text-text">50</td>
+<td class="px-4 py-3 text-right text-text">3.500.000</td>
+<td class="px-4 py-3 text-right text-text">175.000.000</td>
+</tr>
+<tr class="hover:bg-background-light transition-colors">
+<td class="px-4 py-3 text-text">Tas &amp; Aksesoris</td>
+<td class="px-4 py-3 text-right text-text">50</td>
+<td class="px-4 py-3 text-right text-text">1.500.000</td>
+<td class="px-4 py-3 text-right text-text">75.000.000</td>
+</tr>
+</tbody>
+<tfoot>
+<tr class="bg-[#F4F4F0] border-t-2 border-[#111111]">
+<td class="px-4 py-3 text-right font-bold text-text uppercase text-xs tracking-wider" colspan="3">Total Pagu</td>
+<td class="px-4 py-3 text-right font-mono font-bold text-text text-sm">2.750.000.000</td>
+</tr>
+</tfoot>
+</table>
+</div>
+</div>
+</div>
+<div class="h-8"></div> <!-- Bottom padding -->
+</div>
+</div>
+<!-- Right Pane: Discussion & Actions (50%) -->
+<div class="w-full md:w-1/2 h-full flex flex-col bg-surface relative">
+<!-- Tab Header -->
+<div class="flex border-b border-[#E5E5E5] bg-[#F4F4F0]">
+<button class="flex-1 py-4 text-sm font-bold text-text border-b-2 border-text bg-surface">Diskusi Publik <span class="ml-1 text-xs font-mono text-muted bg-[#E5E5E5] px-1.5 py-0.5 rounded-sm">12</span></button>
+<button class="flex-1 py-4 text-sm font-medium text-muted hover:text-text transition-colors">Riwayat Status</button>
+</div>
+<!-- Validation Status Bar -->
+<div class="p-4 border-b border-[#E5E5E5] bg-surface">
+<div class="flex justify-between items-end mb-2">
+<span class="text-xs font-bold uppercase tracking-wide text-text">Konsensus Komunitas</span>
+<span class="font-mono text-sm font-bold text-review">65% Sanggah</span>
+</div>
+<!-- Tri-color Progress Bar -->
+<div class="h-2 w-full flex rounded-sm overflow-hidden bg-[#E5E5E5]">
+<div class="bg-verified h-full" style="width: 15%;" title="15% Valid"></div>
+<div class="bg-review h-full" style="width: 20%;" title="20% Abstain/Review"></div>
+<div class="bg-disputed h-full" style="width: 65%;" title="65% Sanggah"></div>
+</div>
+</div>
+<!-- Evidence Thread (Scrollable) -->
+<div class="flex-1 overflow-y-auto p-4 space-y-6 scrollbar-hide">
+<!-- Comment: Disputed -->
+<div class="flex gap-3">
+<div class="w-8 h-8 rounded-sm bg-[#111111] text-surface flex items-center justify-center font-bold text-sm shrink-0">
+                            A
+                        </div>
+<div class="flex-1">
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-bold text-sm text-text">Andi Susanto</span>
+<span class="text-xs text-muted font-mono">2 jam lalu</span>
+<span class="ml-auto inline-flex items-center gap-1 text-[10px] font-mono font-bold uppercase tracking-wider text-disputed border border-disputed/30 px-1.5 py-0.5 rounded-sm bg-disputed/5">
+<span class="material-symbols-outlined text-[12px]">warning</span> Menyanggah
+                                </span>
+</div>
+<p class="text-sm text-text mb-2 leading-relaxed">Harga satuan 50jt/unit sangat tidak masuk akal untuk spesifikasi laptop dinas standar. Saya cek di e-katalog LKPP untuk spek Core i7/16GB harganya maksimal 25-30jt.</p>
+<!-- Evidence Attachment -->
+<a class="block p-3 border border-[#E5E5E5] rounded-sm hover:border-primary transition-colors bg-background-light group" href="#">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-muted group-hover:text-primary transition-colors">link</span>
+<div>
+<p class="text-xs font-bold text-text truncate group-hover:text-primary transition-colors">E-Katalog LKPP - Laptop Asus ExpertBook B9</p>
+<p class="text-[11px] font-mono text-muted truncate mt-0.5">e-katalog.lkpp.go.id/katalog/produk/detail/12345</p>
+</div>
+</div>
+</a>
+</div>
+</div>
+<!-- Comment: Verified -->
+<div class="flex gap-3">
+<div class="w-8 h-8 rounded-sm bg-verified text-surface flex items-center justify-center font-bold text-sm shrink-0">
+                            B
+                        </div>
+<div class="flex-1">
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-bold text-sm text-text">Budi W.</span>
+<span class="text-xs text-muted font-mono">5 jam lalu</span>
+<span class="ml-auto inline-flex items-center gap-1 text-[10px] font-mono font-bold uppercase tracking-wider text-verified border border-verified/30 px-1.5 py-0.5 rounded-sm bg-verified/5">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> Memvalidasi
+                                </span>
+</div>
+<p class="text-sm text-text leading-relaxed">Perlu diingat ini termasuk bundling software khusus kementerian dan garansi on-site 3 tahun. Harganya masuk akal jika memperhitungkan SLA vendor.</p>
+<div class="mt-2 flex gap-4">
+<button class="text-xs font-bold text-muted hover:text-text flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">thumb_up</span> 4
+                                </button>
+<button class="text-xs font-bold text-muted hover:text-text flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">thumb_down</span> 12
+                                </button>
+</div>
+</div>
+</div>
+<!-- Comment: Disputed -->
+<div class="flex gap-3">
+<img alt="User avatar" class="w-8 h-8 rounded-sm object-cover shrink-0" data-alt="User profile avatar portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJUiyLLQtN5MOBkRTT7U6kH_R2C9zPHT1_N-TVJBu7GuL_tlWpM0-bC6iYgqu50DhtralStrmeZkJO7FLNnKLcYOO90iIL4NKpyHhj1P-pJDY6szYM4KirxFPFgDZ3Wziz5U0MqBbWBA5mAGArOfmsUEjjxKSpU0dRAuhRHAR08tDbaA8Syt3E6SPNqZPfeOLO0C5xYNhqhhjt3DPzDn_XsZjtwu1Y9BrDpb7zyH1WV-YTxQ9YOxKV40apNFzH_0OyuZDMlemtGdGp"/>
+<div class="flex-1">
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-bold text-sm text-text">InvestigasiID</span>
+<span class="material-symbols-outlined text-[14px] text-[#3B82F6]" title="Verified Journalist">verified</span>
+<span class="text-xs text-muted font-mono">1 hari lalu</span>
+<span class="ml-auto inline-flex items-center gap-1 text-[10px] font-mono font-bold uppercase tracking-wider text-disputed border border-disputed/30 px-1.5 py-0.5 rounded-sm bg-disputed/5">
+<span class="material-symbols-outlined text-[12px]">warning</span> Menyanggah
+                                </span>
+</div>
+<p class="text-sm text-text mb-2 leading-relaxed">Kami menemukan kejanggalan pada vendor pemenang tender (PT. Teknologi Maju Bersama). Alamat kantor terdaftar fiktif.</p>
+<!-- News Article Attachment -->
+<div class="border-l-2 border-text pl-3 py-1 my-2">
+<p class="text-xs font-medium text-text italic">"Penelusuran ke alamat vendor pemenang tender pengadaan laptop Kementerian X berujung pada sebuah rumah kosong di pinggiran Jakarta..."</p>
+</div>
+</div>
+</div>
+<!-- Padding for sticky footer -->
+<div class="h-24"></div>
+</div>
+<!-- Sticky Action Bar -->
+<div class="absolute bottom-0 left-0 right-0 bg-surface border-t border-[#E5E5E5] p-4 shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+<p class="text-xs text-center text-muted mb-3 font-medium">Apa penilaian Anda terhadap anggaran ini?</p>
+<div class="flex gap-3">
+<button class="flex-1 bg-surface border-2 border-verified text-verified hover:bg-verified hover:text-surface font-bold text-sm py-3 px-4 rounded-sm transition-all flex items-center justify-center gap-2 uppercase tracking-wide">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+                            Validasi
+                        </button>
+<button class="flex-1 bg-primary border-2 border-primary text-surface hover:bg-[#C81E2C] hover:border-[#C81E2C] font-bold text-sm py-3 px-4 rounded-sm transition-all flex items-center justify-center gap-2 uppercase tracking-wide shadow-sm">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+                            Sanggah
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

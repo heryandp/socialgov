@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;500;600;700,FILL@0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e32636",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#211112",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .filled-icon { font-variation-settings: 'FILL' 1; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased font-display">
+<div class="relative flex min-h-screen w-full flex-col max-w-md mx-auto bg-background-light dark:bg-background-dark pb-20">
+<!-- Header -->
+<div class="sticky top-0 z-10 flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md p-4 justify-between border-b border-primary/10">
+<div class="text-slate-900 dark:text-slate-100 flex size-10 shrink-0 items-center justify-center rounded-lg hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center">Profil Verifikator</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-transparent text-slate-900 dark:text-slate-100 hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</div>
+<!-- Profile Hero -->
+<div class="flex p-6 @container">
+<div class="flex w-full flex-col gap-6 items-center">
+<div class="flex gap-4 flex-col items-center">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32 border-4 border-primary/20 p-1" data-alt="Professional portrait of a male community volunteer" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDEF9tpubjKpLbEHEycg1rejLI7fmkNhbX85hrzF7bO2OK8Iyn0jolrE1acVxSrDnTv_U0vaZzop1xf7YDFb7_xQdifHzqc19gxtUU_n2-oXmEBKc1HyETvWu2QaitPJMf-7UnqJ5Qw0lptpJ7ttGLxYrKk9Znnlie3ggMj0lWLomCKSXvrwo_nIhG0GpLpJx7OyPdxXkfATEQdQpHIJ1xEHSz2qi-DwgcerfgfZegkhhFliXRqF55YqqphJPoXHguKLPJlsE-xLVUv");'>
+</div>
+<div class="absolute bottom-1 right-1 bg-primary text-white p-1 rounded-full border-2 border-background-light">
+<span class="material-symbols-outlined text-xs filled-icon">verified</span>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center">
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight tracking-tight text-center">Ahmad Sulaiman</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="bg-primary/10 text-primary px-2 py-0.5 rounded text-xs font-bold uppercase tracking-wider">Level 4</span>
+<p class="text-primary font-medium text-sm">Relawan Senior • Jakarta Pusat</p>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-2 uppercase tracking-widest font-bold">Bergabung sejak Jan 2024</p>
+</div>
+</div>
+<div class="flex w-full gap-3">
+<button class="flex flex-1 cursor-pointer items-center justify-center rounded-lg h-12 px-4 bg-primary/10 text-primary text-sm font-bold border border-primary/20 hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined mr-2 text-lg">edit</span>
+                        Edit Profil
+                    </button>
+<button class="flex flex-1 cursor-pointer items-center justify-center rounded-lg h-12 px-4 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/30 hover:brightness-110 transition-all">
+<span class="material-symbols-outlined mr-2 text-lg">share</span>
+                        Bagikan
+                    </button>
+</div>
+</div>
+</div>
+<!-- Metrics Grid -->
+<div class="grid grid-cols-2 gap-3 px-4 py-2">
+<div class="flex flex-col gap-1 rounded-xl p-4 bg-white dark:bg-slate-800/50 border border-primary/5 shadow-sm">
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">Skor Reputasi</p>
+<span class="material-symbols-outlined text-primary text-sm">military_tech</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold">980</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-emerald-500 text-xs">trending_up</span>
+<p class="text-emerald-500 text-xs font-bold">+12% Bulan ini</p>
+</div>
+</div>
+<div class="flex flex-col gap-1 rounded-xl p-4 bg-white dark:bg-slate-800/50 border border-primary/5 shadow-sm">
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">Validasi</p>
+<span class="material-symbols-outlined text-primary text-sm">fact_check</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold">142</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-emerald-500 text-xs">trending_up</span>
+<p class="text-emerald-500 text-xs font-bold">Akurasi 98%</p>
+</div>
+</div>
+<div class="flex flex-col gap-1 rounded-xl p-4 bg-white dark:bg-slate-800/50 border border-primary/5 shadow-sm">
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">Poin Jaga</p>
+<span class="material-symbols-outlined text-primary text-sm">monetization_on</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold">2.4k</p>
+<p class="text-slate-400 text-xs font-medium">Tukar Hadiah →</p>
+</div>
+<div class="flex flex-col gap-1 rounded-xl p-4 bg-white dark:bg-slate-800/50 border border-primary/5 shadow-sm">
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">Laporan</p>
+<span class="material-symbols-outlined text-primary text-sm">description</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold">38</p>
+<p class="text-slate-400 text-xs font-medium">12 Dalam Proses</p>
+</div>
+</div>
+<!-- Activity Feed Section -->
+<div class="px-4 pt-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight">Riwayat Aktivitas</h3>
+<button class="text-primary text-sm font-bold">Lihat Semua</button>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Activity Item 1 -->
+<div class="flex gap-4 items-start p-4 rounded-xl bg-white dark:bg-slate-800/50 border border-primary/5 shadow-sm">
+<div class="flex-shrink-0 bg-primary/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">task_alt</span>
+</div>
+<div class="flex flex-col flex-1">
+<div class="flex justify-between items-start">
+<p class="text-slate-900 dark:text-slate-100 font-bold text-sm">Validasi Berhasil</p>
+<span class="text-[10px] font-bold text-slate-400 uppercase">2 Jam Lalu</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">Memvalidasi laporan anggaran renovasi SDN 01 Gambir sebesar Rp 2.4M.</p>
+<div class="flex items-center mt-2 text-[10px] font-bold text-emerald-600 bg-emerald-50 dark:bg-emerald-900/20 px-2 py-0.5 rounded w-fit uppercase">
+                            +15 Reputasi
+                        </div>
+</div>
+</div>
+<!-- Activity Item 2 -->
+<div class="flex gap-4 items-start p-4 rounded-xl bg-white dark:bg-slate-800/50 border border-primary/5 shadow-sm">
+<div class="flex-shrink-0 bg-amber-100 dark:bg-amber-900/20 p-2 rounded-lg text-amber-600">
+<span class="material-symbols-outlined">report_gmailerrorred</span>
+</div>
+<div class="flex flex-col flex-1">
+<div class="flex justify-between items-start">
+<p class="text-slate-900 dark:text-slate-100 font-bold text-sm">Laporan Baru</p>
+<span class="text-[10px] font-bold text-slate-400 uppercase">1 Hari Lalu</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">Mengirimkan dugaan ketidaksesuaian spek pada proyek trotoar Sudirman.</p>
+<div class="flex items-center mt-2 text-[10px] font-bold text-amber-600 bg-amber-50 dark:bg-amber-900/20 px-2 py-0.5 rounded w-fit uppercase">
+                            Sedang Diverifikasi
+                        </div>
+</div>
+</div>
+<!-- Activity Item 3 -->
+<div class="flex gap-4 items-start p-4 rounded-xl bg-white dark:bg-slate-800/50 border border-primary/5 shadow-sm opacity-70">
+<div class="flex-shrink-0 bg-primary/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">emoji_events</span>
+</div>
+<div class="flex flex-col flex-1">
+<div class="flex justify-between items-start">
+<p class="text-slate-900 dark:text-slate-100 font-bold text-sm">Pencapaian Baru</p>
+<span class="text-[10px] font-bold text-slate-400 uppercase">3 Hari Lalu</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">Membuka lencana "Mata Elang" - 100 validasi akurat beruntun.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Navigation -->
+<div class="fixed bottom-0 left-0 right-0 z-50 max-w-md mx-auto">
+<div class="flex gap-2 border-t border-primary/10 bg-white/90 dark:bg-background-dark/90 backdrop-blur-lg px-4 pb-6 pt-2 shadow-2xl">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">home</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Beranda</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">search_insights</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Jelajah</p>
+</a>
+<div class="flex flex-1 justify-center -mt-8">
+<button class="size-14 rounded-full bg-primary text-white shadow-lg shadow-primary/40 flex items-center justify-center border-4 border-white dark:border-background-dark">
+<span class="material-symbols-outlined text-3xl font-bold">add</span>
+</button>
+</div>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">verified</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Validasi</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-2xl filled-icon">person</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Profil</p>
+</a>
+</div>
+</div>
+</div>
+</body></html>

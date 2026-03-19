@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#e32636",
+              "background-light": "#f8f6f6",
+              "background-dark": "#211112",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header -->
+<header class="sticky top-0 z-20 flex items-center bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md px-4 py-3 border-b border-primary/10 justify-between">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">menu</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center">Jaga Anggaran</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="flex items-center justify-center text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</header>
+<!-- Category Tabs -->
+<nav class="sticky top-[64px] z-10 bg-background-light dark:bg-background-dark overflow-x-auto no-scrollbar border-b border-primary/5">
+<div class="flex px-4 gap-6">
+<a class="flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-3 pt-4 shrink-0" href="#">
+<p class="text-sm font-bold">Terbaru</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 pb-3 pt-4 shrink-0" href="#">
+<p class="text-sm font-medium">Nasional</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 pb-3 pt-4 shrink-0" href="#">
+<p class="text-sm font-medium">Daerah</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 pb-3 pt-4 shrink-0" href="#">
+<p class="text-sm font-medium">Investigasi</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 pb-3 pt-4 shrink-0" href="#">
+<p class="text-sm font-medium">Infografis</p>
+</a>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-1 pb-24">
+<!-- Featured Story -->
+<section class="p-4 @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-sm bg-white dark:bg-slate-900 border border-primary/5">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="Digital spreadsheet showing complex financial budget data analysis" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBogXLl_jTiPfU2S9u7biI7-7St4xyOJC4EEMjneW58aakC4LCV2KmpxVLPpPR4l43Yxs355PG3p3OTkQLv7lk8J3XJO3h4TgirbwYzwbTPacP5n0zfMyvATreqPjzzvJV6kO4M_Z5m2IyIKs0hjhINoq7PwSu_fhuO-PWrgUA_tKyX15wDUdUVr27D7AEcr3wse0j_Q-Qr48gtvQ0opVfrS90FVZ9Rl4yq3ZEHYtIio4wCGyuXE0oFewP1a9s_EifgkIT8RU0a3VKr");'>
+</div>
+<div class="flex flex-col gap-2 p-4">
+<div class="flex items-center gap-2">
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-0.5 rounded tracking-wider uppercase">Utama</span>
+<span class="text-slate-400 text-xs font-medium">2 jam yang lalu</span>
+</div>
+<h1 class="text-xl font-bold leading-tight tracking-tight text-slate-900 dark:text-slate-100">
+                            Analisis APBD 2024: Alokasi Pendidikan Meningkat 15% di 12 Provinsi
+                        </h1>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed line-clamp-2">
+                            Data menunjukkan pergeseran signifikan dalam pos belanja barang dan jasa di tingkat provinsi tahun anggaran ini.
+                        </p>
+<div class="mt-2 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="size-6 rounded-full bg-primary/20 flex items-center justify-center text-[10px] font-bold text-primary">RA</div>
+<span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Redaksi Jaga</span>
+</div>
+<button class="flex items-center justify-center rounded-lg px-4 py-2 bg-primary text-white text-xs font-bold transition-transform active:scale-95">
+                                Baca Detail
+                            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Trending Section Header -->
+<div class="px-4 py-2 flex items-center justify-between">
+<h3 class="text-lg font-bold tracking-tight">Berita Terpopuler</h3>
+<span class="material-symbols-outlined text-primary">trending_up</span>
+</div>
+<!-- Data-Rich Feed -->
+<section class="flex flex-col gap-px bg-slate-200 dark:bg-slate-800">
+<!-- Card 1 -->
+<div class="bg-background-light dark:bg-slate-900 p-4 flex gap-4">
+<div class="flex-1 flex flex-col gap-1">
+<span class="text-primary text-[10px] font-bold uppercase tracking-widest">Infrastruktur</span>
+<h4 class="text-sm font-bold leading-snug line-clamp-2">Audit Proyek Strategis Nasional Menemukan Selisih Anggaran Rp 2.4 Triliun</h4>
+<div class="flex items-center gap-3 mt-1">
+<div class="flex items-center gap-1 text-[11px] text-slate-500 font-medium">
+<span class="material-symbols-outlined text-[14px]">visibility</span> 12.4k
+                            </div>
+<div class="flex items-center gap-1 text-[11px] text-slate-500 font-medium">
+<span class="material-symbols-outlined text-[14px]">chat_bubble</span> 84
+                            </div>
+</div>
+</div>
+<div class="size-20 rounded-lg bg-cover bg-center shrink-0 border border-slate-100 dark:border-slate-800" data-alt="Heavy construction machinery working on a major highway project" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCFljq0er4cWah17AAkT_UzZ8pUM3xYbPTo77wmozam8gIXR1F8Yr-hLteMh7pTsRrTrzL0FM99DOJm3tXdqBvIdp2uYKKH8r_widNIbzj9NKRunGLaBf_cySMAhjnUN0FN5ixu6cJGeVvxz39Qm1lyal-x18Ab2fFaorCjv-Jmoc1tUXo68_0KSh0wWBM-mooqB5xxrojon2ThrXRoKxAsm-b9FXrFMi2ztj7WTPBTAjwXX7WraWuf8TJIImYEsQvd1SxAUGmqCcPs");'></div>
+</div>
+<!-- Card 2 -->
+<div class="bg-background-light dark:bg-slate-900 p-4 flex gap-4">
+<div class="flex-1 flex flex-col gap-1">
+<span class="text-primary text-[10px] font-bold uppercase tracking-widest">Transparansi</span>
+<h4 class="text-sm font-bold leading-snug line-clamp-2">KPK Rilis Daftar Daerah dengan Skor Integritas Anggaran Terendah</h4>
+<div class="flex items-center gap-3 mt-1">
+<div class="flex items-center gap-1 text-[11px] text-slate-500 font-medium">
+<span class="material-symbols-outlined text-[14px]">visibility</span> 8.1k
+                            </div>
+<div class="flex items-center gap-1 text-[11px] text-slate-500 font-medium">
+<span class="material-symbols-outlined text-[14px]">chat_bubble</span> 156
+                            </div>
+</div>
+</div>
+<div class="size-20 rounded-lg bg-cover bg-center shrink-0 border border-slate-100 dark:border-slate-800" data-alt="Official government document with a stamp of approval" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB1MNX1oyut5yLJ9s1SKvBrSR2imzfUuO-L8WDcOZRcHrEhrLXQFv0BqdMX_lXKTsP-K4tGxy2NbUSnA3eZ09B0S0VjXPnto-h9_3tvfEnObIcHNqg9ODTq0iMyve_xXsSMYuWbanTpKjCUNTUl6H_KKwvx1q8zwEV_XSPMPBa1ddgpK5VgXdP2rOW2M1Gi6zA8jBfEBI4LAMFb5u2oV3taDurUXYPhAzCampPGCVE6Y6Rpl8wJvo94z9nXlj8Rod3c7sVyNSMY9gqY");'></div>
+</div>
+<!-- Card 3: Data Spotlight -->
+<div class="bg-primary/5 dark:bg-primary/10 p-4 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="text-primary text-[10px] font-bold uppercase tracking-widest flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bar_chart</span> Data Spotlight
+                        </span>
+<span class="text-[10px] font-medium text-slate-500 uppercase">Interactive</span>
+</div>
+<h4 class="text-sm font-bold leading-snug">Visualisasi Real-time Penyerapan Anggaran Bansos per Provinsi 2024</h4>
+<div class="flex gap-2">
+<div class="flex-1 h-1.5 bg-primary/20 rounded-full overflow-hidden">
+<div class="w-[65%] h-full bg-primary"></div>
+</div>
+<span class="text-[10px] font-bold text-primary">65.2% Tercapai</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-background-light dark:bg-slate-900 p-4 flex gap-4">
+<div class="flex-1 flex flex-col gap-1">
+<span class="text-primary text-[10px] font-bold uppercase tracking-widest">Kesehatan</span>
+<h4 class="text-sm font-bold leading-snug line-clamp-2">Evaluasi Dana Alokasi Khusus: Fokus pada Penanganan Stunting 2025</h4>
+<div class="flex items-center gap-3 mt-1">
+<div class="flex items-center gap-1 text-[11px] text-slate-500 font-medium">
+<span class="material-symbols-outlined text-[14px]">visibility</span> 5.2k
+                            </div>
+<div class="flex items-center gap-1 text-[11px] text-slate-500 font-medium">
+<span class="material-symbols-outlined text-[14px]">chat_bubble</span> 32
+                            </div>
+</div>
+</div>
+<div class="size-20 rounded-lg bg-cover bg-center shrink-0 border border-slate-100 dark:border-slate-800" data-alt="Healthcare worker preparing medical supplies in a clinic" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBcm6hjDL9TZja7qlzTqL9UvrYwJSQ__Dxa6bAAThwPNzXuFeUpjK41Mwx2QPAKEUECawcD7h4pcJIBtOX09yQjIlwoju-loJ9bdiudnkl-O9uJb3wq9mfUj7QAWfDoi1o657o1_26EfM2KzzZwY5mTzeJwqSLEyyGkIeiSBKfgPZNKZllHOZry7Ivi1C8Jjw1Df0Qhv8XbP6oeONSfa6A6Pj_ByOJzNrB-NqEo05scatBrS6e1iE4M4CTIQa7jJVZ9X8e3cx3iM4mz");'></div>
+</div>
+</section>
+</main>
+<!-- Sticky Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 z-30 bg-background-light dark:bg-background-dark border-t border-primary/10 px-4 pb-6 pt-2 shadow-[0_-4px_12px_rgba(0,0,0,0.05)]">
+<div class="flex items-center justify-around max-w-md mx-auto">
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-[10px] font-bold uppercase tracking-tighter">Dashboard</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">newspaper</span>
+<p class="text-[10px] font-bold uppercase tracking-tighter">Berita</p>
+</a>
+<div class="relative -top-8">
+<button class="size-14 rounded-full bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/30 border-4 border-background-light dark:border-background-dark">
+<span class="material-symbols-outlined !text-3xl">add</span>
+</button>
+<p class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-slate-900 dark:text-slate-100 uppercase tracking-tighter whitespace-nowrap">Lapor</p>
+</div>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<p class="text-[10px] font-bold uppercase tracking-tighter">Data</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-bold uppercase tracking-tighter">Profil</p>
+</a>
+</div>
+</nav>
+</div>
+</body></html>

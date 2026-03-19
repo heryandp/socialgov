@@ -6,6 +6,11 @@
       "sourceType": "github",
       "computedHash": "20b74ca9310c1339360b54916621f81abeac34576758bfffcd70062cfd1d73cd"
     },
+    "ai-seo": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "computedHash": "5f7ce5ccdb2b0dce5e1ea7f3ed8bf17070b790865e91725ca8908e6ec829e164"
+    },
     "animate": {
       "source": "pbakaus/impeccable",
       "sourceType": "github",
@@ -66,6 +71,11 @@
       "sourceType": "github",
       "computedHash": "975e399d1afa2bcf172903517193e0a088779b8b9c84e78ea42a22cd663ab2c1"
     },
+    "next-best-practices": {
+      "source": "vercel-labs/next-skills",
+      "sourceType": "github",
+      "computedHash": "515ba75178bd44875812d9a560bdf14651f86709f89cf1d4f209638e879807f3"
+    },
     "normalize": {
       "source": "pbakaus/impeccable",
       "sourceType": "github",
@@ -96,6 +106,11 @@
       "sourceType": "github",
       "computedHash": "48e998e3d5c30ae959d78ca945563f07afa61bd1ce1e6acc890f6fbf2baaf119"
     },
+    "seo-audit": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "computedHash": "ec3109d213dde1747614ad1112ef0e498e04b24e464538968e156dfbfadb2121"
+    },
     "teach-impeccable": {
       "source": "pbakaus/impeccable",
       "sourceType": "github",
@@ -105,6 +120,11 @@
       "source": "pbakaus/impeccable",
       "sourceType": "github",
       "computedHash": "3ed1b5db2db9594a15fca4d01a0f4b07581ccd635844a8c667782c19b83c95e2"
+    },
+    "web-design-guidelines": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "computedHash": "a6a44d5498f7e8f68289902f3dedfc6f38ae0cee1e96527c80724cf27f727c2a"
     }
   }
 }

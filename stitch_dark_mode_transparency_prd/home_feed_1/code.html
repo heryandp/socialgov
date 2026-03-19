@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jaga Anggaran - Home Feed</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0c90e9",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#000000",
+                        surface: "#121212",
+                        "surface-hover": "#1A1A1A",
+                        border: "#262626",
+                        verified: "#00E676",
+                        review: "#FFEA00",
+                        disputed: "#FF1744",
+                    },
+                    fontFamily: {
+                        display: ["Space Grotesk", "sans-serif"],
+                        body: ["Plus Jakarta Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "4px",
+                        sm: "4px",
+                        md: "6px",
+                        lg: "8px",
+                        xl: "12px",
+                        full: "9999px",
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #000000;
+            color: #F5F5F5;
+        }
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #262626;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #333333;
+        }
+    </style>
+</head>
+<body class="bg-background-dark min-h-screen text-[#F5F5F5] font-display antialiased selection:bg-primary/30 selection:text-white">
+<div class="max-w-[1200px] mx-auto flex justify-center w-full min-h-screen">
+<!-- Left Sidebar (Fixed) -->
+<aside class="w-[244px] hidden lg:flex flex-col h-screen sticky top-0 border-r border-border bg-background-dark px-4 py-8 shrink-0">
+<!-- Logo -->
+<div class="flex items-center gap-3 px-2 mb-10 cursor-pointer group">
+<div class="bg-primary text-white p-1.5 rounded-sm flex items-center justify-center">
+<span class="material-symbols-outlined fill text-xl">account_balance</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-white group-hover:text-primary transition-colors">Jaga Anggaran</h1>
+</div>
+<!-- Navigation -->
+<nav class="flex flex-col gap-2 flex-1">
+<a class="flex items-center gap-4 px-3 py-3 rounded-sm bg-surface text-white group transition-colors" href="#">
+<span class="material-symbols-outlined fill text-2xl group-hover:scale-110 transition-transform">home</span>
+<span class="font-bold text-base">Home</span>
+</a>
+<a class="flex items-center gap-4 px-3 py-3 rounded-sm text-[#A8A8A8] hover:bg-surface-hover hover:text-white group transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl group-hover:scale-110 transition-transform">search</span>
+<span class="font-medium text-base">Search</span>
+</a>
+<a class="flex items-center gap-4 px-3 py-3 rounded-sm text-[#A8A8A8] hover:bg-surface-hover hover:text-white group transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl group-hover:scale-110 transition-transform">article</span>
+<span class="font-medium text-base">News</span>
+</a>
+<a class="flex items-center gap-4 px-3 py-3 rounded-sm text-[#A8A8A8] hover:bg-surface-hover hover:text-white group transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl group-hover:scale-110 transition-transform">person</span>
+<span class="font-medium text-base">Profile</span>
+</a>
+</nav>
+<!-- Action Button -->
+<div class="mt-auto">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 px-4 rounded-sm transition-colors flex justify-center items-center gap-2">
+<span class="material-symbols-outlined text-xl">add_box</span>
+                    Report Budget
+                </button>
+</div>
+</aside>
+<!-- Central Feed -->
+<main class="w-full max-w-[630px] border-r border-border min-h-screen pb-20 lg:pb-0">
+<!-- Header (Mobile/Tablet) -->
+<header class="lg:hidden sticky top-0 z-50 bg-background-dark/90 backdrop-blur-md border-b border-border px-4 py-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="bg-primary text-white p-1 rounded-sm flex items-center justify-center">
+<span class="material-symbols-outlined fill text-sm">account_balance</span>
+</div>
+<h1 class="text-lg font-bold text-white">Jaga Anggaran</h1>
+</div>
+<button class="text-white hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add_box</span>
+</button>
+</header>
+<div class="flex flex-col items-center py-6 gap-8">
+<!-- Post 1 (Under Review) -->
+<article class="w-full max-w-[470px] flex flex-col gap-3 pb-6 border-b border-border/50 px-4 sm:px-0">
+<!-- Post Header -->
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-3 cursor-pointer group">
+<div class="w-10 h-10 rounded-sm bg-surface border border-border overflow-hidden shrink-0">
+<img alt="DKI Jakarta Logo" class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="DKI Jakarta government seal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_WVfL6czTCqu6Pr-kotpdazoAJGt7BGUpy8JYlitReuqSKa0nQq0GtSGGz0b3SXMW7-_vnBifn9YIp-ecPz0ImbQtUw0C93g-69QY1MPtyDbmGX6NIQesSv0n1EWX5zbKlbic-1saY_O-uHiy-iODmTKYenT25iTBAs52kus4FAm5AI1TVFx9VnF0-CXDqsKqEDEUMCsE1vd4Oa3TEvTzkq99bWsn8_RJh_K6lbjg8GoASdAzQwVz-An-07NPf7E7QVQgCy2unAvC"/>
+</div>
+<div class="flex flex-col">
+<h3 class="font-bold text-sm text-white group-hover:text-primary transition-colors line-clamp-1">Dinas PUPR DKI Jakarta</h3>
+<span class="text-xs text-[#A8A8A8]">2 hours ago • Jakarta Pusat</span>
+</div>
+</div>
+<button class="text-[#A8A8A8] hover:text-white transition-colors p-1">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<!-- Post Media -->
+<div class="relative w-full aspect-[4/5] bg-surface rounded-sm border border-border overflow-hidden group cursor-pointer">
+<img alt="Road construction site" class="w-full h-full object-cover" data-alt="Urban road construction project site" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADvLPUvtEfnHcey4NbyRbQE_jruI-kzhR8MACZ8LbJVZji_r4WC7guWlpeJNTN7S3E_JvK1RHKzc4FZD0CEaobICgN4WhwfrJ-Nnnxi9512xX10tdEcftviTvUtcJ3REfQSfEtUnwNb-E3N9mMxO02xeEAlUyb23iMyuuD-wDto9hBKaVUeFIxBet6KPMGqIW7itcvplY2dfkoniIG08yzMzLtK0-44MjBso-3ekanhMiYGEHS5M4bEUa33QxbLT7llvquyODsvVLw"/>
+<!-- Hover Overlay -->
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+<div class="bg-black/50 p-3 rounded-full backdrop-blur-sm text-white">
+<span class="material-symbols-outlined text-3xl">zoom_in</span>
+</div>
+</div>
+<!-- Validation Tag -->
+<div class="absolute top-3 right-3 bg-surface/90 backdrop-blur-md border border-[#FFEA00]/30 px-2.5 py-1 rounded-sm shadow-lg flex items-center gap-1.5 cursor-help hover:scale-105 transition-transform">
+<div class="w-2 h-2 rounded-full bg-[#FFEA00] animate-pulse"></div>
+<span class="text-[11px] font-bold text-[#FFEA00] uppercase tracking-wider">Under Review</span>
+</div>
+</div>
+<!-- Post Actions -->
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 text-[#A8A8A8] hover:text-[#FFEA00] transition-colors group">
+<span class="material-symbols-outlined group-hover:fill text-[26px]">gavel</span>
+<span class="font-semibold text-sm">Validate</span>
+</button>
+<button class="flex items-center gap-2 text-[#A8A8A8] hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[26px]">chat_bubble</span>
+<span class="font-semibold text-sm">42</span>
+</button>
+<button class="flex items-center gap-2 text-[#A8A8A8] hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[26px]">send</span>
+</button>
+</div>
+<button class="text-[#A8A8A8] hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[26px]">bookmark</span>
+</button>
+</div>
+<!-- Post Details -->
+<div class="px-1 flex flex-col gap-1.5">
+<div class="font-bold text-[20px] text-white tracking-tight">Rp 25.500.000.000</div>
+<div class="text-sm">
+<span class="font-bold text-white mr-1 cursor-pointer hover:text-primary">Dinas PUPR DKI Jakarta</span>
+<span class="text-[#F5F5F5] leading-relaxed">Pengadaan aspal dan perbaikan infrastruktur jalan protokol Sudirman-Thamrin untuk kuartal III 2024.</span>
+</div>
+<button class="text-[#A8A8A8] text-sm text-left font-medium hover:text-white mt-1 w-fit">View all 42 comments</button>
+</div>
+</article>
+<!-- Post 2 (Verified) -->
+<article class="w-full max-w-[470px] flex flex-col gap-3 pb-6 border-b border-border/50 px-4 sm:px-0">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-3 cursor-pointer group">
+<div class="w-10 h-10 rounded-sm bg-surface border border-border overflow-hidden shrink-0">
+<img alt="Kemenkes Logo" class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Ministry of Health official logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPfBBlYQ8WxVbKs-wkZcIq3cmg1t_TOm2YqxGBx1vw7ERvxHtcNiRivxZBysWa46hK6_eTcXp1fg__-i_pHCNozeIBmpthIFTOvdpJqUBtp_hWRrISxDlzwNxCAj4j_ET3AfoI-bY0jTCWmbxEkMuA4MbX3cxd_Oblszi6JKtgQgJ2XmEqa1R4w73Zw6UB0dnHr3bJgcsARp6QAiK_tO8tlGxGDQLH5hJPxi9iS2I_uM5uu6WxpFffC8idSJIcrLptl8EdkUq_XgLc"/>
+</div>
+<div class="flex flex-col">
+<h3 class="font-bold text-sm text-white group-hover:text-primary transition-colors line-clamp-1">Kementerian Kesehatan RI</h3>
+<span class="text-xs text-[#A8A8A8]">5 hours ago • Nasional</span>
+</div>
+</div>
+<button class="text-[#A8A8A8] hover:text-white transition-colors p-1">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<div class="relative w-full aspect-square bg-surface rounded-sm border border-border overflow-hidden group cursor-pointer">
+<img alt="Medical supplies" class="w-full h-full object-cover" data-alt="Boxes of medical supplies stacked" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZSnKFJlP29P4A5_g-E-9JmWroplm3bS4m53FJqWfy7-2Knqa4wLURg06P_4n6wAk-m_V3D06zMxvmKRwwqh-7sLsqQNohPlY1G3Vj-b9e3tFHgSs6usV1xhvGw8B7UjPqf7nvRr6h61CCtDWFovekr7Hw0qFhFRhCnHhf1YRsGgo0Ton-C0Ku2SAPpWefXVcnVpmQdI7o28zl7PQo4CtaWDLWAAVRBeG5g1ABwWygdz7mc3Qd3IQE6TctSy3oXNNCMS08-QZknPUT"/>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+<div class="bg-black/50 p-3 rounded-full backdrop-blur-sm text-white">
+<span class="material-symbols-outlined text-3xl">zoom_in</span>
+</div>
+</div>
+<div class="absolute top-3 right-3 bg-surface/90 backdrop-blur-md border border-[#00E676]/30 px-2.5 py-1 rounded-sm shadow-lg flex items-center gap-1.5 cursor-help hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[14px] text-[#00E676] font-bold">check_circle</span>
+<span class="text-[11px] font-bold text-[#00E676] uppercase tracking-wider">Verified</span>
+</div>
+</div>
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 text-[#00E676] transition-colors group">
+<span class="material-symbols-outlined fill text-[26px]">verified</span>
+</button>
+<button class="flex items-center gap-2 text-[#A8A8A8] hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[26px]">chat_bubble</span>
+<span class="font-semibold text-sm">18</span>
+</button>
+<button class="flex items-center gap-2 text-[#A8A8A8] hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[26px]">send</span>
+</button>
+</div>
+<button class="text-[#A8A8A8] hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[26px]">bookmark</span>
+</button>
+</div>
+<div class="px-1 flex flex-col gap-1.5">
+<div class="font-bold text-[20px] text-white tracking-tight">Rp 120.000.000.000</div>
+<div class="text-sm">
+<span class="font-bold text-white mr-1 cursor-pointer hover:text-primary">Kementerian Kesehatan RI</span>
+<span class="text-[#F5F5F5] leading-relaxed">Pengadaan alat kesehatan dan obat-obatan untuk RSUD di wilayah Indonesia Timur. Dokumen lelang telah tervalidasi oleh BPK.</span>
+</div>
+<button class="text-[#A8A8A8] text-sm text-left font-medium hover:text-white mt-1 w-fit">View all 18 comments</button>
+</div>
+</article>
+</div>
+</main>
+<!-- Right Contextual Column (Fixed) -->
+<aside class="w-[320px] hidden xl:block h-screen sticky top-0 px-6 py-8 shrink-0">
+<div class="flex flex-col gap-8">
+<!-- User Mini Profile -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3 cursor-pointer">
+<div class="w-12 h-12 rounded-sm bg-surface border border-border overflow-hidden">
+<img alt="User Avatar" class="w-full h-full object-cover" data-alt="Male user profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATACCI2qtA9Nduaz_rXPWVMU3AUtHtDvJQd_HXIfv0cebjd4nshhe3wbds2vlWpP-6bHH_CRi78Ya9Ai07mWvN7c_7A6_dfsxvAR_mgukgmppf3E-Ev--q_igVqngMMBKzwbPxn8Y8tvxil9Ns5ZFMgGQWYQblfzX5waepfEZQVNPP5ExDEM4nbxsM0qg42ZLFDr-ZEoPR8x9b6knx8p99UcJOkr377SMfTRGHkMq6A_im5XmN7mSDg1tzBmtjamktqyVWZ3zm6b_Q"/>
+</div>
+<div class="flex flex-col">
+<span class="font-bold text-sm text-white">budi_watchdog</span>
+<span class="text-xs text-[#A8A8A8]">Civic Score: 850</span>
+</div>
+</div>
+<button class="text-xs font-bold text-primary hover:text-white transition-colors">Switch</button>
+</div>
+<!-- Trending Tags -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<h2 class="font-bold text-[#A8A8A8] text-sm">Trending Disputed</h2>
+<button class="text-xs font-bold text-white hover:text-primary transition-colors">See All</button>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between group cursor-pointer">
+<div class="flex flex-col">
+<span class="font-bold text-sm text-white group-hover:text-primary transition-colors line-clamp-1">#IKN_Infrastructure</span>
+<span class="text-xs text-[#A8A8A8]">12.5K reports</span>
+</div>
+<div class="text-[#FF1744] bg-[#FF1744]/10 px-2 py-0.5 rounded-sm text-xs font-bold border border-[#FF1744]/20">Hot</div>
+</div>
+<div class="flex items-center justify-between group cursor-pointer">
+<div class="flex flex-col">
+<span class="font-bold text-sm text-white group-hover:text-primary transition-colors line-clamp-1">#Bansos2024</span>
+<span class="text-xs text-[#A8A8A8]">8.2K reports</span>
+</div>
+</div>
+<div class="flex items-center justify-between group cursor-pointer">
+<div class="flex flex-col">
+<span class="font-bold text-sm text-white group-hover:text-primary transition-colors line-clamp-1">#PemkotBandung_IT</span>
+<span class="text-xs text-[#A8A8A8]">3.1K reports</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Links -->
+<div class="flex flex-col gap-4 mt-4">
+<div class="flex flex-wrap gap-x-3 gap-y-1 text-xs text-[#555555] font-medium">
+<a class="hover:text-[#A8A8A8] transition-colors" href="#">About</a>
+<a class="hover:text-[#A8A8A8] transition-colors" href="#">Help</a>
+<a class="hover:text-[#A8A8A8] transition-colors" href="#">API</a>
+<a class="hover:text-[#A8A8A8] transition-colors" href="#">Terms</a>
+<a class="hover:text-[#A8A8A8] transition-colors" href="#">Privacy</a>
+<a class="hover:text-[#A8A8A8] transition-colors" href="#">Data Policy</a>
+</div>
+<span class="text-xs text-[#555555] uppercase tracking-wider">© 2024 JAGA ANGGARAN</span>
+</div>
+</div>
+</aside>
+<!-- Mobile Bottom Navigation -->
+<nav class="lg:hidden fixed bottom-0 left-0 right-0 bg-background-dark border-t border-border flex justify-around items-center h-14 px-2 z-50">
+<a class="p-2 text-white" href="#"><span class="material-symbols-outlined fill text-2xl">home</span></a>
+<a class="p-2 text-[#A8A8A8]" href="#"><span class="material-symbols-outlined text-2xl">search</span></a>
+<a class="p-2 text-[#A8A8A8]" href="#"><span class="material-symbols-outlined text-2xl">add_box</span></a>
+<a class="p-2 text-[#A8A8A8]" href="#"><span class="material-symbols-outlined text-2xl">article</span></a>
+<div class="p-2">
+<div class="w-7 h-7 rounded-sm overflow-hidden border border-border">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="User profile thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEnd2sOz3XeN9nYEcaBIHzBC6_nZoluJ6a7ss3ZFOps0fczto2U65pZodX-6S-HWNr5h06WuYXyHpz11BYaFkXmQs4S5cubCQusJWSQBbex9vpRKWdvpgKdUFMkd9k8jJV5HWtOunGVdaj7nCC1vtVAzxgGKrJf9Z8DyhXx_P-P9dgufygp5es_ZKa0QvFqqeECSOsVEcuLeODYXw_x47exnoq7wkN0n5i6vvRRhyqnQyISO9_bxtTC0bBk987WWMHVHTyo8zDB8i2"/>
+</div>
+</div>
+</nav>
+</div>
+</body></html>

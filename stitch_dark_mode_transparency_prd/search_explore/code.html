@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Search &amp; Explore - Jaga Anggaran</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0095F6",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#000000",
+                        "surface": "#121212",
+                        "surface-hover": "#1A1A1A",
+                        "border-color": "#262626",
+                        "text-main": "#F5F5F5",
+                        "text-muted": "#A8A8A8",
+                        "verified": "#00E676",
+                        "review": "#FFEA00",
+                        "disputed": "#FF1744"
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "4px",
+                        "lg": "8px",
+                        "xl": "12px",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-text-main font-body antialiased min-h-screen flex selection:bg-primary/30">
+<!-- Sidebar Navigation (Fixed) -->
+<nav class="hidden md:flex flex-col w-[244px] fixed h-full border-r border-border-color bg-surface z-50 p-4 justify-between">
+<div>
+<!-- Logo -->
+<div class="px-3 py-6 mb-4">
+<h1 class="font-display font-bold text-2xl tracking-tight text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-size: 28px;">account_balance</span>
+                    Jaga Anggaran
+                </h1>
+</div>
+<!-- Nav Links -->
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-4 px-3 py-3 rounded hover:bg-surface-hover transition-colors group" href="#">
+<span class="material-symbols-outlined text-text-main group-hover:scale-110 transition-transform" style="font-size: 28px; font-variation-settings: 'FILL' 0;">home</span>
+<span class="font-body text-[16px] font-medium text-text-main">Home</span>
+</a>
+<a class="flex items-center gap-4 px-3 py-3 rounded bg-surface-hover font-bold transition-colors group" href="#">
+<span class="material-symbols-outlined text-text-main group-hover:scale-110 transition-transform" style="font-size: 28px; font-variation-settings: 'FILL' 1;">search</span>
+<span class="font-body text-[16px] text-text-main">Search &amp; Explore</span>
+</a>
+<a class="flex items-center gap-4 px-3 py-3 rounded hover:bg-surface-hover transition-colors group" href="#">
+<span class="material-symbols-outlined text-text-main group-hover:scale-110 transition-transform" style="font-size: 28px; font-variation-settings: 'FILL' 0;">newspaper</span>
+<span class="font-body text-[16px] font-medium text-text-main">News</span>
+</a>
+<a class="flex items-center gap-4 px-3 py-3 rounded hover:bg-surface-hover transition-colors group" href="#">
+<span class="material-symbols-outlined text-text-main group-hover:scale-110 transition-transform" style="font-size: 28px; font-variation-settings: 'FILL' 0;">person</span>
+<span class="font-body text-[16px] font-medium text-text-main">Profile</span>
+</a>
+</div>
+</div>
+<!-- CTA Button -->
+<div class="mb-4">
+<button class="w-full h-12 bg-primary hover:bg-primary/90 text-white font-display font-semibold text-[14px] rounded transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" style="font-size: 20px;">add_circle</span>
+                Report Budget
+            </button>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-[244px] min-h-screen flex flex-col max-w-[960px] mx-auto w-full">
+<!-- Search & Filter Header -->
+<header class="sticky top-0 z-40 bg-background-dark/95 backdrop-blur pt-6 pb-2 px-4 md:px-8 border-b border-border-color">
+<!-- Search Bar -->
+<div class="relative w-full max-w-2xl mx-auto mb-6">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-text-muted">search</span>
+</div>
+<input class="w-full h-[40px] pl-12 pr-4 bg-[#262626] border-none text-text-main font-body text-[15px] rounded placeholder-text-muted focus:ring-1 focus:ring-primary focus:outline-none transition-shadow" placeholder="Search budgets, regions, or institutions..." type="text"/>
+<div class="absolute inset-y-0 right-0 pr-4 flex items-center cursor-pointer hover:text-white text-text-muted">
+<span class="material-symbols-outlined" style="font-size: 20px;">tune</span>
+</div>
+</div>
+<!-- Filter Pills -->
+<div class="flex gap-2 overflow-x-auto no-scrollbar pb-2 w-full max-w-3xl mx-auto items-center">
+<button class="shrink-0 h-[32px] px-4 rounded bg-[#F5F5F5] text-[#000000] font-display font-semibold text-[14px] transition-colors border border-transparent whitespace-nowrap">
+                    All
+                </button>
+<button class="shrink-0 h-[32px] px-4 rounded bg-surface text-text-main hover:bg-surface-hover font-display font-semibold text-[14px] border border-border-color transition-colors whitespace-nowrap">
+                    DKI Jakarta
+                </button>
+<button class="shrink-0 h-[32px] px-4 rounded bg-surface text-text-main hover:bg-surface-hover font-display font-semibold text-[14px] border border-border-color transition-colors whitespace-nowrap">
+                    Kemenkeu
+                </button>
+<button class="shrink-0 h-[32px] px-4 rounded bg-surface text-text-main hover:bg-surface-hover font-display font-semibold text-[14px] border border-border-color transition-colors flex items-center gap-1 whitespace-nowrap">
+<span class="w-2 h-2 rounded-full bg-disputed block"></span> Disputed
+                </button>
+<button class="shrink-0 h-[32px] px-4 rounded bg-surface text-text-main hover:bg-surface-hover font-display font-semibold text-[14px] border border-border-color transition-colors flex items-center gap-1 whitespace-nowrap">
+<span class="w-2 h-2 rounded-full bg-verified block"></span> Verified
+                </button>
+<button class="shrink-0 h-[32px] px-4 rounded bg-surface text-text-main hover:bg-surface-hover font-display font-semibold text-[14px] border border-border-color transition-colors flex items-center gap-1 whitespace-nowrap">
+<span class="w-2 h-2 rounded-full bg-review block"></span> Under Review
+                </button>
+<button class="shrink-0 h-[32px] px-4 rounded bg-surface text-text-main hover:bg-surface-hover font-display font-semibold text-[14px] border border-border-color transition-colors whitespace-nowrap">
+                    Jawa Barat
+                </button>
+<button class="shrink-0 h-[32px] px-4 rounded bg-surface text-text-main hover:bg-surface-hover font-display font-semibold text-[14px] border border-border-color transition-colors whitespace-nowrap">
+                    Kemenkes
+                </button>
+</div>
+</header>
+<!-- Explore Grid -->
+<div class="p-4 md:p-8 w-full max-w-4xl mx-auto">
+<div class="grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-4">
+<!-- Grid Item 1 (Disputed) -->
+<div class="relative aspect-square group cursor-pointer overflow-hidden rounded bg-surface border border-border-color">
+<img alt="Financial document showing budget breakdown" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" data-alt="Spreadsheet document with budget numbers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6J6t4ijYOLcm-ZegtPXsVVnJ89sw0WChIndVqLfPXr0tlfdOyQCrrfztWXLBd1uKwUXIudmtTVgrgN-Mv7vAdmEv6Akir0cjO9RYya4P4OtFwMf3KRxTttxNTXNofe6BBEpww86lE0-SHoROvOXlP_lXtOp-li58xh2aUimcZi0K0Gpc-wJy6Euecp40nUjp-sU_a8FowYYq28tS9iVOfzWZVHRDQ-36kvIVs1p4HcxdyFDwK1zgmfeopg8PoVuAKQN3uG8QIY_M0"/>
+<!-- Hover Overlay -->
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+<span class="material-symbols-outlined text-disputed mb-2" style="font-size: 32px; font-variation-settings: 'FILL' 1;">error</span>
+<span class="font-display font-bold text-xl md:text-2xl text-white tracking-tight">Rp 2.4B</span>
+<span class="font-body text-[13px] text-text-muted mt-1 truncate w-full">Proyek Jalan Tol JORR</span>
+</div>
+</div>
+<!-- Grid Item 2 (Verified) -->
+<div class="relative aspect-square group cursor-pointer overflow-hidden rounded bg-surface border border-border-color">
+<img alt="Modern office building architecture" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" data-alt="Government building exterior shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC_WGtUBrt65JmzE_r3KG6htSgT0QTGEYe1bw3skVMbSsfmAkZYg6ApW1gKGne0JbH1SwnZzfJ52avUywsPnCMKkMMfhV7We_9gXgx7tXEUrJG7phIj8k1ictiITNIaXoC21CBPvD5NRxnENIVCHSi25pNkWh-lgo0HrLbuzsIcBAXXWZwo1R8bI2YVtYV1he-zPHUsGEW8kb7-O0yAFmiYSX9HzjRgfI5ugdX12SVr58G8KWuAMUHw8ocqLyFEXSciMWAA5R2wB-7"/>
+<!-- Hover Overlay -->
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+<span class="material-symbols-outlined text-verified mb-2" style="font-size: 32px; font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-display font-bold text-xl md:text-2xl text-white tracking-tight">Rp 850M</span>
+<span class="font-body text-[13px] text-text-muted mt-1 truncate w-full">Renovasi Gedung Kemenkeu</span>
+</div>
+</div>
+<!-- Grid Item 3 (Under Review) -->
+<div class="relative aspect-square group cursor-pointer overflow-hidden rounded bg-surface border border-border-color">
+<div class="absolute inset-0 bg-gradient-to-br from-[#1a2b3c] to-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-border-color" style="font-size: 48px;">pie_chart</span>
+</div>
+<!-- Hover Overlay -->
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+<span class="material-symbols-outlined text-review mb-2" style="font-size: 32px; font-variation-settings: 'FILL' 1;">pending</span>
+<span class="font-display font-bold text-xl md:text-2xl text-white tracking-tight">Rp 12.5T</span>
+<span class="font-body text-[13px] text-text-muted mt-1 truncate w-full">Alokasi Dana Desa Jatim</span>
+</div>
+</div>
+<!-- Grid Item 4 (Disputed) -->
+<div class="relative aspect-square group cursor-pointer overflow-hidden rounded bg-surface border border-border-color">
+<img alt="Construction site with heavy machinery" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" data-alt="Active construction site with crane" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcyUkNfWFmPcnh4rZWgJKsvy0TnTGj_0irqOSvvIQMfr42a4ZqNmXg_pozGWLc_91ETT2pGolwOEn4Gr-1pf06P9lwxvh99HLZDJj7GeQYJQKViBAar4rAi9FEKgOlRb34VBekdeE-FBjKZIMTLiURfVfto6l7lWt0Bu5dmIU1ANTbr50y6pu161XOTPCqHQHLPH2ZPHenxnGCHDZZWN4DBgzdmQnwOPwKRpNATm2IEJhClnuMc7W-58pRZ-11Db2uXk6t8YNjfZSp"/>
+<!-- Hover Overlay -->
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+<span class="material-symbols-outlined text-disputed mb-2" style="font-size: 32px; font-variation-settings: 'FILL' 1;">error</span>
+<span class="font-display font-bold text-xl md:text-2xl text-white tracking-tight">Rp 4.2B</span>
+<span class="font-body text-[13px] text-text-muted mt-1 truncate w-full">Pembangunan Jembatan Kukar</span>
+</div>
+</div>
+<!-- Grid Item 5 (Verified) -->
+<div class="relative aspect-square group cursor-pointer overflow-hidden rounded bg-surface border border-border-color">
+<img alt="Chart showing financial growth" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" data-alt="Bar chart showing rising trends" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdarl9gXiGiU9CfDxvKzx4BPsnWw4SIwESrgLTl0n5bLH35pi_IqHGar2iiDch1cK288mn4GHN7tprAxHXZM7SjmL9jCZkiQJ9xw7bEyFA-YmC6RWslz19meFUi1-_gs7Elu8djmC6Om1uHKaC29otnm27Epsjz9UQrjc7PxovvCOgFBPwyVeBBYA3tfZzLLL3gFVpc0qL1Xan2WmJUkwZFWtluQAYzvyxwxbd6_J18FSBza2wBQEn4AuO9QahK6N4ErNu2y8Cur7V"/>
+<!-- Hover Overlay -->
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+<span class="material-symbols-outlined text-verified mb-2" style="font-size: 32px; font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-display font-bold text-xl md:text-2xl text-white tracking-tight">Rp 300M</span>
+<span class="font-body text-[13px] text-text-muted mt-1 truncate w-full">Subsidi Pupuk Pertanian</span>
+</div>
+</div>
+<!-- Grid Item 6 (Review) -->
+<div class="relative aspect-square group cursor-pointer overflow-hidden rounded bg-surface border border-border-color">
+<img alt="Healthcare facility or medical equipment" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" data-alt="Hospital bed and medical equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDs-sB_-GXDkfA5zdlUrkoxC2aBQuh00HXotnm2hcKiGQEaAC7hr5NAEhXWaj1k2Ohuqot_5B6IT2xSWgrMmZAfg7eBlyxNhG-kaXoKJFVhRdEVegbzoorUiW5st45nXLnc__1JNM2zty3ooWMxe-sKVp5Gh7BY9BEOB1uyZdp2RU7u3OifZv5WkRqo3uP40FeJuyR-ZeK6gqhtKGCa7zvppKViW6OWol8mNZDreuc7BTXtIOmxpwyBja13FKAV2jvVOWwtMP2qMVX"/>
+<!-- Hover Overlay -->
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+<span class="material-symbols-outlined text-review mb-2" style="font-size: 32px; font-variation-settings: 'FILL' 1;">pending</span>
+<span class="font-display font-bold text-xl md:text-2xl text-white tracking-tight">Rp 1.5T</span>
+<span class="font-body text-[13px] text-text-muted mt-1 truncate w-full">Pengadaan Alkes RSUD</span>
+</div>
+</div>
+<!-- Grid Item 7 (Verified) -->
+<div class="relative aspect-square group cursor-pointer overflow-hidden rounded bg-surface border border-border-color">
+<div class="absolute inset-0 bg-gradient-to-br from-[#2a1b3c] to-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-border-color" style="font-size: 48px;">receipt_long</span>
+</div>
+<!-- Hover Overlay -->
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+<span class="material-symbols-outlined text-verified mb-2" style="font-size: 32px; font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-display font-bold text-xl md:text-2xl text-white tracking-tight">Rp 45M</span>
+<span class="font-body text-[13px] text-text-muted mt-1 truncate w-full">Pengadaan Laptop Sekolah</span>
+</div>
+</div>
+<!-- Grid Item 8 (Disputed) -->
+<div class="relative aspect-square group cursor-pointer overflow-hidden rounded bg-surface border border-border-color">
+<img alt="Dining or food service setup" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" data-alt="Catering food display trays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzaA21kfz44KmL4fhr_cGiXwDsifQRf3jYQTnt941tQBtN-Jkt79eY792EmyOiNudtUv4kUT5zy40LIyUVLQlGSSRz3nwQLjFHTtV6DWj_79GJObNKKappakhBUMGEUEw9pke9WMfLKWrREQu0a9mDynhRGMrxoN1heMmndfxQYiVm2lT9mZbfPGi5Vmp_jK2nR6eqwMnYWl8RTX7lvKGn0wNX5fo_REBHci7trR4e7UDouaXdb6CB0jTrv6Zh2SjGSA2qxmItXKxN"/>
+<!-- Hover Overlay -->
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+<span class="material-symbols-outlined text-disputed mb-2" style="font-size: 32px; font-variation-settings: 'FILL' 1;">error</span>
+<span class="font-display font-bold text-xl md:text-2xl text-white tracking-tight">Rp 120M</span>
+<span class="font-body text-[13px] text-text-muted mt-1 truncate w-full">Anggaran Makan Siang DPRD</span>
+</div>
+</div>
+<!-- Grid Item 9 (Review) -->
+<div class="relative aspect-square group cursor-pointer overflow-hidden rounded bg-surface border border-border-color">
+<img alt="Corporate meeting room" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" data-alt="Empty corporate boardroom meeting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUoTTkPvUB2c-zaCeypjAxuXwdj1SAbgs6e89v7OoOQgr1iXNO65EFmC53FtI72nmK6N8ZVVgBiBRhnoFEpPYw0X50hbEUz4n7ZnDv8RB_jYvtAynOmRIl13UjXhV2M3kPRAt5_xPJSofyFPd1QiIRD17uylU6HV90UAr_IjcJi8TNX4jW3lLCCRE0xbHWUafPKPzzNrJvQCA65vt_N3CDkGyXdcYb5QHX7JOOEEcNxt_9DRMNdDxrfSrW3UTZmunoWotMiH-yYukg"/>
+<!-- Hover Overlay -->
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+<span class="material-symbols-outlined text-review mb-2" style="font-size: 32px; font-variation-settings: 'FILL' 1;">pending</span>
+<span class="font-display font-bold text-xl md:text-2xl text-white tracking-tight">Rp 8.5B</span>
+<span class="font-body text-[13px] text-text-muted mt-1 truncate w-full">Studi Banding Luar Negeri</span>
+</div>
+</div>
+</div>
+<!-- Loading Spinner (Hidden by default, shown for infinite scroll) -->
+<div class="py-8 flex justify-center">
+<span class="material-symbols-outlined text-primary animate-spin" style="font-size: 32px;">progress_activity</span>
+</div>
+</div>
+</main>
+<!-- Mobile Bottom Navigation -->
+<nav class="md:hidden fixed bottom-0 w-full bg-surface border-t border-border-color z-50 px-4 py-3 flex justify-around items-center">
+<a class="flex flex-col items-center gap-1 text-text-muted hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-size: 24px; font-variation-settings: 'FILL' 0;">home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-white transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-size: 24px; font-variation-settings: 'FILL' 1;">search</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-text-muted hover:text-white transition-colors" href="#">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined" style="font-size: 24px;">add</span>
+</div>
+</a>
+<a class="flex flex-col items-center gap-1 text-text-muted hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-size: 24px; font-variation-settings: 'FILL' 0;">newspaper</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-text-muted hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-size: 24px; font-variation-settings: 'FILL' 0;">person</span>
+</a>
+</nav>
+</body></html>

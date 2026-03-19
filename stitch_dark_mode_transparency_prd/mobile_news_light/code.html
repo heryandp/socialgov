@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e52a2a",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#211111",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex min-h-screen w-full flex-col max-w-md mx-auto bg-background-light dark:bg-background-dark shadow-xl">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="flex items-center p-4 justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-primary text-white p-1.5 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">account_balance</span>
+</div>
+<h1 class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100">Jaga Anggaran</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex h-10 w-10 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-slate-700 dark:text-slate-300">search</span>
+</button>
+<button class="flex h-10 w-10 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-slate-700 dark:text-slate-300">notifications</span>
+</button>
+</div>
+</div>
+<!-- Categories Scrollable -->
+<div class="px-4 pb-3 overflow-x-auto hide-scrollbar flex gap-6">
+<a class="flex flex-col items-center shrink-0 relative" href="#">
+<span class="text-sm font-bold text-primary">Terbaru</span>
+<div class="absolute -bottom-3 h-1 w-full bg-primary rounded-full"></div>
+</a>
+<a class="flex flex-col items-center shrink-0" href="#">
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">Nasional</span>
+</a>
+<a class="flex flex-col items-center shrink-0" href="#">
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">Daerah</span>
+</a>
+<a class="flex flex-col items-center shrink-0" href="#">
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">Analisis</span>
+</a>
+<a class="flex flex-col items-center shrink-0" href="#">
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">Infografis</span>
+</a>
+<a class="flex flex-col items-center shrink-0" href="#">
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">Opini</span>
+</a>
+</div>
+</header>
+<!-- Main News Content -->
+<main class="flex-1 overflow-y-auto pb-24">
+<!-- Featured Hero Card -->
+<div class="p-4">
+<div class="relative w-full aspect-[16/9] rounded-xl overflow-hidden mb-4 group shadow-lg">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+<div class="absolute inset-0 bg-center bg-cover transition-transform duration-700 group-hover:scale-105" data-alt="Government building exterior under dramatic sky" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAodU8WW9YEU4KFE5EDDQ5U2AJZHMSicEKOwfLvs8PFbSaQp8yDocpvaCdGBgNarfZokKNdfFtVkEy6Xfff6lj6IvVf13yjZuISUd_A758QUOnkvKxtkWJgCH-48G8HBFSIsyZxCE42UmgU_WDKfVaePIWVq3jrcDjAAWw7UMco3708iePEdfCCX-GJlO4d70npNIygdu5VYYcDGi1xt25A66UmeCpXKeU28Y8GvXhIJwbfXILAGLpcQZM5I-_ZdBKXTgj34s8i7yn0');"></div>
+<div class="absolute bottom-0 left-0 p-5 z-20 w-full">
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-primary px-2 py-0.5 rounded text-[10px] font-bold text-white tracking-widest uppercase">Eksklusif</span>
+<span class="text-white/80 text-[10px] font-medium">15 MENIT LALU</span>
+</div>
+<h2 class="text-white text-xl font-bold leading-tight line-clamp-2">
+                            Anggaran Pendidikan 2024 Diprediksi Tembus Rekor Baru Rp660 Triliun
+                        </h2>
+</div>
+</div>
+</div>
+<!-- News List: Editorial Style -->
+<div class="px-4 space-y-8">
+<!-- Horizontal Card 1 -->
+<div class="flex gap-4 group cursor-pointer">
+<div class="flex flex-col flex-1 justify-between py-1">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="text-[10px] font-bold text-primary tracking-wider uppercase">Nasional</span>
+<span class="w-1 h-1 rounded-full bg-slate-300"></span>
+<span class="text-[10px] text-slate-500 dark:text-slate-400">2 JAM LALU</span>
+</div>
+<h3 class="text-base font-bold text-slate-900 dark:text-slate-100 leading-snug line-clamp-2 group-hover:text-primary transition-colors">
+                                Transparansi Dana Desa Meningkat: 15% Kenaikan Efisiensi Terdeteksi
+                            </h3>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1 mt-2">Pemerintah merilis laporan terbaru penggunaan dana di level mikro.</p>
+</div>
+<div class="w-24 h-24 rounded-lg bg-center bg-cover shrink-0 shadow-sm border border-slate-100 dark:border-slate-800" data-alt="Rural landscape showing village infrastructure development" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDAZS_snFX00RLWuvBIBE09NbMDnkvm_1PI7LWKcn6_Hs9yJfsjcupiLoTmbPoZpNeGmAGL6Xwom0IE89Lj0D8dFlsWX6cloBPJz8sqI6cJgG3Evsv95ImAhNd8aRYpXhcvnQqZ59iTE7ShaRuchCgTozMAQofUXig9rDwXLi8qkreHY_GbylCxu9bcYLu2HqluuPjM1uhynkePSOQ3f6OoJLWaQh2AYto6At12IseQRYMN1qhMiavMJOko3mY99S7LVL2Hs_fsPsDa');"></div>
+</div>
+<div class="h-px bg-slate-200 dark:bg-slate-800 w-full"></div>
+<!-- Horizontal Card 2 -->
+<div class="flex gap-4 group cursor-pointer">
+<div class="flex flex-col flex-1 justify-between py-1">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="text-[10px] font-bold text-primary tracking-wider uppercase">Analisis</span>
+<span class="w-1 h-1 rounded-full bg-slate-300"></span>
+<span class="text-[10px] text-slate-500 dark:text-slate-400">5 JAM LALU</span>
+</div>
+<h3 class="text-base font-bold text-slate-900 dark:text-slate-100 leading-snug line-clamp-2 group-hover:text-primary transition-colors">
+                                Fokus Ketahanan Pangan dalam RAPBN 2025: Siapkan Antisipasi Krisis
+                            </h3>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1 mt-2">Dampak alokasi anggaran terhadap harga bahan pokok di pasar domestik.</p>
+</div>
+<div class="w-24 h-24 rounded-lg bg-center bg-cover shrink-0 shadow-sm border border-slate-100 dark:border-slate-800" data-alt="Fresh vegetables in a market stall background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDssVLXmcrZHKaw61Zgi0RYYxDq2oYJwINaGEB9B3THRoxesO_SILSVt9isZGYiVZTicG22cJAMvZWqiDExONrkYfwH55MCtnn9F3ZML5Cts5E09IMwNacOiFKI66rEmnyTh5tHwvRUDOmZwWKtORlBkW5L7rBfNmCzh13PrbtmhR7NdIYP4rbx-MZrD25HKwbt2866iT8qGt_zCYhQOLRy4DHjl9PO_L55NcPHlCa2l_U34Mswr1DnF2u44rOvarl3HSP6K3O2rVIo');"></div>
+</div>
+<div class="h-px bg-slate-200 dark:bg-slate-800 w-full"></div>
+<!-- Horizontal Card 3 -->
+<div class="flex gap-4 group cursor-pointer">
+<div class="flex flex-col flex-1 justify-between py-1">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="text-[10px] font-bold text-primary tracking-wider uppercase">Daerah</span>
+<span class="w-1 h-1 rounded-full bg-slate-300"></span>
+<span class="text-[10px] text-slate-500 dark:text-slate-400">8 JAM LALU</span>
+</div>
+<h3 class="text-base font-bold text-slate-900 dark:text-slate-100 leading-snug line-clamp-2 group-hover:text-primary transition-colors">
+                                Proyek Strategis Nasional di Kalimantan Utara Mulai Masuk Tahap Final
+                            </h3>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1 mt-2">Gubernur pastikan penyerapan anggaran tepat sasaran sesuai jadwal.</p>
+</div>
+<div class="w-24 h-24 rounded-lg bg-center bg-cover shrink-0 shadow-sm border border-slate-100 dark:border-slate-800" data-alt="Construction site with heavy machinery work" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA-hQjCUQhG7ONIUu9ZZOqcegGqd0Vrmyg4sL49oIVS7gHvJiaRApqHFYAeWRSICX8_2Oyp3BzG2SDja7ovshszruXvw3zRmZ1YrVCU7BSROoibiWX8z8670mOldsL7Cj8jF6vkMZlXAhrZfHnkp9vLEZBiuGjO8Jy0BqSauEwarO4r4MRJpx5aFfWaeEoIFo5YZlMiXVUtq45s9VkQQUVfQWSyJ0WarFfdKnyT6UIFSUF-kdEQ1PO3oiaDWfPsknOOxT1sjJk9DE4c');"></div>
+</div>
+<!-- Trending Section (Mini Carousel) -->
+<div class="py-4">
+<h4 class="text-sm font-extrabold text-slate-900 dark:text-slate-100 mb-4 flex items-center gap-2 uppercase tracking-widest">
+<span class="material-symbols-outlined text-primary text-lg">trending_up</span>
+                        Sedang Hangat
+                    </h4>
+<div class="flex gap-4 overflow-x-auto hide-scrollbar -mx-4 px-4">
+<div class="min-w-[180px] bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-primary/5">
+<span class="text-2xl font-black text-primary/20 block mb-2">01</span>
+<p class="text-sm font-bold leading-snug line-clamp-3">Refinancing Utang Negara: Apa Dampaknya?</p>
+</div>
+<div class="min-w-[180px] bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-primary/5">
+<span class="text-2xl font-black text-primary/20 block mb-2">02</span>
+<p class="text-sm font-bold leading-snug line-clamp-3">Subsidi Energi BBM &amp; Listrik 2024</p>
+</div>
+<div class="min-w-[180px] bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-primary/5">
+<span class="text-2xl font-black text-primary/20 block mb-2">03</span>
+<p class="text-sm font-bold leading-snug line-clamp-3">Evaluasi Pajak Hiburan 75%</p>
+</div>
+</div>
+</div>
+<div class="h-px bg-slate-200 dark:bg-slate-800 w-full"></div>
+<!-- Horizontal Card 4 -->
+<div class="flex gap-4 group cursor-pointer pb-6">
+<div class="flex flex-col flex-1 justify-between py-1">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="text-[10px] font-bold text-primary tracking-wider uppercase">Global</span>
+<span class="w-1 h-1 rounded-full bg-slate-300"></span>
+<span class="text-[10px] text-slate-500 dark:text-slate-400">YESTERDAY</span>
+</div>
+<h3 class="text-base font-bold text-slate-900 dark:text-slate-100 leading-snug line-clamp-2 group-hover:text-primary transition-colors">
+                                Indonesia-ASEAN Kolaborasi Integrasi Pembayaran Lintas Batas
+                            </h3>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1 mt-2">Langkah strategis BI dalam menstabilkan nilai tukar Rupiah.</p>
+</div>
+<div class="w-24 h-24 rounded-lg bg-center bg-cover shrink-0 shadow-sm border border-slate-100 dark:border-slate-800" data-alt="Close up of various world currency banknotes" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBqpIV2PBpHsjsfAvQDeW0Fb6j4aoFQum-jFJ7gUQieP8POkDOh5-7edr1aYAYXHoh-fgsOIMKAZ21JVeHWkTmVIqsmNdEXxp6yK9htFlRxOAyHvuQOS_ycc2R8XOvuVXqBrecO0CZH3DcbTG10hgEKsgjF3Tk7SCRqBLGI2Lq6k4l53zi00y11ND9rUD4KHZP4SgI0w9N-ur9BTiqeZVDgrYvafMCtDRfuU0wqSftEAZ4EYKy7JnwrVDiSLVeZhC1zQghpAX6V3MO8');"></div>
+</div>
+</div>
+</main>
+<!-- Sticky Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 px-6 py-2 pb-6 z-50">
+<div class="flex justify-between items-center">
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 transition-all hover:text-primary" href="#">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-2xl fill-1">newspaper</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Berita</span>
+<div class="w-1 h-1 bg-primary rounded-full"></div>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 transition-all hover:text-primary" href="#">
+<div class="relative">
+<span class="material-symbols-outlined text-2xl">monitoring</span>
+<div class="absolute -top-1 -right-1 w-2 h-2 bg-primary rounded-full"></div>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Anggaran</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 transition-all hover:text-primary" href="#">
+<span class="material-symbols-outlined text-2xl">person</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Profil</span>
+</a>
+</div>
+</nav>
+</div>
+</body></html>

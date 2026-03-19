@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#E52B2B",
+              "background-light": "#FFFFFF",
+              "background-dark": "#0B0B0B",
+              "surface-dark": "#161616",
+              "slate-custom": "#1e293b",
+            },
+            fontFamily: {
+              "display": ["Newsreader", "serif"],
+              "sans": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {
+                "DEFAULT": "0px", 
+                "sm": "2px",
+                "lg": "4px", 
+                "xl": "8px", 
+                "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3 {
+            font-family: 'Newsreader', serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .border-thin {
+            border-width: 1px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-sans">
+<div class="relative flex min-h-screen w-full flex-col max-w-md mx-auto bg-background-light dark:bg-background-dark border-x border-slate-200 dark:border-white/10">
+<!-- Header -->
+<header class="sticky top-0 z-50 flex items-center bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md px-4 py-3 justify-between border-b border-slate-200 dark:border-white/10">
+<div class="flex size-10 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</div>
+<h1 class="text-slate-900 dark:text-white text-2xl font-semibold leading-tight tracking-tight flex-1 text-center italic">Jaga Anggaran</h1>
+<div class="flex w-10 items-center justify-end relative">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+<span class="absolute top-0.5 right-0 block h-2 w-2 rounded-full bg-primary ring-2 ring-background-dark"></span>
+</div>
+</header>
+<!-- Categories / Stories Style -->
+<div class="flex w-full overflow-x-auto hide-scrollbar px-4 py-5 gap-5 border-b border-slate-200 dark:border-white/10 bg-slate-50/50 dark:bg-white/[0.02]">
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="size-16 rounded-full p-[1px] bg-primary">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-full border-[3px] border-background-dark" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBI9xqOWyfpesAJpyG7GJdxvBEnfsiyN_JMCUC69Iw8KE8Gmp-XutA7DTYqhIJIswPgRIcM_z5ex2HundnFiGMPoy8m6nB-bkZflt9sci9yPgH6-dEyWpXOjoOo5o928fI0W-5-kPZlG8xurmc2iAgQoce_XHsSPmwOy5ui90XIRN7vvUAF5a-UCSOyMqxsx2mOX0916wW9fpnRb4zNfa8XNrhuAwkT1Sak5BNqp9tdusi2nwh3TMuyVPRKOLB0Y7UKFDQPQlKVTtj_");'></div>
+</div>
+<p class="text-[11px] font-bold tracking-tight">My Area</p>
+</div>
+<div class="flex flex-col items-center gap-2 shrink-0 opacity-60">
+<div class="size-16 rounded-full p-[1px] bg-slate-300 dark:bg-white/20">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-full border-[3px] border-background-dark" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBUV3zz0V8sZ_3FYvds1qS71PQ9U52pdi4FMtZ2B9Ej2HrHT8sHLxme6AEzmEKce0aCcXfMBXjsGKVYnSoeATNuZURsohBpESnLexsZZQqDKW3MHu18D7JcP3iff87I5MzMltqsHTnKo5Up5x2ozl2wKb5ONXTBW8MJCGs5cySdNH_7RUCizCsdfIvKkP9QGFWixclq84Js1A6bvzI8nvM_u83ZPwmb14AbPPGgtkyNlO2i1fSwpgwdBqVrMZBKscX4e6havh5BaKDu");'></div>
+</div>
+<p class="text-[11px] font-medium tracking-tight">Education</p>
+</div>
+<div class="flex flex-col items-center gap-2 shrink-0 opacity-60">
+<div class="size-16 rounded-full p-[1px] bg-slate-300 dark:bg-white/20">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-full border-[3px] border-background-dark" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDmCb5RvjygoGE0Siltlsv4nfh7JF7UaGE6P6bD2XM3ldhB9sIaAw1-_akHKuJhLr511Ujbr2V09Z3G9B1i7ovwv2YWeTU_G9kvOvr0SDl9G1jts7DoZcvbq21HcbI__DxfYTenHd4us__1wd6RnGWkho3Hi0-TxWxA5Ky4GsCU84TClNNHCtRqfKSAF3On6AKhGZqCBcEykeRstSwMLFIBXaDKa2_IwaRgPuoZ3yANue_MXVqfjauyVGYuzNe_hQQNW7i6d0QlamCo");'></div>
+</div>
+<p class="text-[11px] font-medium tracking-tight">Health</p>
+</div>
+<div class="flex flex-col items-center gap-2 shrink-0 opacity-60">
+<div class="size-16 rounded-full p-[1px] bg-slate-300 dark:bg-white/20">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-full border-[3px] border-background-dark" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC2ytnn2tnThwcTLNujgaKfD_9DiViRNCqXhGCG8lAzH_fXyLer71d7PVNBgvy9-PAr4Sg5zprKsWDYZZ1vZAh_HC0E7wobaHPEW4UbG1BlRNiE7xK2937-bBtCLIc66Ctu0DcjPQGZvgehXeiqeeUKyP3ecmlGSgS4ZSXFITe0QT_Wu24KSBDnR-kSJBZQiqbZhKul58V7dT650tROT0BHI-XyNEAMw8S9XYCAegY9sb4ktpnwKiHJJZWhFck_-ZgJgAZ2wkXo-bw2");'></div>
+</div>
+<p class="text-[11px] font-medium tracking-tight">Infrastructure</p>
+</div>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-2 px-4 py-4 overflow-x-auto hide-scrollbar">
+<button class="flex h-8 shrink-0 items-center justify-center rounded-sm bg-primary px-4">
+<p class="text-white text-xs font-bold uppercase tracking-widest">Feed Terbaru</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-1 rounded-sm border border-slate-200 dark:border-white/10 px-4 bg-transparent">
+<p class="text-xs font-semibold uppercase tracking-widest">Populer</p>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-1 rounded-sm border border-slate-200 dark:border-white/10 px-4 bg-transparent">
+<p class="text-xs font-semibold uppercase tracking-widest">Terverifikasi</p>
+<span class="material-symbols-outlined text-sm text-blue-500">verified</span>
+</button>
+</div>
+<!-- Feed Content -->
+<main class="flex flex-col pb-24">
+<!-- Post 1 -->
+<article class="flex flex-col border-b border-slate-200 dark:border-white/10">
+<div class="flex items-center justify-between px-4 py-4">
+<div class="flex items-center gap-3">
+<div class="size-9 rounded-full bg-slate-200 dark:bg-white/10 overflow-hidden border-thin border-slate-200 dark:border-white/10">
+<img alt="User" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3sx-P_7ZSuJNNjNmupOC8zP9yIMjFNSbJn5nKmsSSbl7Otb9Tx2GY4T73kQOmTFjhGb4AHrf-jND5n6f6pdnRX2bkTeJKXuP7qNYkjSQQt51w2KFo5G4oeEL5X8MmcM-ulV7qgVSkXTFeWtL3TsZ2HGg6a90VW1GqcI04vhznq1A3agziEYMlSdSk0heOQtxKdUNODg2wRCe4UM7qQ-vcmoX9Axq6M-DNoGUsEd_dtSAg6eJn651eGKHSt_egjP5a8fbSBWL52v6A"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="text-sm font-bold tracking-tight">Budi Cahyadi</span>
+<span class="material-symbols-outlined text-primary text-[14px] fill-1">verified</span>
+</div>
+<span class="text-[10px] uppercase font-bold tracking-tighter text-slate-500">2 JAM • JAKARTA SELATAN</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400">more_horiz</span>
+</div>
+<div class="w-full aspect-square bg-slate-100 dark:bg-surface-dark relative">
+<img alt="Construction" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrYLSZdSrR8YAUt6xxwoeDXGpjhcVGJgAuz_9B9AEkylvSXB1iDEfv1rtsY-BuCX-8VKpufFUYOcS6K-itb8EkX8uH4UJjRp_xLvNjCEL1GbcMDwI7-BkwAAx8ImK5ugV0TpZ6D6zvJJHLKW1vWSf9-zQDj77gbcySN8pDFaVX4XxYeDQ3Q1W3fEjfL8Q9IhYttiJg7IPRPwiQIvLSJXjx7-hDYjqeijDcGdmQsZL2K7qIFxDMq8ds-weqhVHsIE_PUiDpjas-2S1C"/>
+<div class="absolute top-4 left-4 bg-primary px-2.5 py-1 rounded-sm text-[9px] text-white flex items-center gap-1.5 font-black uppercase tracking-widest shadow-xl">
+<span class="material-symbols-outlined text-xs">warning</span> Proyek Bermasalah
+                    </div>
+</div>
+<div class="px-4 py-5 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-5">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+<span class="material-symbols-outlined text-2xl">chat_bubble</span>
+<span class="material-symbols-outlined text-2xl">send</span>
+</div>
+<span class="material-symbols-outlined text-2xl">bookmark</span>
+</div>
+<div class="text-xs font-black uppercase tracking-wider">1,240 Warga Menyukai</div>
+<div class="flex flex-wrap gap-2">
+<span class="border border-slate-200 dark:border-white/10 text-[9px] px-2 py-0.5 rounded-sm font-bold uppercase tracking-widest text-slate-500">#INFRASTRUKTUR</span>
+<span class="border border-primary/30 text-primary text-[9px] px-2 py-0.5 rounded-sm font-bold uppercase tracking-widest">IDR 4.2M</span>
+</div>
+<p class="text-[15px] leading-relaxed text-slate-800 dark:text-slate-200">
+<span class="font-black">budicahyadi</span> Renovasi Jembatan Desa Sukamaju terlihat mangkrak. Sudah 3 bulan tidak ada aktivitas pekerja, padahal papan proyek bilang selesai Desember.
+                    </p>
+<button class="text-slate-500 text-[11px] font-semibold uppercase tracking-widest text-left">Lihat 84 Komentar</button>
+<!-- Validation Action -->
+<div class="mt-2 bg-slate-50 dark:bg-white/[0.03] border-thin border-slate-200 dark:border-white/10 p-4 rounded-sm">
+<div class="flex items-center justify-between mb-3">
+<span class="text-[10px] font-black text-primary uppercase tracking-widest">Validasi Warga</span>
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">44 Suara</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="bg-primary text-white text-[11px] font-black py-2 rounded-sm uppercase tracking-widest">Akurat (42)</button>
+<button class="border border-slate-200 dark:border-white/10 text-[11px] font-black py-2 rounded-sm uppercase tracking-widest">Tidak (2)</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Post 2 -->
+<article class="flex flex-col border-b border-slate-200 dark:border-white/10">
+<div class="flex items-center justify-between px-4 py-4">
+<div class="flex items-center gap-3">
+<div class="size-9 rounded-full bg-slate-200 dark:bg-white/10 overflow-hidden border-thin border-slate-200 dark:border-white/10">
+<img alt="User" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQTIR3FXRlRS4EHQ5Gdqd7DY8IXWb4IsfWl35CIg3l1pwb4tmfxsYCP42x4h3qpGHKB6rH8CZ7kmnV1qy3U2DVTPU8w9EI8XbXC_E2ZHy0ewcmcetB9LtTZdb4vw8PUlit7YbF94u8SlBeSa3HWlVd8k45MHnElxsZnC5L0isNlorb0XCVnwfhTPbgDTtfSr-EROK-bph1mufwTQucdt9q-nG3xen8EXQpnfcOtRQZGLH7ZXODUxhnBkKDJxe8VuDDYh3FMoYy0h1z"/>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold tracking-tight">Ani Setiawati</span>
+<span class="text-[10px] uppercase font-bold tracking-tighter text-slate-500">5 JAM • BANDUNG</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400">more_horiz</span>
+</div>
+<div class="w-full aspect-square bg-slate-100 dark:bg-surface-dark relative">
+<img alt="School" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZlFXKPdkQVS468UJjzVyi87Pkfu2KxMpWcy1AvsvNMGtzwkCXWrk97Td3rdw8kErDNJbzZw6nDJvY9CuVPG7HCz4UgcFupVUxsUmK0XAFD3VpfZoXOMPY0wUifbiQLRcNAcnLqJsu5b_8m5ZLMsi7LWYQuBLK9NVP9jedbWZej12cWG4DLgEmvSc9YmcHF51vAt7u-sHF__qSjRF5_NI_qMVOwiziKhqBtY_VqUpCCME0MC82-OwqM7K5dOsQCGNvsFOpAm_PIteh"/>
+<div class="absolute top-4 left-4 bg-emerald-600 px-2.5 py-1 rounded-sm text-[9px] text-white flex items-center gap-1.5 font-black uppercase tracking-widest shadow-xl">
+<span class="material-symbols-outlined text-xs">verified</span> Proyek Selesai
+                    </div>
+</div>
+<div class="px-4 py-5 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-5">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+<span class="material-symbols-outlined text-2xl">chat_bubble</span>
+<span class="material-symbols-outlined text-2xl">send</span>
+</div>
+<span class="material-symbols-outlined text-2xl">bookmark</span>
+</div>
+<div class="text-xs font-black uppercase tracking-wider">856 Warga Menyukai</div>
+<p class="text-[15px] leading-relaxed text-slate-800 dark:text-slate-200">
+<span class="font-black">anis_setia</span> Senang melihat SDN 04 Bandung sudah selesai direnovasi tepat waktu. Ruang kelas sekarang jauh lebih layak!
+                    </p>
+</div>
+</article>
+</main>
+<!-- Sticky Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 flex h-20 w-full max-w-md mx-auto items-center justify-around border-t border-slate-200 dark:border-white/10 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-lg px-4 pb-6 pt-3">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-2xl fill-1">home</span>
+<p class="text-[9px] font-black uppercase tracking-widest">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined text-2xl">search</span>
+<p class="text-[9px] font-bold uppercase tracking-widest">Explore</p>
+</a>
+<div class="flex flex-1 flex-col items-center justify-center -mt-10">
+<button class="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-2xl shadow-primary/40 border-[4px] border-background-dark">
+<span class="material-symbols-outlined text-3xl font-bold">add</span>
+</button>
+</div>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined text-2xl">monitoring</span>
+<p class="text-[9px] font-bold uppercase tracking-widest">Stats</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined text-2xl">person</span>
+<p class="text-[9px] font-bold uppercase tracking-widest">Profil</p>
+</a>
+</nav>
+</div>
+</body></html>

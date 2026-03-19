@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jaga Anggaran - Public Budget Watch</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0c90e9",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101b22",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Top Header -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">shield_person</span>
+<h1 class="text-xl font-bold tracking-tight">Jaga Anggaran</h1>
+</div>
+<div class="flex gap-3">
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+<!-- Filter Tabs -->
+<div class="flex gap-2 p-3 overflow-x-auto no-scrollbar border-t border-slate-200 dark:border-slate-800">
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-4">
+<p class="text-white text-sm font-medium">All Feeds</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-800 px-4">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium">Education</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-800 px-4">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium">Health</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-800 px-4">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium">Roads</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-800 px-4">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium">Tenders</p>
+</button>
+</div>
+</header>
+<!-- Main Content Feed -->
+<main class="flex-1 pb-24 overflow-y-auto">
+<!-- Post 1 -->
+<article class="p-4 border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+</div>
+<div>
+<h3 class="font-bold text-sm">Transparency Watch Bandung</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">2 hours ago • Infrastructure</p>
+</div>
+<button class="ml-auto">
+<span class="material-symbols-outlined text-slate-400">more_horiz</span>
+</button>
+</div>
+<div class="mb-3">
+<div class="relative w-full aspect-video rounded-xl overflow-hidden mb-3 bg-slate-800">
+<img class="w-full h-full object-cover opacity-80" data-alt="A modern bridge under construction in Bandung" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiV8cpRvdD6Y1m0cbG66Q1zqnxas6YY1_HyeNm1FVdFbtJ-MllCZpezjLbvVaTf7RNbvFE9QD6RJaphEJfNeJV1Z9L45o_rPrwU0x6oj5_Y9__0K5GhqC6iCsNqIn89ocBCpJ5vw5_nLYz6F7ThrKGeZ7AmpQjTFOCV73EweoM2OmNcciDq1PYcrmRcHHR-KoxwfEtAFwIXYV-Ya8DnSCPr2wEc3LCEx9zSgWOV3gqYbkGxuun6WOmGCDwSl3cqqWWG9g3izjP4Hpk"/>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Unverified</span>
+<span class="bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">50B IDR</span>
+</div>
+</div>
+<h2 class="text-lg font-bold leading-tight mb-2">Proposed Pasupati Bridge Renovation Analysis</h2>
+<p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                    Local government allocated 50B IDR for aesthetic upgrades. Community reports suggest structural repairs are more urgent. Material costs appear inflated by 20% compared to market rates.
+                </p>
+</div>
+<div class="flex items-center justify-between py-2 border-t border-slate-100 dark:border-slate-800/50 mt-4">
+<div class="flex gap-4">
+<button class="flex items-center gap-1.5 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">thumb_up</span>
+<span class="text-xs font-bold">1.2k</span>
+</button>
+<button class="flex items-center gap-1.5 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">chat_bubble</span>
+<span class="text-xs font-bold">450</span>
+</button>
+<button class="flex items-center gap-1.5 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">share</span>
+<span class="text-xs font-bold">89</span>
+</button>
+</div>
+<button class="flex items-center gap-1 px-3 py-1.5 bg-primary/10 text-primary rounded-lg text-xs font-bold">
+<span class="material-symbols-outlined text-sm">fact_check</span>
+                    VERIFY
+                </button>
+</div>
+</article>
+<!-- Post 2 -->
+<article class="p-4 border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">school</span>
+</div>
+<div>
+<h3 class="font-bold text-sm">Education Guard</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">5 hours ago • Education</p>
+</div>
+<button class="ml-auto">
+<span class="material-symbols-outlined text-slate-400">more_horiz</span>
+</button>
+</div>
+<div class="mb-3">
+<div class="relative w-full aspect-video rounded-xl overflow-hidden mb-3 bg-slate-800">
+<img class="w-full h-full object-cover opacity-80" data-alt="A primary school building with budget data overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxAzI7r0XMA0HiPTV4WAVuOoWFML8q52KLPGMai1cyLa57COpCq8LI-drRGTCQaVfRigSrcK9rUZklD61rdLQZRnIGWo6E8iTKTqYbi2K3mVJZPOxhiEJau75vIKDmcR1t57hJ0FqodXf_wKwg_ngTOT93ebkaoHQZw6w0UGkVU9G2YCPq3G7xfT2TtLLH0a_4D7LUXF8plrFl7Aa3EHNO7PBwOOngewDFqXi5apQWazr7bJHapzCanzBP2zLyS4UsQC272t3KWXhX"/>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Verified</span>
+<span class="bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">12B IDR</span>
+</div>
+</div>
+<h2 class="text-lg font-bold leading-tight mb-2">School Digitalization Program: Jakarta Timur</h2>
+<p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                    Monitoring the distribution of 5,000 tablets to public schools. Current delivery status is at 85%. All procurement receipts are public.
+                </p>
+</div>
+<div class="flex items-center justify-between py-2 border-t border-slate-100 dark:border-slate-800/50 mt-4">
+<div class="flex gap-4">
+<button class="flex items-center gap-1.5 text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px] fill-current">thumb_up</span>
+<span class="text-xs font-bold">2.8k</span>
+</button>
+<button class="flex items-center gap-1.5 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-[20px]">chat_bubble</span>
+<span class="text-xs font-bold">128</span>
+</button>
+<button class="flex items-center gap-1.5 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+<div class="text-green-500 text-[10px] font-bold uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+                    Clean Budget
+                </div>
+</div>
+</article>
+<!-- Post 3 (Text Only) -->
+<article class="p-4 border-b border-slate-200 dark:border-slate-800 bg-primary/5">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-amber-500">warning</span>
+<h3 class="font-bold text-sm text-amber-500">Urgent Verification Needed</h3>
+</div>
+<h2 class="text-lg font-bold leading-tight mb-2">Puskesmas Renovation Anomaly</h2>
+<p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
+                We've flagged a recurring 500M IDR "Consultation Fee" in multiple sub-district healthcare center projects. Does anyone have the official vendor list?
+            </p>
+<div class="flex items-center justify-between">
+<p class="text-xs text-slate-500 dark:text-slate-400 italic">Posted by Citizen_Watchdog</p>
+<button class="px-4 py-1.5 bg-amber-500/20 text-amber-500 rounded-lg text-xs font-bold">REPORT ANOMALY</button>
+</div>
+</article>
+</main>
+<!-- Sticky Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 pb-safe">
+<div class="flex justify-around items-center h-16 max-w-md mx-auto">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-current">home</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Search</span>
+</a>
+<!-- Floating Action Button Style -->
+<div class="relative -top-4">
+<button class="w-12 h-12 bg-primary text-white rounded-xl shadow-lg shadow-primary/40 flex items-center justify-center">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">newspaper</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">News</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Profile</span>
+</a>
+</div>
+<div class="h-4 bg-background-light dark:bg-background-dark"></div> <!-- Spacer for mobile home bar -->
+</nav>
+<!-- Bottom Margin for Navbar -->
+<div class="h-20 shrink-0"></div>
+</body></html>

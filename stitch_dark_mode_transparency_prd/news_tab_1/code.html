@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>News - Jaga Anggaran</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0095F6",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#000000",
+                        "surface": "#121212",
+                        "surface-hover": "#1A1A1A",
+                        "border-color": "#262626",
+                        "text-main": "#F5F5F5",
+                        "text-muted": "#A8A8A8",
+                        "verified": "#00E676",
+                        "review": "#FFEA00",
+                        "disputed": "#FF1744"
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "4px",
+                        "sm": "4px",
+                        "md": "4px",
+                        "lg": "4px",
+                        "xl": "4px",
+                        "2xl": "4px",
+                        "3xl": "4px",
+                        "full": "4px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: theme('colors.background-dark');
+            color: theme('colors.text-main');
+        }
+        h1, h2, h3, h4, h5, h6, .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        .masonry-grid {
+            column-count: 2;
+            column-gap: 1.5rem;
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Webkit scrollbar styling for a cleaner dark mode look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: theme('colors.background-dark'); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: theme('colors.border-color'); 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: theme('colors.text-muted'); 
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-text-main min-h-screen antialiased selection:bg-primary/30 selection:text-primary">
+<div class="flex h-screen w-full mx-auto max-w-[1200px] overflow-hidden">
+<!-- Left Sidebar (Fixed) -->
+<aside class="w-[244px] shrink-0 border-r border-border-color h-full flex flex-col justify-between py-6 px-4 bg-background-dark sticky top-0">
+<div class="flex flex-col gap-8">
+<!-- Logo -->
+<div class="px-3">
+<h1 class="text-text-main text-2xl font-bold font-display tracking-tight">Jaga Anggaran</h1>
+</div>
+<!-- Navigation -->
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-4 px-3 py-3 rounded hover:bg-surface-hover transition-colors group" href="#">
+<span class="material-symbols-outlined text-text-main group-hover:text-primary transition-colors text-[28px]">home</span>
+<span class="text-text-main text-base font-medium group-hover:text-primary transition-colors">Home</span>
+</a>
+<a class="flex items-center gap-4 px-3 py-3 rounded hover:bg-surface-hover transition-colors group" href="#">
+<span class="material-symbols-outlined text-text-main group-hover:text-primary transition-colors text-[28px]">search</span>
+<span class="text-text-main text-base font-medium group-hover:text-primary transition-colors">Search</span>
+</a>
+<a class="flex items-center gap-4 px-3 py-3 rounded bg-surface border border-border-color" href="#">
+<span class="material-symbols-outlined text-text-main text-[28px] fill-current">newspaper</span>
+<span class="text-text-main text-base font-bold">News</span>
+</a>
+<a class="flex items-center gap-4 px-3 py-3 rounded hover:bg-surface-hover transition-colors group" href="#">
+<span class="material-symbols-outlined text-text-main group-hover:text-primary transition-colors text-[28px]">person</span>
+<span class="text-text-main text-base font-medium group-hover:text-primary transition-colors">Profile</span>
+</a>
+</nav>
+</div>
+<!-- CTA -->
+<button class="w-full flex items-center justify-center h-12 rounded bg-primary text-white text-sm font-bold font-display hover:bg-primary/90 transition-colors focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-dark">
+                Report Budget
+            </button>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto h-full px-8 py-8">
+<div class="max-w-[800px] mx-auto w-full flex flex-col gap-8">
+<!-- Page Header -->
+<div class="flex items-center justify-between border-b border-border-color pb-4">
+<h2 class="text-2xl font-bold font-display text-text-main">Editorial &amp; News</h2>
+<span class="text-sm text-text-muted font-medium">Curated Updates</span>
+</div>
+<!-- Featured Article -->
+<article class="w-full group cursor-pointer flex flex-col gap-4">
+<div class="w-full aspect-video rounded overflow-hidden relative border border-border-color">
+<div class="absolute inset-0 bg-gradient-to-tr from-surface to-surface-hover z-0"></div>
+<img alt="Aerial view of highway construction project" class="w-full h-full object-cover relative z-10 transition-transform duration-500 group-hover:scale-[1.05]" data-alt="Highway construction site from above" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi_8iQhZabxEx7CR0epFKF6uY5JcKRsvzhMeKe_0A809t-kJF8DtWMwkHXKLoiov3nVdjk3uEymjwT22tlwIuO5DnpNlF8QpQ4gWqT9Vu0yE4y3TIuWrP9k3xr5i1J06k5VjmU5ZzUm14dXCSd5wOG954DW3qwJceB_AMJNGlVAtAxsR15iK1fFq-bLk29s_Ky69erJm-_U75Gkaws2bJof2iC-9jx8RKXLBOMtLRWuxU3sgY-rIIeRyqK84aUIcM66g5CUr12bv7y"/>
+<!-- Overlay Tag -->
+<div class="absolute top-4 left-4 z-20">
+<span class="px-3 py-1.5 bg-surface text-primary text-xs font-bold font-display rounded border border-border-color uppercase tracking-wider shadow-sm">
+                                APBN 2024
+                            </span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-[32px] font-bold font-display leading-tight tracking-tight text-text-main group-hover:text-primary transition-colors">
+                            APBN 2024 Breakdown: Where is the Infrastructure Budget Going?
+                        </h3>
+<p class="text-text-muted text-base leading-relaxed max-w-[90%]">
+                            An in-depth look at the newly released national budget allocations for major infrastructure projects across the archipelago, highlighting key shifts in regional focus and funding sources.
+                        </p>
+<!-- Source Badge -->
+<div class="flex items-center gap-2 mt-2">
+<div class="w-5 h-5 rounded-full bg-surface border border-border-color flex items-center justify-center overflow-hidden">
+<span class="text-[10px] font-bold text-text-main">KPK</span>
+</div>
+<span class="text-text-muted text-[13px] font-medium">KPK Watch • 2 hours ago</span>
+</div>
+</div>
+</article>
+<div class="w-full h-px bg-border-color my-4"></div>
+<!-- News Grid (Masonry) -->
+<div class="masonry-grid">
+<!-- Grid Item 1 -->
+<article class="masonry-item group cursor-pointer flex flex-col gap-3 bg-surface p-3 rounded border border-border-color hover:border-primary/50 transition-colors">
+<div class="w-full aspect-video rounded overflow-hidden relative bg-surface-hover">
+<img alt="Jakarta MRT train at station" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]" data-alt="Jakarta MRT train arriving" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrhDvYusejuEBj6NhrSnpY28n1-S2DJbtK2Vh-zXNzwGIQvZC7u8I6JBkUWZNFFaAT9mTx92IsdCXswtLIaVFYyAMSeaTi-DD8G66tTWG2S9PKUyA2I7PpNVDwA-a0aYjmJ13KRdmvJfeM3CxyLNNYIbpFpSPW8N647r8xk03K2RVimOwmRkmlq1UT9S4GzF8C9uK4isReLp_SLrfokU1WFGYSFrEcWNXzZfT3fVTfDYK1xcIgVK9tKcOBxMo2TX5FQ37xYIuoEbsD"/>
+<div class="absolute top-3 left-3 z-20">
+<span class="px-2 py-1 bg-surface/90 backdrop-blur-sm text-primary text-[11px] font-bold font-display rounded border border-border-color uppercase tracking-wider">
+                                    DKI Jakarta
+                                </span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5 px-1">
+<h4 class="text-xl font-bold font-display leading-snug text-text-main group-hover:text-primary transition-colors">
+                                Jakarta Transport Subsidies Shift Focus
+                            </h4>
+<p class="text-text-muted text-[15px] leading-relaxed line-clamp-2">
+                                Analysis of the new MRT and TransJakarta budget allocations and their impact on daily commuters facing fare changes.
+                            </p>
+<div class="flex items-center gap-2 mt-1">
+<div class="w-4 h-4 rounded-full bg-[#1e293b] flex items-center justify-center text-[8px] font-bold">JP</div>
+<span class="text-text-muted text-[13px]">Jakarta Post • 3h ago</span>
+</div>
+</div>
+</article>
+<!-- Grid Item 2 -->
+<article class="masonry-item group cursor-pointer flex flex-col gap-3 bg-surface p-3 rounded border border-border-color hover:border-primary/50 transition-colors">
+<div class="w-full aspect-[4/3] rounded overflow-hidden relative bg-surface-hover">
+<img alt="Financial documents and calculator on desk" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]" data-alt="Financial documents on desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrobnGDRYVf1axcaNjrVp-ouJlBatzSUJ0JQ2pGNzzHLE0CL8Wm4buCtym05kaQI39900J43-51wZna7BNkWyWL8cM_WtXR3YzscKnStRf6BvEzikRZlkHwtXJkas5GEiKJIs0aWj22frkl7X_uOajwSex37BzdO3eDMqwMlaaIOph7TLSmrWRNnfelfqNLQNOaJU20AXDMoMxoAj_C7iacYCI_BGq-yDKrqU2ELjMmPd9mswQeqjIV6rE8gyNodRp9EUacnRIhun8"/>
+<div class="absolute top-3 left-3 z-20">
+<span class="px-2 py-1 bg-surface/90 backdrop-blur-sm text-primary text-[11px] font-bold font-display rounded border border-border-color uppercase tracking-wider">
+                                    Policy
+                                </span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5 px-1">
+<h4 class="text-xl font-bold font-display leading-snug text-text-main group-hover:text-primary transition-colors">
+                                Kemenkeu's New Transparency Mandate
+                            </h4>
+<p class="text-text-muted text-[15px] leading-relaxed line-clamp-2">
+                                Ministry of Finance announces new mandatory reporting tools for regional governments to track spending in real-time.
+                            </p>
+<div class="flex items-center gap-2 mt-1">
+<div class="w-4 h-4 rounded-full bg-[#991b1b] flex items-center justify-center text-[8px] font-bold">T</div>
+<span class="text-text-muted text-[13px]">Tempo • 5h ago</span>
+</div>
+</div>
+</article>
+<!-- Grid Item 3 -->
+<article class="masonry-item group cursor-pointer flex flex-col gap-3 bg-surface p-3 rounded border border-border-color hover:border-primary/50 transition-colors">
+<div class="w-full aspect-[3/2] rounded overflow-hidden relative bg-surface-hover">
+<img alt="Damaged rural road with potholes" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]" data-alt="Damaged rural road" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm35LKsecettUk15s3pScVIC9WAv_Vs0AJBLh9ATP7FP_VKnASa-SIcKTmGCRn60Orp1OdddrUcuoSiyeE6g7Gbn3_US0o9F8k7EDeH0xdVlcx1GFSxLbSZN-cP0GmC8pqorH6q-T0afmr2YllNRRVqbgeAlPUOaoQ56VATqwwLCAtOlAxyK4g7X-vFdslnE5jVHG31TYAJDdrbcacYAz-ZQ9TBW9qoKikyaRF1-pcGfoY9Kc-yzWvLSfYeGNp2R-xA75g_znl9WtS"/>
+<div class="absolute top-3 left-3 z-20">
+<span class="px-2 py-1 bg-surface/90 backdrop-blur-sm text-disputed text-[11px] font-bold font-display rounded border border-border-color uppercase tracking-wider">
+                                    Investigation
+                                </span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5 px-1">
+<h4 class="text-xl font-bold font-display leading-snug text-text-main group-hover:text-primary transition-colors">
+                                Local Road Repair Budgets Disputed in West Java
+                            </h4>
+<p class="text-text-muted text-[15px] leading-relaxed line-clamp-2">
+                                Citizens flag massive discrepancies in provincial spending reports versus actual on-the-ground conditions for rural infrastructure.
+                            </p>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-[14px] text-text-muted">groups</span>
+<span class="text-text-muted text-[13px]">Citizen Report • 1d ago</span>
+</div>
+</div>
+</article>
+<!-- Grid Item 4 -->
+<article class="masonry-item group cursor-pointer flex flex-col gap-3 bg-surface p-3 rounded border border-border-color hover:border-primary/50 transition-colors">
+<div class="w-full aspect-square rounded overflow-hidden relative bg-surface-hover">
+<img alt="Modern hospital building exterior" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]" data-alt="Hospital building exterior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiKNkpzf3I67YqQhIvCplml0RvsMeF50eabv1duPSbFpXjQDM1rr-baTlZtEBxhqWxCh6i8rhj0mJGretQsSrobzRe6FSfcgtLg9zkVMr6Vz4ocAIb8kc4AhMglTSyIb-v72DK5fXdGQ89-F8Txy-NbCHJW4j91El1GedXSQtKk_-QIqAyxwj_A1bAbg6WmPbu9Q1Kwx6OfrYZ5fzjToF5U_qtCA7tDaJwLR5W37velduOdUc_u5fd3DTy5jJ3uXP-_1oCM3zWu050"/>
+<div class="absolute top-3 left-3 z-20">
+<span class="px-2 py-1 bg-surface/90 backdrop-blur-sm text-primary text-[11px] font-bold font-display rounded border border-border-color uppercase tracking-wider">
+                                    Healthcare
+                                </span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5 px-1">
+<h4 class="text-xl font-bold font-display leading-snug text-text-main group-hover:text-primary transition-colors">
+                                Healthcare Budget Highlights
+                            </h4>
+<p class="text-text-muted text-[15px] leading-relaxed line-clamp-2">
+                                Breaking down what the 2024 national health budget means for public clinics (Puskesmas) and regional hospitals.
+                            </p>
+<div class="flex items-center gap-2 mt-1">
+<div class="w-4 h-4 rounded-full bg-[#0369a1] flex items-center justify-center text-[8px] font-bold text-white">K</div>
+<span class="text-text-muted text-[13px]">Kompas • 2d ago</span>
+</div>
+</div>
+</article>
+</div>
+<!-- Load More -->
+<div class="py-8 flex justify-center">
+<button class="px-6 py-2 rounded border border-border-color text-text-main text-sm font-bold font-display hover:bg-surface transition-colors focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-dark">
+                        Load More Stories
+                    </button>
+</div>
+</div>
+</main>
+</div>
+</body></html>

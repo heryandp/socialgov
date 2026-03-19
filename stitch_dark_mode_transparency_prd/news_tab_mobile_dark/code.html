@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0c90e9",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101b22",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex min-h-screen w-full flex-col max-w-md mx-auto bg-background-light dark:bg-background-dark shadow-2xl">
+<!-- Sticky Top Header -->
+<header class="sticky top-0 z-20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center p-4 justify-between">
+<div class="text-primary flex size-10 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-3xl">search</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight flex-1 text-center">Jaga Anggaran</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="flex items-center justify-center rounded-full bg-primary/10 p-2">
+<span class="material-symbols-outlined text-primary">account_circle</span>
+</button>
+</div>
+</div>
+<!-- Categories Scroll -->
+<div class="flex overflow-x-auto hide-scrollbar px-4 gap-6 border-b border-slate-200 dark:border-slate-800">
+<a class="flex flex-col items-center justify-center border-b-2 border-primary py-3 shrink-0" href="#">
+<p class="text-primary text-sm font-bold tracking-wide">Terbaru</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent py-3 shrink-0" href="#">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium tracking-wide">Nasional</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent py-3 shrink-0" href="#">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium tracking-wide">Investigasi</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent py-3 shrink-0" href="#">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium tracking-wide">Daerah</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent py-3 shrink-0" href="#">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium tracking-wide">Tutorial</p>
+</a>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 pb-24">
+<!-- Featured News Hero -->
+<div class="p-4">
+<div class="relative group overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 aspect-[16/10]">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="High angle view of modern city infrastructure development" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB-wXwD0iXFz3qzZkk6vtNJ14sbOhRjF7-GEqMPfdhsaeJ4czM8WWPoG3RLU3yifrP9WvroKYo_FHDDMvz9x3ULQ6cC3F4tnp0X36zxlKks16uwSCdnfG3vSUrJ5hlSf2wMefLWyEUQSYkC1UAdwyOYXU4T3cyJbSsURLjkgCaS6xGO3T29DoMwXGgoaWrjrKw322MpiB8P6Ni_vDT-vc9ds-znjO1608aiJZeg7uBnBlhTFM3gUka9Rwy_GUqZWuJrjkTsdAnanHfy');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-4 w-full">
+<span class="inline-block px-2 py-1 mb-2 text-[10px] font-bold uppercase tracking-widest bg-primary text-white rounded">Investigasi</span>
+<h3 class="text-white text-xl font-bold leading-snug">Menelusuri Aliran Dana Siluman Proyek Tol Lintas Sumatera</h3>
+<div class="flex items-center gap-2 mt-2 text-slate-300 text-xs">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>12 Menit yang lalu</span>
+</div>
+</div>
+</div>
+</div>
+<!-- List of Editorial News -->
+<div class="px-4 space-y-6">
+<!-- News Item 1 -->
+<div class="flex gap-4 items-start group">
+<div class="flex-1 space-y-1">
+<p class="text-primary text-[10px] font-bold uppercase tracking-wider">Nasional</p>
+<h4 class="text-slate-900 dark:text-slate-100 text-base font-bold leading-tight group-active:text-primary">DPR Sahkan Anggaran Bansos Rp 496 Triliun untuk Tahun 2024</h4>
+<p class="text-slate-500 dark:text-slate-400 text-xs line-clamp-2">Pemerintah dan Badan Anggaran DPR RI sepakat meningkatkan alokasi perlindungan sosial...</p>
+<p class="text-slate-400 dark:text-slate-500 text-[10px] pt-1">Redaksi Jaga • 2 Jam yang lalu</p>
+</div>
+<div class="w-24 h-24 shrink-0 rounded-lg bg-slate-200 dark:bg-slate-800 bg-cover bg-center" data-alt="Stack of Indonesian Rupiah banknotes on table" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBIhgS8LRZwP_cV8TnKT2Za7a6MNeH9jxxpvOdDdMylzUpvwFp9d-QdK4yBNQqzuptaY9xWXPge-6vPFVsTFycpwjvDHUnLZ_C1Jrskz-ZIh0ox1OUm8e_NlTtgkbTg-2WAYF8Q4q0EnWnxm9mUlBP2ORKYgjkyFlNs7hA99Eo2w1cLCC9kRCoQ25BMm6gtO8vPJtXhO9MIO_MXwEeNgohdhRLDaQQFOd6POz-pNPYB11gr84G2QaqFqrjlum2NXXHlnWpOP4Eq2OWC');"></div>
+</div>
+<hr class="border-slate-200 dark:border-slate-800"/>
+<!-- News Item 2 -->
+<div class="flex gap-4 items-start group">
+<div class="flex-1 space-y-1">
+<p class="text-primary text-[10px] font-bold uppercase tracking-wider">Transparansi</p>
+<h4 class="text-slate-900 dark:text-slate-100 text-base font-bold leading-tight group-active:text-primary">E-Budgeting: Cara Rakyat Pantau Setiap Rupiah Pajak</h4>
+<p class="text-slate-500 dark:text-slate-400 text-xs line-clamp-2">Inovasi baru dalam portal Jaga Anggaran memudahkan akses data real-time APBN dan APBD...</p>
+<p class="text-slate-400 dark:text-slate-500 text-[10px] pt-1">Tim IT Jaga • 5 Jam yang lalu</p>
+</div>
+<div class="w-24 h-24 shrink-0 rounded-lg bg-slate-200 dark:bg-slate-800 bg-cover bg-center" data-alt="Data visualization charts on a digital screen" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC6qCpfljINQFRbYGv3zVQATzaEzTYjn939bGbcesjBqRh9tmLWBAt65DV6xXt1DrSBMi05Iv4e-kYcMJEHdBo3T_X45QfwKyOI0tpCO2CBYKkyQWY2aN_ilMLMhT0FW5r32e-6Eq75RLfh47gga9kkQBS6JNtNZAAVbj7cgDJn-FkwBLze-iB_pb5K5Uynp0qRsa78u8m7vyuSd4FA7kOKOncTcbiLyL4NDPR39uIpfMNNtg0HGp0yEi6oYcRDiH4bIV7SpOsat7-0');"></div>
+</div>
+<hr class="border-slate-200 dark:border-slate-800"/>
+<!-- News Item 3 (Small Headline style) -->
+<div class="flex gap-4 items-start group">
+<div class="flex-1 space-y-1">
+<p class="text-primary text-[10px] font-bold uppercase tracking-wider">Opini</p>
+<h4 class="text-slate-900 dark:text-slate-100 text-base font-bold leading-tight group-active:text-primary">Mengapa Defisit Anggaran Bisa Menjadi Bom Waktu?</h4>
+<p class="text-slate-500 dark:text-slate-400 text-xs line-clamp-2">Analis ekonomi memperingatkan risiko penambahan utang luar negeri yang tidak terkontrol...</p>
+<p class="text-slate-400 dark:text-slate-500 text-[10px] pt-1">Andi Pratama • 8 Jam yang lalu</p>
+</div>
+<div class="w-24 h-24 shrink-0 rounded-lg bg-slate-200 dark:bg-slate-800 bg-cover bg-center" data-alt="Person signing important financial documents in office" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5AZjVp-oOywqa2gK7fMq8DpaUJrytWh4LsY1oTK8GRYq7rEUYMWJKSKf6S1NdZDfWwnHOqVPHPi9pOZIzAp09iJ9hNjQMZU2GAVKShrFOpmxwFvsZWZUrSFI5ghryfm7xScT0aJuhfABRfkZzBt3Zm3oyu2t50P1DjE5cNkthtAEy5AG4mLFfhh7hdkHo39AguoXWhUJXNnqY4_CStMWOwv5FlrGOg0LdOs9yaV0XUrDlf2zlOmxLtTIspeZE07zKKckN72sTfoE0');"></div>
+</div>
+<!-- Featured Section 2 -->
+<div class="bg-primary/10 rounded-xl p-4 mt-8 border border-primary/20">
+<div class="flex justify-between items-center mb-4">
+<h5 class="text-slate-900 dark:text-slate-100 font-bold text-sm">Laporan Khusus: IKN</h5>
+<span class="text-primary text-[10px] font-bold">LIHAT SEMUA</span>
+</div>
+<div class="flex gap-3 overflow-x-auto hide-scrollbar">
+<div class="min-w-[200px] bg-background-light dark:bg-background-dark p-3 rounded-lg border border-slate-200 dark:border-slate-800">
+<div class="h-24 w-full bg-slate-300 dark:bg-slate-700 rounded mb-2 bg-cover bg-center" data-alt="Construction cranes at a large building site" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC1hbDB4INDBmn7V_szE2aEB1vJeTG-W0XT3zCM_7jLuHxwAvLpxzdmA3aOYyd7ZmO0QTaq4nzQmkwpiuazNELO9W1bdaqvjE__YMjyfSU9Z95tlVN1hO4n2FAbiOEE8CKPFiWO9fR78stPDe46B6wx8uI9Jsvwezjqb28vWX30bJCXN95JaknB2RlQfAOfowu_IpOlbeDOArrbyMvPwtuSKXR_fDRZRKDxVK4RM0iTBqWpz4rwNBtMe3Pta-LgPiZBTRZl67L0KM8C');"></div>
+<h6 class="text-xs font-bold leading-tight line-clamp-2">Rincian Biaya Infrastruktur Dasar Tahap 1</h6>
+</div>
+<div class="min-w-[200px] bg-background-light dark:bg-background-dark p-3 rounded-lg border border-slate-200 dark:border-slate-800">
+<div class="h-24 w-full bg-slate-300 dark:bg-slate-700 rounded mb-2 bg-cover bg-center" data-alt="Aerial view of city urban planning model" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBwvjW0aHiTXQtHlcXJ5Z9SdAwaQ0jgRDXh0MRn50rlMy4cXL6tBSkF6zSVPtY_0grnIMrR-KNf8S6KsIcUj3NYApP7XkrqJ7Eq9NZNwUypU7YSsY6JAaxwOJYRMBauHvk1_19BzOo2_vkMzRvhoM_Ep6G67PmUp0-ABPzoHR2lxVuu4COEvwamt81_Xt9ziLeBpRE5IZ1rija_EWrjlJ4MNKA_uPNKPSOagQWDaYlDHwhvNyrOvc_FDuIqKZR00KiMVseDIBetI3Ra');"></div>
+<h6 class="text-xs font-bold leading-tight line-clamp-2">Investor Asing vs Domestik: Siapa Pemenangnya?</h6>
+</div>
+</div>
+</div>
+<!-- Last News Item -->
+<div class="flex gap-4 items-start group pt-4">
+<div class="flex-1 space-y-1">
+<p class="text-primary text-[10px] font-bold uppercase tracking-wider">Daerah</p>
+<h4 class="text-slate-900 dark:text-slate-100 text-base font-bold leading-tight group-active:text-primary">Audit BPK Temukan Mark-up Proyek Jembatan di Kalimantan</h4>
+<p class="text-slate-500 dark:text-slate-400 text-xs line-clamp-2">Ditemukan selisih harga material yang mencapai 40% dari harga pasar yang seharusnya...</p>
+<p class="text-slate-400 dark:text-slate-500 text-[10px] pt-1">Kontributor Kaltim • Kemarin</p>
+</div>
+<div class="w-24 h-24 shrink-0 rounded-lg bg-slate-200 dark:bg-slate-800 bg-cover bg-center" data-alt="Large suspension bridge under clear blue sky" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDbE_tcJa296jT2OGiDgSCelc8tZo7RAhftEojYBJo6R1ib7GnVqrmk4RlFWZbtoVNEmpOX9omWdQ2xunAzsRr_8iE9toe-cqH-P2YeZRbO87vFQpn20wTlP385ltPf0PjWps1f66q1xkEKG9hOxRa84JteEcPxPlTtGX8EmfIOVm1w8sDjIWwhwwmLpVElp1eoddIQqz8ImTm34oDA5HN0642jZYZigzuRf039UfP408Xf1Zq9mtmV34DCyJNK_85MbF5nfhoqAXWv');"></div>
+</div>
+</div>
+</main>
+<!-- Sticky Bottom Navbar -->
+<nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md z-30 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 pb-safe">
+<div class="flex justify-around items-center h-16">
+<a class="flex flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-[10px] font-medium">Beranda</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined text-2xl">monitoring</span>
+<span class="text-[10px] font-medium">Anggaran</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-primary" href="#">
+<div class="relative">
+<span class="material-symbols-outlined text-2xl fill-[1]">newspaper</span>
+<div class="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full border border-background-dark"></div>
+</div>
+<span class="text-[10px] font-bold">Berita</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined text-2xl">campaign</span>
+<span class="text-[10px] font-medium">Lapor</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined text-2xl">person</span>
+<span class="text-[10px] font-medium">Profil</span>
+</a>
+</div>
+</nav>
+</div>
+</body></html>

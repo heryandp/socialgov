@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jaga Anggaran - User Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0095F6",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#000000",
+                        "surface": "#121212",
+                        "surface-hover": "#1A1A1A",
+                        "border-color": "#262626",
+                        "text-primary": "#F5F5F5",
+                        "text-muted": "#A8A8A8",
+                        "accent-verified": "#00E676",
+                        "accent-review": "#FFEA00",
+                        "accent-disputed": "#FF1744"
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "4px",
+                        "sm": "4px",
+                        "md": "4px",
+                        "lg": "4px",
+                        "xl": "4px",
+                        "2xl": "4px",
+                        "3xl": "4px",
+                        "full": "4px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .font-display { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-text-primary min-h-screen antialiased selection:bg-primary selection:text-white">
+<div class="flex h-screen overflow-hidden max-w-[1200px] mx-auto">
+<!-- Left Sidebar -->
+<aside class="w-[244px] flex-shrink-0 border-r border-border-color bg-surface hidden md:flex flex-col justify-between p-4 h-full relative z-10">
+<div class="flex flex-col gap-6">
+<!-- Logo -->
+<div class="px-2 pt-2 pb-6">
+<h1 class="font-display text-2xl font-bold text-text-primary tracking-tight">Jaga<span class="text-primary">Anggaran</span></h1>
+</div>
+<!-- Navigation -->
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-4 px-4 py-3 rounded-sm hover:bg-surface-hover transition-colors group" href="#">
+<span class="material-symbols-outlined text-text-primary text-[28px] font-light group-hover:scale-110 transition-transform">home</span>
+<span class="text-text-primary text-base font-normal">Home</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-sm hover:bg-surface-hover transition-colors group" href="#">
+<span class="material-symbols-outlined text-text-primary text-[28px] font-light group-hover:scale-110 transition-transform">search</span>
+<span class="text-text-primary text-base font-normal">Search</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-sm hover:bg-surface-hover transition-colors group" href="#">
+<span class="material-symbols-outlined text-text-primary text-[28px] font-light group-hover:scale-110 transition-transform">article</span>
+<span class="text-text-primary text-base font-normal">News</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-sm bg-surface-hover font-semibold" href="#">
+<span class="material-symbols-outlined text-text-primary text-[28px] font-normal">person</span>
+<span class="text-text-primary text-base">Profile</span>
+</a>
+</nav>
+</div>
+<!-- Action CTA -->
+<div class="mt-auto pt-4">
+<button class="w-full flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white h-12 rounded-sm font-display font-bold text-[15px] transition-colors">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+                    Report Budget
+                </button>
+</div>
+</aside>
+<!-- Main Content (Profile) -->
+<main class="flex-1 flex flex-col h-full overflow-y-auto border-r border-border-color relative">
+<div class="max-w-[800px] w-full mx-auto">
+<!-- Profile Header Section -->
+<div class="flex flex-col md:flex-row gap-8 p-8 border-b border-border-color items-start md:items-center">
+<!-- Avatar -->
+<div class="flex-shrink-0">
+<div class="w-32 h-32 md:w-40 md:h-40 rounded-sm bg-surface border border-border-color overflow-hidden relative">
+<img alt="User profile avatar portrait" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-300" data-alt="User profile avatar portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwlSY0vN4gwXM6U5nf7hPGlEuwYNpfjO4zgiMF93laX5KaJpwonzv1o0WWxqjzIZ8XPV1F4gAbwm7lkBk9GF9eWokq3MBtx3VkepvOBzAzRZCrw5QVroKK0pK8J6ZeA01t8DEpZtC4q2ttYVInSX9S29cTxNbJcSRtniQQBx73ZQBQixRDrBIvqPxEMwADQjqxWxLXcnuYzmMyWuzrcpTzc3vLkH2Tg6r_YcevEFBXGG9Ht9qefOLyZoiNa_6L4TgN_DuJp6mPs7xX"/>
+<!-- Trust Badge Overlay -->
+<div class="absolute bottom-2 right-2 bg-background-dark/80 backdrop-blur-sm border border-border-color px-2 py-1 rounded-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-accent-verified text-[14px]">verified</span>
+<span class="font-display text-xs font-bold text-text-primary">98</span>
+</div>
+</div>
+</div>
+<!-- User Info -->
+<div class="flex flex-col flex-1 w-full">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+<div>
+<h2 class="font-display text-2xl font-bold text-text-primary tracking-tight">Budi Santoso</h2>
+<p class="text-text-muted text-base">@budisantoso</p>
+</div>
+<button class="px-6 py-2 bg-surface hover:bg-surface-hover border border-border-color text-text-primary font-display font-semibold text-sm rounded-sm transition-colors w-full md:w-auto">
+                                Edit Profile
+                            </button>
+</div>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-text-muted text-[18px]">location_on</span>
+<span class="text-text-primary text-sm">DKI Jakarta, Indonesia</span>
+<span class="text-border-color mx-2">•</span>
+<span class="material-symbols-outlined text-primary text-[18px]">shield</span>
+<span class="text-text-primary text-sm font-semibold">Civic Validator Rank: Elite</span>
+</div>
+<p class="text-text-primary text-sm leading-relaxed max-w-lg mb-6">
+                            Independent investigative journalist focusing on provincial budget allocations (APBD) in Java. Tracking infrastructure and public facility spending.
+                        </p>
+<!-- Stats Row -->
+<div class="flex gap-6 border-t border-border-color pt-4">
+<div class="flex flex-col">
+<span class="font-display text-xl font-bold text-text-primary">15</span>
+<span class="text-text-muted text-xs uppercase tracking-wider">Reports</span>
+</div>
+<div class="flex flex-col">
+<span class="font-display text-xl font-bold text-text-primary">42</span>
+<span class="text-text-muted text-xs uppercase tracking-wider">Votes</span>
+</div>
+<div class="flex flex-col">
+<span class="font-display text-xl font-bold text-text-primary">12</span>
+<span class="text-text-muted text-xs uppercase tracking-wider">Saved</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Tabs -->
+<div class="flex border-b border-border-color sticky top-0 bg-background-dark z-20">
+<button class="flex-1 py-4 text-center border-b-2 border-primary text-text-primary font-display font-bold text-sm uppercase tracking-wider flex justify-center items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+                        Saved
+                    </button>
+<button class="flex-1 py-4 text-center border-b-2 border-transparent text-text-muted hover:text-text-primary hover:bg-surface-hover transition-colors font-display font-bold text-sm uppercase tracking-wider flex justify-center items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">upload_file</span>
+                        Reports
+                    </button>
+<button class="flex-1 py-4 text-center border-b-2 border-transparent text-text-muted hover:text-text-primary hover:bg-surface-hover transition-colors font-display font-bold text-sm uppercase tracking-wider flex justify-center items-center gap-2 hidden sm:flex">
+<span class="material-symbols-outlined text-[20px]">gavel</span>
+                        Validations
+                    </button>
+</div>
+<!-- Grid Feed (Saved Items) -->
+<div class="grid grid-cols-2 md:grid-cols-3 gap-1 p-1">
+<!-- Grid Item 1 -->
+<a class="aspect-square relative group overflow-hidden bg-surface cursor-pointer" href="#">
+<img alt="Construction site for road repair project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Construction site for road repair project" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-ogPamIxIahO52B5AntND6NHls8OsYDD9B1bKYRNym4EMWxNK8C7IfIs4Ceo_-2Nw1D3Z368agnvGSPMa_NxvbuAQl3cS6d05iqAoT5R554tEJka9XHhXQWtfmtCb3ZIhnRuAJ6x9G11g9Hg2p3rIo2NTmDfxjDeR1L1jD9knQQr5VBhcnLgzyyvuP4lSDo91iECDEk05yVLHKdLJwPG1wz23il79YmhQDQPd068r3NyKCp_esUi-IbwPclhPOPb0T8b48SJQeJQd"/>
+<div class="absolute inset-0 bg-background-dark/0 group-hover:bg-background-dark/60 transition-colors flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 p-4 text-center">
+<span class="font-display text-lg font-bold text-white mb-1">Rp 4.2B</span>
+<span class="text-white/80 text-xs mb-3">Dinas Bina Marga DKI</span>
+<div class="bg-accent-disputed/20 border border-accent-disputed text-accent-disputed px-2 py-1 rounded-sm text-[10px] font-display font-bold uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">warning</span> Disputed
+                            </div>
+</div>
+<!-- Persistent Status Indicator -->
+<div class="absolute top-2 right-2 w-3 h-3 rounded-sm bg-accent-disputed shadow-[0_0_8px_rgba(255,23,68,0.5)] md:hidden"></div>
+</a>
+<!-- Grid Item 2 -->
+<a class="aspect-square relative group overflow-hidden bg-surface cursor-pointer" href="#">
+<div class="w-full h-full bg-surface-hover flex items-center justify-center p-4">
+<!-- Abstract representation of a document -->
+<div class="w-full h-full border border-border-color bg-surface flex flex-col p-3 opacity-70 group-hover:opacity-100 transition-opacity">
+<div class="w-1/2 h-2 bg-border-color mb-2"></div>
+<div class="w-full h-1 bg-border-color mb-1"></div>
+<div class="w-3/4 h-1 bg-border-color mb-4"></div>
+<div class="w-full h-12 bg-border-color/30 mt-auto flex items-center justify-center text-text-muted text-xs">PDF Document</div>
+</div>
+</div>
+<div class="absolute inset-0 bg-background-dark/0 group-hover:bg-background-dark/60 transition-colors flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 p-4 text-center">
+<span class="font-display text-lg font-bold text-white mb-1">Rp 850M</span>
+<span class="text-white/80 text-xs mb-3">Pengadaan ATK Balai Kota</span>
+<div class="bg-accent-review/20 border border-accent-review text-accent-review px-2 py-1 rounded-sm text-[10px] font-display font-bold uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">pending</span> Under Review
+                            </div>
+</div>
+<div class="absolute top-2 right-2 w-3 h-3 rounded-sm bg-accent-review shadow-[0_0_8px_rgba(255,234,0,0.5)] md:hidden"></div>
+</a>
+<!-- Grid Item 3 -->
+<a class="aspect-square relative group overflow-hidden bg-surface cursor-pointer" href="#">
+<img alt="Official government building exterior view" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Official government building exterior view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgRuDYhW6YCtbhBMSxeaf2Jol-i3i2pz8r1ALvIxhszdJIeKvAgGF-J1cPkq5f4jCR0U_qlycYVfZ_Z4Zgfrj3dXJ6RM-siHkDd75TedwoDxnt_yMuFQ_yS2OjkPXdMALI3FqO4kL1E1lzn-AI2Tl0wQLuebpac44jdcJXi4yip0rGU_vFPIsIWiXATS3XskKiBfcog74GHP_dV8dh3Od2-QfCD8FBiI52Fs3E12kq5Mim29tuEPZ_mfB9ZSX331m0YaZQ7HWhFXkn"/>
+<div class="absolute inset-0 bg-background-dark/0 group-hover:bg-background-dark/60 transition-colors flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 p-4 text-center">
+<span class="font-display text-lg font-bold text-white mb-1">Rp 12.5B</span>
+<span class="text-white/80 text-xs mb-3">Renovasi Gedung DPRD</span>
+<div class="bg-accent-verified/20 border border-accent-verified text-accent-verified px-2 py-1 rounded-sm text-[10px] font-display font-bold uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> Verified
+                            </div>
+</div>
+<div class="absolute top-2 right-2 w-3 h-3 rounded-sm bg-accent-verified shadow-[0_0_8px_rgba(0,230,118,0.5)] md:hidden"></div>
+</a>
+<!-- Grid Item 4 -->
+<a class="aspect-square relative group overflow-hidden bg-surface cursor-pointer" href="#">
+<img alt="Empty school classroom with desks" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Empty school classroom with desks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCaV1nDSa2Ld8MJc9fycMvB18KIJfvVjPduCk6ZuxiBJvKpj91PLSO54oOwWrWkITbTr-MeKgbCfTHtW_AT1Zq7raJ9ewDvtMBw-qpT0M74XBREAdN_tNFF8NkN-4JamUdIqNSCKkmdeYEu3j0I0ZHjVWru5JDazSPo-kWBJOJYH4_135_GdcJQW71e2kDhsTwCu75WQWSckyXmidDzVqKDpvRWbCETYgqgeOuXBOQ2cTJlAJJjuX2zB14fwWG9oSgGUbbW2rhf_OU"/>
+<div class="absolute inset-0 bg-background-dark/0 group-hover:bg-background-dark/60 transition-colors flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 p-4 text-center">
+<span class="font-display text-lg font-bold text-white mb-1">Rp 2.1B</span>
+<span class="text-white/80 text-xs mb-3">Dinas Pendidikan Jabar</span>
+<div class="bg-accent-verified/20 border border-accent-verified text-accent-verified px-2 py-1 rounded-sm text-[10px] font-display font-bold uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> Verified
+                            </div>
+</div>
+</a>
+</div>
+</div>
+</main>
+</div>
+</body></html>

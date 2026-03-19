@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profil Pengguna - Jaga Anggaran</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#E32636",
+                        "background-light": "#F4F4F0",
+                        "background-dark": "#211112",
+                        "surface": "#FFFFFF",
+                        "surface-dark": "#2D181A",
+                        "text-main": "#111111",
+                        "text-muted": "#737373",
+                        "verified": "#059669",
+                        "review": "#D97706",
+                        "disputed": "#DC2626",
+                        "border-thin": "#E5E5E5",
+                        "border-thick": "#111111"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Plus Jakarta Sans", "sans-serif"],
+                        "mono": ["Plus Jakarta Sans", "monospace"] // Fallback to sans for tabular if mono unavailable
+                    },
+                    borderRadius: {
+                        "DEFAULT": "4px",
+                        "sm": "4px",
+                        "md": "4px",
+                        "lg": "4px",
+                        "xl": "4px",
+                        "2xl": "4px",
+                        "3xl": "4px",
+                        "full": "4px" // Enforcing strict 4px radius everywhere per brutalist spec
+                    },
+                    boxShadow: {
+                        // Removing shadows per spec
+                        'sm': 'none',
+                        'DEFAULT': 'none',
+                        'md': 'none',
+                        'lg': 'none',
+                        'xl': 'none',
+                        '2xl': 'none',
+                        'inner': 'none',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #F4F4F0;
+            color: #111111;
+        }
+        
+        /* Utility classes for specific brutalist borders */
+        .border-t-thick { border-top: 2px solid #111111; }
+        .border-b-thick { border-bottom: 2px solid #111111; }
+        .border-l-thick { border-left: 2px solid #111111; }
+        .border-r-thick { border-right: 2px solid #111111; }
+        
+        /* Tabular nums for data */
+        .tabular-nums { font-variant-numeric: tabular-nums; }
+        
+        /* Hover scale effect for cards */
+        .hover-scale-card {
+            transition: transform 200ms ease-in-out;
+        }
+        .hover-scale-card:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main dark:text-slate-100 min-h-screen selection:bg-primary selection:text-white">
+<div class="mx-auto max-w-[1160px] grid grid-cols-1 lg:grid-cols-[240px_600px_320px] gap-0 lg:gap-8 px-4 lg:px-0">
+<!-- Left Sidebar (Fixed on Desktop) -->
+<aside class="hidden lg:flex flex-col h-screen sticky top-0 py-8 pr-6 border-r border-border-thin dark:border-slate-800">
+<div class="mb-10 px-4">
+<h1 class="text-2xl font-extrabold tracking-tight uppercase text-text-main dark:text-white border-b-thick pb-2 border-text-main dark:border-white">
+                    Jaga Anggaran
+                </h1>
+<p class="text-xs font-bold text-text-muted mt-2 tracking-widest uppercase">Civic Transparency</p>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-4 px-4 py-3 text-text-muted hover:text-text-main dark:hover:text-white transition-colors group" href="#">
+<span class="material-symbols-outlined text-2xl group-hover:text-primary transition-colors">home</span>
+<span class="font-bold text-lg tracking-wide">Home Feed</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-text-muted hover:text-text-main dark:hover:text-white transition-colors group" href="#">
+<span class="material-symbols-outlined text-2xl group-hover:text-primary transition-colors">search</span>
+<span class="font-bold text-lg tracking-wide">Explore</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-text-muted hover:text-text-main dark:hover:text-white transition-colors group" href="#">
+<span class="material-symbols-outlined text-2xl group-hover:text-primary transition-colors">article</span>
+<span class="font-bold text-lg tracking-wide">News</span>
+</a>
+<!-- Active Nav Item -->
+<a class="flex items-center gap-4 px-4 py-3 text-text-main dark:text-white border-l-4 border-primary bg-surface dark:bg-surface-dark font-bold relative -left-[2px]" href="#">
+<span class="material-symbols-outlined text-2xl text-primary">person</span>
+<span class="text-lg tracking-wide">Profile</span>
+</a>
+</nav>
+<div class="mt-auto px-4 pb-4">
+<button class="w-full border-2 border-text-main dark:border-white text-text-main dark:text-white font-bold py-2 px-4 uppercase tracking-widest text-sm hover:bg-text-main hover:text-white dark:hover:bg-white dark:hover:text-text-main transition-colors">
+                    Lapor Data
+                </button>
+</div>
+</aside>
+<!-- Central Column (Scrollable Feed/Profile) -->
+<main class="py-8 flex flex-col min-h-screen">
+<!-- Mobile Header (Hidden on Desktop) -->
+<div class="lg:hidden flex items-center justify-between border-b-thick border-text-main pb-4 mb-6">
+<h1 class="text-xl font-extrabold tracking-tight uppercase text-text-main dark:text-white">
+                    Jaga Anggaran
+                </h1>
+<button class="text-text-main dark:text-white">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+<!-- User Profile Header -->
+<div class="bg-surface dark:bg-surface-dark border border-border-thin dark:border-slate-800 p-6 mb-6">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 mb-8 border-b border-border-thin dark:border-slate-800 pb-6">
+<div class="flex items-center gap-6">
+<div class="w-20 h-20 bg-text-main dark:bg-white text-white dark:text-text-main flex items-center justify-center text-3xl font-extrabold">
+                            BS
+                        </div>
+<div>
+<h2 class="text-2xl font-extrabold tracking-tight">Budi Santoso</h2>
+<p class="text-text-muted font-medium font-mono text-sm mt-1">@budisantoso_investigates</p>
+<p class="text-xs font-bold text-text-muted uppercase tracking-wider mt-2">Bergabung Okt 2023</p>
+</div>
+</div>
+<button class="border-2 border-text-main dark:border-white text-text-main dark:text-white font-bold py-2 px-4 uppercase tracking-widest text-xs hover:bg-primary hover:border-primary hover:text-white transition-colors">
+                        Edit Profil
+                    </button>
+</div>
+<!-- Trust Level Score -->
+<div class="flex flex-col items-center justify-center py-4 bg-background-light dark:bg-background-dark border border-border-thin dark:border-slate-800">
+<p class="text-xs font-bold text-text-muted uppercase tracking-widest mb-2">Reputation Score</p>
+<div class="flex items-baseline gap-2">
+<span class="text-[48px] font-extrabold leading-none tracking-tighter tabular-nums">85</span>
+<span class="text-xl font-bold text-text-muted">/100</span>
+</div>
+<p class="text-sm font-medium mt-2 text-verified flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">verified</span>
+                        Tingkat Kepercayaan Tinggi
+                    </p>
+</div>
+</div>
+<!-- Tabs -->
+<div class="flex border-b-2 border-border-thin dark:border-slate-800 mb-6">
+<button class="px-6 py-3 font-bold text-lg border-b-4 border-primary text-text-main dark:text-white uppercase tracking-wide">
+                    Activity
+                </button>
+<button class="px-6 py-3 font-bold text-lg border-b-4 border-transparent text-text-muted hover:text-text-main dark:hover:text-white uppercase tracking-wide transition-colors">
+                    Saved (3)
+                </button>
+</div>
+<!-- Activity Feed Tab Content -->
+<div class="flex flex-col gap-4">
+<!-- Activity Item 1: Disputed -->
+<div class="bg-surface dark:bg-surface-dark border border-border-thin dark:border-slate-800 p-4 flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 bg-disputed/10 rounded flex items-center justify-center text-disputed border border-disputed/20">
+<span class="material-symbols-outlined">gavel</span>
+</div>
+<div class="w-px h-full bg-border-thin dark:bg-slate-800 mt-2"></div>
+</div>
+<div class="flex-1 pb-4">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-xs font-bold font-mono text-text-muted">Hari ini, 14:30</span>
+<span class="px-2 py-0.5 bg-disputed text-white text-[10px] font-bold uppercase tracking-wider rounded">Disputed</span>
+</div>
+<p class="text-sm font-medium leading-relaxed mb-3">
+                            Menyanggah alokasi dana dengan melampirkan bukti perbandingan harga pasar dari e-katalog.
+                        </p>
+<!-- Reference Mini Card -->
+<div class="bg-background-light dark:bg-background-dark border border-border-thin dark:border-slate-800 p-3 flex justify-between items-center group cursor-pointer hover:border-text-main dark:hover:border-white transition-colors">
+<div>
+<h4 class="text-sm font-bold group-hover:text-primary transition-colors">Pengadaan Laptop Dinas - Kemendikbud</h4>
+<p class="text-xs font-mono font-bold text-text-muted mt-1 tabular-nums">Rp 50.000.000 / unit</p>
+</div>
+<span class="material-symbols-outlined text-text-muted group-hover:text-primary">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Activity Item 2: Validated -->
+<div class="bg-surface dark:bg-surface-dark border border-border-thin dark:border-slate-800 p-4 flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 bg-verified/10 rounded flex items-center justify-center text-verified border border-verified/20">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<div class="w-px h-full bg-border-thin dark:bg-slate-800 mt-2"></div>
+</div>
+<div class="flex-1 pb-4">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-xs font-bold font-mono text-text-muted">Kemarin, 09:15</span>
+<span class="px-2 py-0.5 bg-verified text-white text-[10px] font-bold uppercase tracking-wider rounded">Validated</span>
+</div>
+<p class="text-sm font-medium leading-relaxed mb-3">
+                            Memverifikasi kesesuaian harga material bangunan sesuai standar PU daerah.
+                        </p>
+<!-- Reference Mini Card -->
+<div class="bg-background-light dark:bg-background-dark border border-border-thin dark:border-slate-800 p-3 flex justify-between items-center group cursor-pointer hover:border-text-main dark:hover:border-white transition-colors">
+<div>
+<h4 class="text-sm font-bold group-hover:text-primary transition-colors">Renovasi Gedung Balai Kota DKI Jakarta</h4>
+<p class="text-xs font-mono font-bold text-text-muted mt-1 tabular-nums">Rp 2.500.000.000</p>
+</div>
+<span class="material-symbols-outlined text-text-muted group-hover:text-primary">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Activity Item 3: Under Review (Comment) -->
+<div class="bg-surface dark:bg-surface-dark border border-border-thin dark:border-slate-800 p-4 flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 bg-review/10 rounded flex items-center justify-center text-review border border-review/20">
+<span class="material-symbols-outlined">chat</span>
+</div>
+<div class="w-px h-8 bg-transparent mt-2"></div> <!-- End of line -->
+</div>
+<div class="flex-1 pb-2">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-xs font-bold font-mono text-text-muted">12 Okt 2023</span>
+<span class="px-2 py-0.5 bg-background-light border border-border-thin text-text-muted text-[10px] font-bold uppercase tracking-wider rounded">Komentar</span>
+</div>
+<p class="text-sm font-medium leading-relaxed italic border-l-2 border-border-thin pl-3 my-3 text-text-muted">
+                            "Saya perhatikan ada selisih biaya angkut yang cukup signifikan jika dibandingkan proyek serupa di tahun lalu. Mohon dicek kembali dokumen lampiran B."
+                        </p>
+<a class="text-xs font-bold text-primary hover:underline uppercase tracking-wide" href="#">Lihat Diskusi →</a>
+</div>
+</div>
+<button class="w-full py-4 border border-border-thin dark:border-slate-800 text-sm font-bold text-text-muted hover:bg-background-light dark:hover:bg-slate-800 uppercase tracking-widest transition-colors">
+                    Muat Lebih Banyak
+                </button>
+</div>
+</main>
+<!-- Right Stats Panel (Desktop Only) -->
+<aside class="hidden lg:block py-8 pl-6 border-l border-border-thin dark:border-slate-800">
+<h3 class="text-lg font-extrabold uppercase tracking-tight mb-6 border-b-thick pb-2 border-text-main dark:border-white">
+                Dampak Personal
+            </h3>
+<div class="flex flex-col gap-6">
+<!-- Stat Block 1 -->
+<div class="bg-surface dark:bg-surface-dark p-5 border border-border-thin dark:border-slate-800">
+<p class="text-xs font-bold text-text-muted uppercase tracking-widest mb-1">Total Validasi</p>
+<p class="text-3xl font-extrabold tabular-nums">142</p>
+<div class="w-full h-1 bg-border-thin mt-3 flex">
+<div class="h-full bg-verified" style="width: 70%;"></div>
+<div class="h-full bg-disputed" style="width: 30%;"></div>
+</div>
+<div class="flex justify-between mt-2 text-[10px] font-bold uppercase tracking-wider text-text-muted">
+<span class="text-verified">99 Setuju</span>
+<span class="text-disputed">43 Sanggah</span>
+</div>
+</div>
+<!-- Stat Block 2 -->
+<div class="bg-surface dark:bg-surface-dark p-5 border border-border-thin dark:border-slate-800">
+<p class="text-xs font-bold text-text-muted uppercase tracking-widest mb-1">Konsensus Komunitas</p>
+<div class="flex items-baseline gap-1">
+<p class="text-3xl font-extrabold tabular-nums">92</p>
+<span class="text-lg font-bold text-text-muted">%</span>
+</div>
+<p class="text-xs font-medium text-text-muted mt-2 leading-tight">
+                        Seberapa sering opini Anda sejalan dengan hasil akhir validasi mayoritas.
+                    </p>
+</div>
+<!-- Stat Block 3 -->
+<div class="bg-surface dark:bg-surface-dark p-5 border border-border-thin dark:border-slate-800">
+<p class="text-xs font-bold text-text-muted uppercase tracking-widest mb-1">Bukti Diterima</p>
+<p class="text-3xl font-extrabold tabular-nums">28</p>
+<p class="text-xs font-medium text-text-muted mt-2 leading-tight">
+                        Tautan atau dokumen yang Anda unggah dijadikan referensi utama.
+                    </p>
+</div>
+</div>
+</aside>
+</div>
+</body></html>

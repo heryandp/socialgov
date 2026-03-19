@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jaga Anggaran - Berita Transparansi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0c90e9",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101b22",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        .masonry-item:nth-child(3n) {
+            grid-column: span 2;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<!-- Header Section -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/20">
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">account_balance</span>
+<h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100">JAGA<span class="text-primary">ANGGARAN</span></h1>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center justify-center size-10 rounded-full bg-primary/10 text-primary border border-primary/20">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-full bg-primary/10 text-primary border border-primary/20">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</div>
+<!-- Category Filter Chips -->
+<div class="flex gap-2 p-4 overflow-x-auto no-scrollbar pb-4">
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-4 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-sm text-white">grid_view</span>
+<p class="text-white text-xs font-bold uppercase tracking-wider">Terbaru</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-800 px-4 border border-slate-300 dark:border-slate-700">
+<span class="material-symbols-outlined text-sm text-primary">monitoring</span>
+<p class="text-slate-700 dark:text-slate-300 text-xs font-bold uppercase tracking-wider">Infografis</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-800 px-4 border border-slate-300 dark:border-slate-700">
+<span class="material-symbols-outlined text-sm text-primary">policy</span>
+<p class="text-slate-700 dark:text-slate-300 text-xs font-bold uppercase tracking-wider">Kebijakan</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-800 px-4 border border-slate-300 dark:border-slate-700">
+<span class="material-symbols-outlined text-sm text-primary">emergency</span>
+<p class="text-slate-700 dark:text-slate-300 text-xs font-bold uppercase tracking-wider">Audit</p>
+</div>
+</div>
+</header>
+<main class="p-4 pb-24 max-w-lg mx-auto">
+<!-- Featured Card -->
+<div class="mb-6 @container">
+<div class="relative overflow-hidden rounded-xl border border-primary/30 bg-slate-900 shadow-2xl">
+<div class="aspect-video w-full bg-cover bg-center" data-alt="Financial data charts and digital analytics dashboard" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAK_bv-M0eIV8Ly8bpIG3v1Qz_YWMa-eg4bO5c8HBOjvT9Kd-uEgCIuj1BKJTGmAv0-DihUh0bJYpQm5MOcJxKEB6xwkSekcqymXa45MRYT6pH3dDy6xghQkuB6vrTzQIOgrkB1IDAU8Ex1Fy4larscIkOAx9hdZJ4YI5vQ7FsEqtJEkv-sO4zLhNff_wp48Y09ZsWxB1g2YpTD1nB3iOsKKZjxyqRuXKpsCDwnyIP5Se4GpCa_U1K3vYki46Lt_jeo5tEFS5Yly5v0");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent"></div>
+<div class="absolute bottom-0 p-5 flex flex-col gap-2">
+<span class="inline-block w-fit px-2 py-0.5 text-[10px] font-black uppercase tracking-[0.2em] bg-primary text-white rounded">Breaking News</span>
+<h2 class="text-xl font-bold text-white leading-tight">Laporan Realisasi APBN Kuartal II 2024: Fokus pada Ketahanan Pangan</h2>
+<div class="flex items-center gap-4 mt-2">
+<span class="text-slate-400 text-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">calendar_today</span> 2 Jam lalu
+                        </span>
+<span class="text-slate-400 text-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">visibility</span> 12.4k
+                        </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Masonry Grid -->
+<div class="masonry-grid">
+<!-- Item 1 -->
+<div class="masonry-item bg-white dark:bg-slate-800/50 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col">
+<div class="aspect-square bg-cover bg-center" data-alt="Close up of Indonesian Rupiah currency notes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBksh6mcBPwxD1oYH7XSGYahe3ktLpMswxgYE3LBZk2J82-LYzeZyLnAwj6VFTMircPUjCxLNtDRbBjNYoZEkJgqZZeVBo1sWt4DVED8q0Uyh4c1NT9HJlJ9umeeUc2RGNRMbvLej3rBkJwFK7TArod2BWcIxkGRBALNgN9OXA8U3oc5N4Ek4Ar0wyXTdCr3a8H2bioGwwK26YJFIsszXCIwsDYKHh6g8OrO30v_TKrZ3XIhBeRViXLEKp2Dp8CkIrm9SLF19WgBXF3");'></div>
+<div class="p-3">
+<span class="text-primary text-[10px] font-bold tracking-widest uppercase">Ekonomi</span>
+<h3 class="text-sm font-bold mt-1 line-clamp-2 leading-snug">Subsidi Energi Diperketat Mulai Agustus</h3>
+<p class="text-xs text-slate-500 mt-2">Kebijakan baru bertujuan menekan defisit anggaran daerah.</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="masonry-item bg-white dark:bg-slate-800/50 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col">
+<div class="aspect-square bg-cover bg-center" data-alt="Person signing official documents on a desk" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBnn6kGxKFVRPQCom1fq0yzPHP3HXWMyKy4Op57dY9KfBlWTGogpS3AtKnFFEy4rrOFVv6ubQMXudIKJRaSt4KwZivPUBCv-EkLa7TxsC9O1rojx_zqgw0WB7ia9TPd6YmLku0KVNEQHvaSJLGtvy-lI1YNUpKp9EYTcQOs2f8rVciNXYRG7oNv3w6351EQsrNHg7RONdmHcIrGKBzm_NiqJqJLDh560Gu67PdxWoAZS1DmOf5ku191lp3rW6KkbawFdDl9CDMQLJOs");'></div>
+<div class="p-3">
+<span class="text-emerald-500 text-[10px] font-bold tracking-widest uppercase">Transparansi</span>
+<h3 class="text-sm font-bold mt-1 line-clamp-2 leading-snug">Open Data Portal Versi 3.0 Diluncurkan</h3>
+<p class="text-xs text-slate-500 mt-2">Masyarakat kini bisa lacak dana desa secara real-time.</p>
+</div>
+</div>
+<!-- Item 3 (Full Width) -->
+<div class="masonry-item bg-primary/5 dark:bg-primary/10 rounded-lg overflow-hidden border border-primary/20 p-4 flex gap-4 items-center">
+<div class="size-20 shrink-0 rounded bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-4xl">analytics</span>
+</div>
+<div class="flex-1">
+<span class="bg-primary text-white text-[8px] font-bold px-1.5 py-0.5 rounded-full uppercase">Update Audit</span>
+<h3 class="text-base font-bold mt-1 leading-tight">BPK Temukan Potensi Pemborosan 5 Triliun di Sektor Konstruksi</h3>
+<div class="flex items-center justify-between mt-2">
+<span class="text-[10px] text-slate-500">Sumber: Laporan BPK RI</span>
+<button class="text-primary text-xs font-bold flex items-center gap-1">
+                            Baca <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="masonry-item bg-white dark:bg-slate-800/50 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col">
+<div class="aspect-square bg-cover bg-center" data-alt="Stock market graph on a monitor" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCb6vDVJlxqdAwJPPff10uOuqHVNHj_sz7IxQUA5IAgtIGA5OfYgz2NgH6EnuzoKAOzNclBhHFMxrf0t7_oc3RcZK5d8xb_GqOO1DqaRKw2Zx7SKi2Oa9mdI4BHXCV-wArVCLspeTFOHuxX-roWq4yiF0VMScr6BEmR4yK9khbMFhtti5Bkki4JdUbZMFCPdTXS9rrBcWVlRvct_TLL1X07sLvfKTdKifYszV0vlDKsOHBgbkdvBPOkeCsKzv2ZcXUgZYs3Lo-aHSHk");'></div>
+<div class="p-3">
+<span class="text-orange-500 text-[10px] font-bold tracking-widest uppercase">Investasi</span>
+<h3 class="text-sm font-bold mt-1 line-clamp-2 leading-snug">Rapor Hijau Alokasi Dana Pendidikan 2024</h3>
+<p class="text-xs text-slate-500 mt-2">Efektivitas meningkat hingga 12% dibandingkan tahun lalu.</p>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="masonry-item bg-white dark:bg-slate-800/50 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col">
+<div class="aspect-[4/3] bg-cover bg-center" data-alt="Statue of scales representing justice and law" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBWL-sLKxgmdelVipngzJlKC8Yh9UFH7imDrIANHcx14UTstFZ182x0LXlk9SvIklWop55qtBzayMO4kW-RuPUFbEqbjhxOXYXoOvGS0RQXB5J9CxSc2AyCpYzdg_CPbCn5jsOEzg0WYdtlKai-h1_T2keV8rF-D8gF5VGPxJ11lFA7u2q9MP2uBTRnmkG4LPYor1GTxDHpTrLz4fzKLuuJZ2N7O1VOLjFARPEQQ3Agj8HBUccGqDFBGCd5yIFhrZJp4AM0ADtkL5yE");'></div>
+<div class="p-3">
+<span class="text-red-500 text-[10px] font-bold tracking-widest uppercase">Hukum</span>
+<h3 class="text-sm font-bold mt-1 line-clamp-2 leading-snug">Sidang Dugaan Korupsi Dana Bansos Memasuki Babak Baru</h3>
+<p class="text-xs text-slate-500 mt-2">Saksi ahli beberkan alur manipulasi anggaran.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-background-light dark:bg-background-dark/95 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 px-6 py-3">
+<div class="max-w-md mx-auto flex items-center justify-between">
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Beranda</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-1">newspaper</span>
+<span class="text-[10px] font-bold">Berita</span>
+</a>
+<div class="relative -top-6">
+<button class="bg-primary text-white size-14 rounded-full shadow-lg shadow-primary/40 flex items-center justify-center border-4 border-background-light dark:border-background-dark">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</div>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">pie_chart</span>
+<span class="text-[10px] font-medium">Anggaran</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profil</span>
+</a>
+</div>
+</nav>
+</body></html>

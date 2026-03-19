@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jaga Anggaran - Explore/Search</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Newsreader:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#E52B2B",
+          "background-light": "#FAFAFA",
+          "background-dark": "#211111",
+          "surface": "#FFFFFF",
+          "text-main": "#1A1A1A",
+          "muted": "#737373",
+          "verified": "#059669",
+          "review": "#D97706",
+          "disputed": "#DC2626",
+          "border-color": "#E5E5E5",
+        },
+        fontFamily: {
+          "display": ["Manrope", "sans-serif"],
+          "heading": ["Newsreader", "serif"],
+        },
+        borderRadius: {
+          "DEFAULT": "2px",
+          "sm": "2px",
+          "md": "2px",
+          "lg": "2px",
+          "xl": "2px",
+          "2xl": "2px",
+          "3xl": "2px",
+          "full": "9999px",
+        },
+      },
+    },
+  }
+</script>
+<style>
+  body {
+    background-color: theme('colors.background-light');
+    color: theme('colors.text-main');
+    font-family: theme('fontFamily.display');
+  }
+  .border-solid-1 {
+    border: 1px solid theme('colors.border-color');
+  }
+  .border-b-solid-1 {
+    border-bottom: 1px solid theme('colors.border-color');
+  }
+  .border-r-solid-1 {
+    border-right: 1px solid theme('colors.border-color');
+  }
+  
+  /* Hide scrollbar for horizontal scrolling */
+  .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+  }
+  .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+  }
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen flex overflow-x-hidden">
+<!-- Left Navigation Sidebar -->
+<aside class="w-[244px] shrink-0 border-r-solid-1 bg-surface h-screen sticky top-0 flex flex-col pt-8 pb-6 px-4 hidden md:flex z-50">
+<div class="mb-10 px-2">
+<h1 class="font-heading font-bold text-2xl text-text-main">Jaga Anggaran</h1>
+</div>
+<nav class="flex flex-col gap-2 flex-1">
+<a class="flex items-center gap-4 px-3 py-3 rounded hover:bg-background-light transition-colors text-text-main" href="#">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="text-[15px] font-medium">Home</span>
+</a>
+<a class="flex items-center gap-4 px-3 py-3 rounded bg-background-light text-text-main font-bold" href="#">
+<span class="material-symbols-outlined text-[24px] font-bold">search</span>
+<span class="text-[15px]">Search</span>
+</a>
+<a class="flex items-center gap-4 px-3 py-3 rounded hover:bg-background-light transition-colors text-text-main" href="#">
+<span class="material-symbols-outlined text-[24px]">article</span>
+<span class="text-[15px] font-medium">News</span>
+</a>
+<a class="flex items-center gap-4 px-3 py-3 rounded hover:bg-background-light transition-colors text-text-main" href="#">
+<span class="material-symbols-outlined text-[24px]">person</span>
+<span class="text-[15px] font-medium">Profile</span>
+</a>
+</nav>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col min-w-0 max-w-[950px] mx-auto w-full">
+<!-- Sticky Search Header & Filters -->
+<header class="sticky top-0 z-40 bg-background-light dark:bg-background-dark pt-8 pb-4 px-4 sm:px-8 border-b-solid-1 w-full">
+<div class="w-full max-w-[950px] mx-auto">
+<!-- Search Input -->
+<div class="relative w-full mb-4">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-muted text-[24px]">search</span>
+</div>
+<input class="w-full h-[44px] pl-12 pr-4 bg-background-light text-text-main text-[15px] border-0 border-b border-transparent focus:border-text-main focus:ring-0 transition-colors placeholder:text-muted" placeholder="Search by institution (e.g., KemenPUPR) or keyword." type="text"/>
+</div>
+<!-- Filter Pills -->
+<div class="flex gap-2 overflow-x-auto scrollbar-hide pb-2">
+<button class="shrink-0 h-8 px-4 rounded border-solid-1 bg-surface text-text-main text-[13px] font-medium hover:bg-background-light transition-colors">
+            Jawa Barat
+          </button>
+<button class="shrink-0 h-8 px-4 rounded border-solid-1 bg-surface text-text-main text-[13px] font-medium hover:bg-background-light transition-colors">
+            Infrastruktur
+          </button>
+<button class="shrink-0 h-8 px-4 rounded border-solid-1 bg-surface text-text-main text-[13px] font-medium hover:bg-background-light transition-colors">
+            Kementerian Pendidikan
+          </button>
+<button class="shrink-0 h-8 px-4 rounded border-solid-1 bg-surface text-text-main text-[13px] font-medium hover:bg-background-light transition-colors">
+            Kesehatan
+          </button>
+<button class="shrink-0 h-8 px-4 rounded border-solid-1 bg-surface text-text-main text-[13px] font-medium hover:bg-background-light transition-colors">
+            APBN 2024
+          </button>
+<button class="shrink-0 h-8 px-4 rounded border-solid-1 bg-surface text-text-main text-[13px] font-medium hover:bg-background-light transition-colors">
+            Jakarta
+          </button>
+</div>
+</div>
+</header>
+<!-- Results Grid -->
+<div class="p-4 sm:px-8 py-6 w-full max-w-[950px] mx-auto">
+<div class="grid grid-cols-2 md:grid-cols-3 gap-1 sm:gap-4 md:gap-6">
+<!-- Grid Item 1 (Verified) -->
+<div class="group relative aspect-square bg-surface border-solid-1 cursor-pointer overflow-hidden rounded">
+<img alt="Bridge construction site" class="w-full h-full object-cover" data-alt="Bridge construction site with heavy machinery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZg6XA1axd6F67yOJBGk2jRdk63wutOi44MBYemWhaU--ytkKT72LwuiRLSzJMNJi3mucwJVM27x4xb7aL91Bwfg5iQ6gxHyy-DgjiUj71tLo7F_8TdfscRm_BRskYYOefHdLOuRq5oS-yao-furk7Imh_rPfJAZF_3b7L9RlPNwNwM2J2iHLlFT4VaAprMUMBtb0Ro7QDGCXj4mYsx2FcMJODrk6MIkJTwlLel6WR3elmd0GdprqRKlb1KcfrNfeCBw8oZXj5x5O4"/>
+<!-- Hover Overlay -->
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4">
+<span class="text-white font-bold text-[15px] mb-2">Rp 500.000.000</span>
+<span class="bg-verified text-white px-3 py-1 rounded-full text-[12px] font-bold tracking-wide uppercase">Verified</span>
+</div>
+</div>
+<!-- Grid Item 2 (Under Review) -->
+<div class="group relative aspect-square bg-surface border-solid-1 cursor-pointer overflow-hidden rounded">
+<img alt="School classroom renovation" class="w-full h-full object-cover" data-alt="Empty school classroom with new desks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuPv5W94yoKewmi8qeMFe2woEVKF58CHwlOmDnkrU-BfQJ9at2v4QC7kXhXoS0WCGNUtPI1R6GJgo1MnpvxNg1vO5h-wjD91GwwPM8ecodCFH24oJuZuIT8y6qBIz8KidwwpXMGugDyPavgFQn5Az9HGIYO26KrSyYHCKVf-uE-jwRRHK96YE-NsJWQjotICORDfmRp2_bo93jPG9hSbn6SG0Wp-ZJ0TT_nfag5tx0xxvLGSuRZ533TGHNNMj2RkbEhNyr8YJxIzPN"/>
+<!-- Hover Overlay -->
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4">
+<span class="text-white font-bold text-[15px] mb-2">Rp 1.200.000.000</span>
+<span class="bg-review text-white px-3 py-1 rounded-full text-[12px] font-bold tracking-wide uppercase">Under Review</span>
+</div>
+</div>
+<!-- Grid Item 3 (Disputed) -->
+<div class="group relative aspect-square bg-surface border-solid-1 cursor-pointer overflow-hidden rounded">
+<img alt="Hospital equipment" class="w-full h-full object-cover" data-alt="Modern medical equipment in hospital" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRjwhk0khmJoyuzcGjNGtqtUQ80u7r2i29kY9uZLRL-7jDJhHbwhipEWzFlmrv8KZ6yMcfAkjk2thDPYKbzE1-5vCMay-_ir9P8MHYwK56Q1WSnAgvN555riONx6OLyduspFiy41fmCJf8r4ai7uLncPbeYg5vmCB18lIy6fzDqYQZHGyPXCMrJhRRhc-emfJrGgSZ0eXXfnHdScWhBgxvn_1tXzoZxzZFbmpKuG_7N76xWcGBFDyBlVMW8A5w4AL_xO4LeK4Hr3cK"/>
+<!-- Hover Overlay -->
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4">
+<span class="text-white font-bold text-[15px] mb-2">Rp 3.500.000.000</span>
+<span class="bg-disputed text-white px-3 py-1 rounded-full text-[12px] font-bold tracking-wide uppercase">Disputed</span>
+</div>
+</div>
+<!-- Grid Item 4 (Verified) -->
+<div class="group relative aspect-square bg-surface border-solid-1 cursor-pointer overflow-hidden rounded">
+<img alt="Public park renovation" class="w-full h-full object-cover" data-alt="Newly renovated public park area" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbrEHGlX9JKzFEtkFJQt7M2C6KgKVe-zjLK5BdAeWbeHpq9kdPykGNjTMUeP6SzQsTIChjYtBAbOmofEAJVrGV73t2VuLqf6fpmrMyki3aAx-V5LH_I6JUPWloLmZXGAFCPqcCcBehlCg2bUVMcM62xKaVtmktsfkG_7uKKUh8iOUq5uk2oXwVIPKjFsPiUdD-nmC58wX-_eYxR3r5hd5w4QpUyIe7_3sSN-qBVwtUAPxyePYOVcvuim6698SqCQpPhMQ2tfoZoyLs"/>
+<!-- Hover Overlay -->
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4">
+<span class="text-white font-bold text-[15px] mb-2">Rp 250.000.000</span>
+<span class="bg-verified text-white px-3 py-1 rounded-full text-[12px] font-bold tracking-wide uppercase">Verified</span>
+</div>
+</div>
+<!-- Grid Item 5 (Verified) -->
+<div class="group relative aspect-square bg-surface border-solid-1 cursor-pointer overflow-hidden rounded">
+<img alt="Road paving project" class="w-full h-full object-cover" data-alt="Freshly paved asphalt road" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC_idUb49FWC9eyyfSICDErVCPrUyEG-3dCWyAbBKR-HJ-QZ1hmYwrKVmZDEbTsAIWVpynAA0z6KDpicrIPk-0yuI7TKxEPNOnZzmEPhJ5CRaWMaBBXRy-Cgz-p6v3kKe_HOPJ3pT0GG4CPXqvV_NoMDB3Q8CwKW2X_F_QVb4hmGhxUGmx6hYSHQvxWG20gcXgZGDc9Y3_iLZs07Vi53g-8CpAA7razasrdFacW0u-QDh6EF9dt_XAIWwQDXnHZG5JORVPK6GodhLo"/>
+<!-- Hover Overlay -->
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4">
+<span class="text-white font-bold text-[15px] mb-2">Rp 8.000.000.000</span>
+<span class="bg-verified text-white px-3 py-1 rounded-full text-[12px] font-bold tracking-wide uppercase">Verified</span>
+</div>
+</div>
+<!-- Grid Item 6 (Under Review) -->
+<div class="group relative aspect-square bg-surface border-solid-1 cursor-pointer overflow-hidden rounded">
+<img alt="Government office interior" class="w-full h-full object-cover" data-alt="Modern government office building interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKQkRuUz6vqjEiu9agTacoNL2_UwmKPUn8OGjojYMIP5zQp5za1Ht6qHA03_sK--Jf6EpwDFeHLFhNefGqkt0BwVTle3YptAyZkGiClt8XZg2JdkP7cJyNQaIPAer6mvbV1g5vcxDiI0KDu7ndmh0WfVpEipVRCw2zx80fz784CLf2AGH76LvTcuJbNOGkW3paqePwDjS4KIJ1ERL6DSHV7ItYpTkGcvtzlfTmxKR69TqcWw-vvCXKiSQoTRk6ZgKxMHlrl-1RBBUh"/>
+<!-- Hover Overlay -->
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4">
+<span class="text-white font-bold text-[15px] mb-2">Rp 4.200.000.000</span>
+<span class="bg-review text-white px-3 py-1 rounded-full text-[12px] font-bold tracking-wide uppercase">Under Review</span>
+</div>
+</div>
+<!-- Grid Item 7 (Disputed) -->
+<div class="group relative aspect-square bg-surface border-solid-1 cursor-pointer overflow-hidden rounded">
+<img alt="Tech equipment for schools" class="w-full h-full object-cover" data-alt="Stacks of new laptop computers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZspRd6J4WPfFDvQCLzYUZQtjTw4u6H-gMgiV1rzZFweU9VTLvyMuBZudzoRfdFZh1EAMNK4HrIHnT_yf2d31WoEOyjmyU_vWokClBcXKKMnZdxItvjGN71qkYBNTNupGEstHhpJU_PU3wV0F593D0453Fvl4556wm_9dMoe50yAHyHCRe9ZewgY3Sv0bJclcO-eZHs4XX3d2N9MwAwMjinGZHkIn6MsYoDSAbIw62CzQseKaQkB0cOGkTRqoct6Pfj0by5hssykBk"/>
+<!-- Hover Overlay -->
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4">
+<span class="text-white font-bold text-[15px] mb-2">Rp 2.100.000.000</span>
+<span class="bg-disputed text-white px-3 py-1 rounded-full text-[12px] font-bold tracking-wide uppercase">Disputed</span>
+</div>
+</div>
+<!-- Grid Item 8 (Verified) -->
+<div class="group relative aspect-square bg-surface border-solid-1 cursor-pointer overflow-hidden rounded">
+<img alt="Public transportation" class="w-full h-full object-cover" data-alt="New city public transit buses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNWM5hTSIODOF5VwiCaUJVskyqT7bYNIM5Aqiu11nIE1KKX33ZxMwjB4xulUmFpM6DW74SGFbk6CyavQodHxHDn2xKJmmlvW_BZLbl3ZIAp3RKNkj8msvPIPZDcV4bCu3DKaxLtny2MJltFqigyzylQFnN-2aZPR-rtMo4JtO3Josc5rrjqbXO_twdiY1516TrPUM5WSoPqGdwzD4iNa9imePSOM5cWmlDhJEmfesfemd1tJ3kNQBWfG4J1JC5E17RIgyeAjhFqa_N"/>
+<!-- Hover Overlay -->
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4">
+<span class="text-white font-bold text-[15px] mb-2">Rp 15.000.000.000</span>
+<span class="bg-verified text-white px-3 py-1 rounded-full text-[12px] font-bold tracking-wide uppercase">Verified</span>
+</div>
+</div>
+<!-- Grid Item 9 (Verified) -->
+<div class="group relative aspect-square bg-surface border-solid-1 cursor-pointer overflow-hidden rounded">
+<img alt="Community center" class="w-full h-full object-cover" data-alt="People gathering in community hall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo9howV_YYOW-AOnh_3U8LSFx4PXvpnyz43NvYUU-M082zzDDdJia9a8cqROvHa4L4l03dv4cbYwaKF4iHZBHFgZVem_ThazMDWYx1Af40LinNi39Da73e3kusOty9AB-dO0fMUyA7pfHBcMhHKk3vkiV4qTps3mqTJV5Id5Hs5d9rLdOku__5KrCrubolri05iD-y1RzlBonii3181WKSDCgUy2e45vP7O5Xcjpuv8fja56alEIqvhnf2Rl-CLE40H3QxXTF65T5U"/>
+<!-- Hover Overlay -->
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4">
+<span class="text-white font-bold text-[15px] mb-2">Rp 850.000.000</span>
+<span class="bg-verified text-white px-3 py-1 rounded-full text-[12px] font-bold tracking-wide uppercase">Verified</span>
+</div>
+</div>
+</div>
+<!-- Load More (Optional, standard pattern) -->
+<div class="mt-8 mb-12 flex justify-center">
+<button class="px-6 py-2 border-solid-1 rounded text-[14px] font-semibold text-text-main hover:bg-background-light transition-colors">
+          Load More
+        </button>
+</div>
+</div>
+</main>
+<!-- Mobile Bottom Nav (Visible only on small screens) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-surface border-t-solid-1 z-50 flex justify-around items-center h-[60px] px-4">
+<a class="flex flex-col items-center gap-1 text-muted hover:text-text-main p-2" href="#">
+<span class="material-symbols-outlined text-[24px]">home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-text-main p-2" href="#">
+<span class="material-symbols-outlined text-[24px] font-bold">search</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-muted hover:text-text-main p-2" href="#">
+<span class="material-symbols-outlined text-[24px]">article</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-muted hover:text-text-main p-2" href="#">
+<span class="material-symbols-outlined text-[24px]">person</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,30 @@
+{
+  "name": "socialgov",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "biome check app package.json next.config.ts next-env.d.ts tsconfig.json biome.json postcss.config.mjs",
+    "format": "biome format --write app package.json next.config.ts next-env.d.ts tsconfig.json biome.json postcss.config.mjs",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run lint && tsc --noEmit"
+  },
+  "dependencies": {
+    "lucide-react": "^0.577.0",
+    "next": "16.2.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.8",
+    "@tailwindcss/postcss": "^4.2.2",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jaga Anggaran - Explore</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#0c90e9",
+                "background-light": "#f5f7f8",
+                "background-dark": "#101b22",
+              },
+              fontFamily: {
+                "display": ["Space Grotesk", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            },
+          },
+        }
+    </script>
+<style>
+        .glass-effect {
+            backdrop-filter: blur(12px);
+            background-color: rgba(16, 27, 34, 0.85);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen flex-col max-w-md mx-auto border-x border-slate-200 dark:border-slate-800 shadow-2xl">
+<!-- Sticky Header with Search -->
+<header class="sticky top-0 z-30 glass-effect border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center p-4 justify-between">
+<h1 class="text-xl font-bold tracking-tight text-primary">Explore</h1>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+</button>
+</div>
+<div class="px-4 pb-3">
+<label class="flex flex-col w-full">
+<div class="flex w-full items-stretch rounded-xl h-12 bg-slate-200/50 dark:bg-slate-800/50 border border-transparent focus-within:border-primary/50 transition-all overflow-hidden">
+<div class="flex items-center justify-center pl-4 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="w-full bg-transparent border-none focus:ring-0 text-base font-normal placeholder:text-slate-500 px-3" placeholder="Search projects, regions, or agencies..." type="text"/>
+<div class="flex items-center pr-4 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-xl">tune</span>
+</div>
+</div>
+</label>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-3 px-4 pb-4 overflow-x-auto hide-scrollbar">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-5 text-white shadow-lg shadow-primary/20">
+<span class="text-sm font-semibold">All Projects</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-800 px-5 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">
+<span class="text-sm font-medium">Health</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-800 px-5 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">
+<span class="text-sm font-medium">Education</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-800 px-5 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">
+<span class="text-sm font-medium">Infrastructure</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-800 px-5 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">
+<span class="text-sm font-medium">Environment</span>
+</button>
+</div>
+</header>
+<!-- Main Content Grid -->
+<main class="flex-1 p-4 mb-20">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-lg font-bold tracking-tight">Trending Budgets</h3>
+<a class="text-primary text-sm font-semibold" href="#">See All</a>
+</div>
+<!-- Square Grid -->
+<div class="grid grid-cols-2 gap-4">
+<!-- Grid Item 1 -->
+<div class="group relative aspect-square overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800">
+<img alt="Public Hospital Construction" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Modern hospital building architecture under clear sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmHYL3bLg32HOtmHSQtcDXjqhEYrADvewlKmkaKmcluJBZIJJovmP6dZzCSutlFc4NhcVkF9zGftoKsJPsH6cH5NXhNjpgL9KppJsar9MqoYv2bMIEIcpcrtflMVz_gRYtVJV9L1KD_c2iRrpQjsxMRzYm5Ncix7EBa8pFDiJdy7ehAmah_1efPWMTnJBcsxoWpN-0dk0x0N5dvsEK6yvasRh615ekm7J_lh8G66h3CL3eFw_ZYJlhm6xHN4ohu1J0HndIlBr7zJ5Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3">
+<span class="text-[10px] font-bold uppercase tracking-wider text-primary mb-1">Health</span>
+<h4 class="text-white text-sm font-bold leading-tight">Central Hospital Revitalization</h4>
+<p class="text-slate-300 text-[11px] mt-1">Rp 42.5B Total</p>
+</div>
+</div>
+<!-- Grid Item 2 -->
+<div class="group relative aspect-square overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800">
+<img alt="Road Infrastructure" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Aerial view of new highway construction" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlrSUbeHvbAPm_55FOQ3ZDlqqajqsAIEbCOJsX1KO_VcJ7NwvsjfXDRkQdsIZgU5AVq5yPzeyMluObUCm3xY0LS80fPv3P_RerXWl3LtNwd8y5AcJvW83uNlqhyrDojxLOaKU3lrgV8XOlw3rCzPyS2jjqAT1qbirIgM9LfCNL6ndOIuyPUV0bznatSyC36Bz1CK_0bneMfQFIzHRiJLBOH34c778KTbeujKG9LAg5u6OFuvEuyAjSD0_JkK65UJmilOOBS77CYn7Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3">
+<span class="text-[10px] font-bold uppercase tracking-wider text-primary mb-1">Infrastructure</span>
+<h4 class="text-white text-sm font-bold leading-tight">Southern Ring Road Phase II</h4>
+<p class="text-slate-300 text-[11px] mt-1">Rp 128.0B Total</p>
+</div>
+</div>
+<!-- Grid Item 3 -->
+<div class="group relative aspect-square overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800">
+<img alt="Smart School Project" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Clean modern university campus interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5B1dqingZz6pO23RU3xGOi-HgzFhqo2jBZaaVd5uvjrcLdAOJExfKaVs96YS6RuFSaKufHYiSBsWDjlQ5IC8zz5yrvYhoZdUNdCB5-eqWX9WR7EjxU09YWwk1hdB0qH796iJ48548U1bl2865bloiu3FUx2dSVxJFvZv2pLfURtDrINuxkiJvze4CvQP40fgO6JHUL9GTyKN5pdreVYSJO5F_fkjFE72Xd2NEJFcZS_4CErmXH59LErVZTOKri0ScDf34vWkhpkTv"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3">
+<span class="text-[10px] font-bold uppercase tracking-wider text-primary mb-1">Education</span>
+<h4 class="text-white text-sm font-bold leading-tight">Digital Library &amp; IT Hub</h4>
+<p class="text-slate-300 text-[11px] mt-1">Rp 15.2B Total</p>
+</div>
+</div>
+<!-- Grid Item 4 -->
+<div class="group relative aspect-square overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800">
+<img alt="Solar Farm" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Vast field of solar panels for renewable energy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn9NNU04GVVQlvkkkJPJrwR-zkcYHf0HbNNAbRFvRHDDQXSy45K4hI827_pP1l68Ak6Lx35yktD0BWp5SuzwctfCbHvC5lPsyjhIRol9RMPF-f1D1Z6ErOQz4DgtLhxip1KuKitL1w3QT5HKOp4-rOoSIqlU25NQP72kin2k-glHI4WH5GYbZydzN74eEeku9BzkXzlA7nhHdubG9kn-1UuM_MTKciJDR4phsxyis4wKJcFtGE9GzW7p7HC_luO4IhQJDaATPmuoZk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3">
+<span class="text-[10px] font-bold uppercase tracking-wider text-primary mb-1">Energy</span>
+<h4 class="text-white text-sm font-bold leading-tight">Renewable Micro-grid Phase 1</h4>
+<p class="text-slate-300 text-[11px] mt-1">Rp 8.9B Total</p>
+</div>
+</div>
+<!-- Grid Item 5 -->
+<div class="group relative aspect-square overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800">
+<img alt="Public Transport" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Modern city bus at a clean bus stop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaKn6U4IJn8UF9wCQJY2DCQRYXtEaJBMvfOKwi1Tr67-oH1-QWw9jZ4qSrq41BPX8sZ-w1LyPh-M-Ln86_2YODpz3t8STH9l6wwaq9ghEYczM_ELDbftBYY37n-ZzeqV2wjoVg6dltOHlZz6StvoPB2as8WzLiwyqvdhdwa9o93stzHY3m_tLclFMoa2UPfXKiHSfNTcoJLokNJzDiKezrJgdnTBa3q6ln25RqRfX9dXla7H07MSwFGMu2mi3Osd6baABajUBVpc_h"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3">
+<span class="text-[10px] font-bold uppercase tracking-wider text-primary mb-1">Transportation</span>
+<h4 class="text-white text-sm font-bold leading-tight">Electric Bus Procurement</h4>
+<p class="text-slate-300 text-[11px] mt-1">Rp 56.4B Total</p>
+</div>
+</div>
+<!-- Grid Item 6 -->
+<div class="group relative aspect-square overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800">
+<img alt="Waste Management" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Recycling facility with modern processing equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDudYaeqHbYFtrkQR4eaUI-PjqYMzLBAf-z-dN2DnLgssvENTVcmJARELHiBOCPAD6YCNiGvMLL9kiEhMLFWEpOc_maiBeYVIprsftvnY8C6aZY3qjwCKmJx66vatyXN9y7Ha-lRKNry8si3GaGendxi6ECeAu-JjNricVDSHNKQKYD1vuEHFcYkFRETnWwoVqgZGeUaWBLZ4KJXFK65wPoJ5j_Zo32yKTHcRS6c6A1FiedBgpqP5KEh09i6toJfgWMRiSRVTAJ_qqV"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3">
+<span class="text-[10px] font-bold uppercase tracking-wider text-primary mb-1">Environment</span>
+<h4 class="text-white text-sm font-bold leading-tight">Integrated Waste Plant</h4>
+<p class="text-slate-300 text-[11px] mt-1">Rp 34.1B Total</p>
+</div>
+</div>
+</div>
+<!-- Popular Regions Section -->
+<div class="mt-8 mb-4">
+<h3 class="text-lg font-bold tracking-tight mb-4">Popular Regions</h3>
+<div class="flex gap-4 overflow-x-auto hide-scrollbar pb-2">
+<div class="flex-none w-24 text-center">
+<div class="w-20 h-20 mx-auto rounded-full overflow-hidden border-2 border-primary/20 p-1 mb-2">
+<img alt="Jakarta" class="w-full h-full object-cover rounded-full" data-alt="Jakarta city skyline during sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYmGz6eI71oZozyakFx8JyzrlHqtSv-H_K9zGtus4jSRfmO_0-iga6qHe3Ay9Q-745Be5bMNWjvLVr072gtKxE8v4C4a63q7S35CUgCverz_TfdAfSRr6-flekZfSrTCClgfRI3c5aVBSx35BjUtoSQCID_VA3NKS9lRL-24wqiN-Uq-i5mjEr7ju-BcWNvEN2vbISg97hoOU_BSzo6IDO8h8uBNUDyv-3XEHTvGUTPv5GCLrEyUd4JP7v6U_Ne_p7KXx2qOUNNsu0"/>
+</div>
+<span class="text-xs font-semibold">Jakarta</span>
+</div>
+<div class="flex-none w-24 text-center">
+<div class="w-20 h-20 mx-auto rounded-full overflow-hidden border-2 border-transparent hover:border-primary/20 p-1 mb-2">
+<img alt="Surabaya" class="w-full h-full object-cover rounded-full" data-alt="Historical bridge in Surabaya city" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMKKYdwOVCBVuBEMCPbgiZo_1tppT7Cu4kDSNM7r9kg7sbGhtZb233j9J5ZwNWo1LY_LYwV2KwO0BhkXAicwuZU5ODz8p_ljLvUIj3g1iRDDwgzo22xYQ-yij6RF1VNhADUy7yuBHqc10IGqlUIbHliCuUp3Z5uaaKNVKjM04jsilxpuS4209wlZoDI3jyPP3z7-P1HHnHnHi8jV03O06HRVlhr8Pyk6DHLzX-s-5CP4N5763FebH1_JmUBU9n-V4UYKf7wjnvDZ0Y"/>
+</div>
+<span class="text-xs font-semibold">Surabaya</span>
+</div>
+<div class="flex-none w-24 text-center">
+<div class="w-20 h-20 mx-auto rounded-full overflow-hidden border-2 border-transparent hover:border-primary/20 p-1 mb-2">
+<img alt="Bandung" class="w-full h-full object-cover rounded-full" data-alt="Lush green tea plantation in Bandung" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJMvUYyrQg59sMElbvsLjYxtkJJettjGZNBLrVLP4-k5SL0Cq3GwX3ttjsg_H_tn54i5UJfWgiSaFacZYa4aPI89u_EXhpj99lbfvJmFTvXcyBVXjaT6xSdzDBLNaS8vsY7K6OQs8euvNR-cNpzQLM8H4GEwzY5MybW0faTsvOC25dy7azK2NjbzvRjnSDRT_OvpSGv0Qejp7kda24gRiu4uM1T5F65x00ctMzGEbH13pm_vuQj5AYh4RSb7wQcOS-UCoIhCyXT_4a"/>
+</div>
+<span class="text-xs font-semibold">Bandung</span>
+</div>
+<div class="flex-none w-24 text-center">
+<div class="w-20 h-20 mx-auto rounded-full overflow-hidden border-2 border-transparent hover:border-primary/20 p-1 mb-2">
+<img alt="Bali" class="w-full h-full object-cover rounded-full" data-alt="Traditional Balinese temple architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEB4MRdTeuM-GtdGjDVMjsjivaJ9IXCjGTGXUqNOtUkeFWf6JDQZ3a0_-MmjDmOdwjzV99xyt5x5KFg30ZeKnIEtge-60pLWTI2LzSoqCHxzl-W3AdxjGhaqB_UKptJVAVLCPrXc3emPsj4FVKat3pJ_T_n8pOiefhxptlpAJrqz6jueGBf74jySLy01VWAxotUoJ0Gg5OcnOVeZERyQYgtUYT5cxfQZ-Gpwzg_Yua4Dz9-_gGp_4PNlY7ag-KfDxbE8wpVqUgYIZQ"/>
+</div>
+<span class="text-xs font-semibold">Bali</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Sticky Bottom Nav -->
+<nav class="fixed bottom-0 z-40 w-full max-w-md glass-effect border-t border-slate-200 dark:border-slate-800">
+<div class="flex items-center justify-around h-20 px-2 pb-2">
+<a class="flex flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-2xl fill-primary">explore</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center -mt-8" href="#">
+<div class="bg-primary p-4 rounded-full shadow-lg shadow-primary/30 border-4 border-background-light dark:border-background-dark">
+<span class="material-symbols-outlined text-white text-3xl">add</span>
+</div>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined text-2xl">bar_chart</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Insights</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined text-2xl">account_circle</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Profile</span>
+</a>
+</div>
+</nav>
+</div>
+</body></html>

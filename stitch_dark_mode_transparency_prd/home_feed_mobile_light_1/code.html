@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e52a2a",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#211111",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<!-- Header -->
+<header class="sticky top-0 z-50 flex items-center bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 p-4 justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">account_balance_wallet</span>
+<h1 class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">Jaga Anggaran</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative flex items-center justify-center p-1">
+<span class="material-symbols-outlined text-slate-700 dark:text-slate-300">notifications</span>
+<span class="absolute top-1 right-1 flex h-2 w-2 rounded-full bg-primary"></span>
+</button>
+<button class="flex items-center justify-center p-1">
+<span class="material-symbols-outlined text-slate-700 dark:text-slate-300">send</span>
+</button>
+</div>
+</header>
+<!-- Story/Category Rail -->
+<div class="flex w-full overflow-x-auto no-scrollbar bg-white dark:bg-background-dark px-4 py-4 border-b border-slate-100 dark:border-slate-800 gap-5">
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="p-0.5 rounded-full bg-gradient-to-tr from-primary to-orange-400">
+<div class="w-16 h-16 rounded-full border-2 border-white dark:border-background-dark bg-slate-200 overflow-hidden bg-cover bg-center" data-alt="Profile picture of Budi Santoso" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDHagreKTUkOk74c7NTuTqAqW1U32zWKcNTPDN1U0QfSVCJ4FkjcG5Q8j6zKAfE3wN3rCsYvvtdCQPvdCSQztIa2GXuY0Htrn_GfJlWgtOIaZrOde2Q8emvKvc4Y4CAgPkZ3FZnSsMX2Fl1UQEW2GV-j4zXXw4YRWzgpXhmnMQFd55XySM5pK9FkYB9MKjpvHDrRFGr88eyR-aGt0DjkxRxHKerwuU-0FZnz7-MHzjqssVF_Zn-Ne7_tdJFwfSiwkIj0-QBXvtaVlnQ')"></div>
+</div>
+<p class="text-[11px] font-semibold">Your Story</p>
+</div>
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="p-0.5 rounded-full border border-slate-200 dark:border-slate-700">
+<div class="w-16 h-16 rounded-full border-2 border-white dark:border-background-dark bg-slate-200 overflow-hidden bg-cover bg-center" data-alt="Savings and investment concept image" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBBSthIFwZ32pyhg9vbfZKj-MuzEAAdTpolXdtrU3qFI0D7ajLB7Qvlu3k9tuWKMZ-EJ9kW6iFYcgzaoAb5HyVxMXZlYH9pTR4qsWS-2ZfxDIeGVFwdub-42S0-RfM_Hs0nt1DRjZfcEIwZfQVjby1Yaz5EVPzU7a_Og2Eviagg7qq_-3XNwlDYpq9rinJ1q5fozICNFjsHAKcnzPl1Lh0-9jAgj1rr6Md5iwa-1ioqWkHZ5DBXzwpR3IV-MvzucHZxUJCt1BWswn7c')"></div>
+</div>
+<p class="text-[11px] font-medium">Investasi</p>
+</div>
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="p-0.5 rounded-full border border-slate-200 dark:border-slate-700">
+<div class="w-16 h-16 rounded-full border-2 border-white dark:border-background-dark bg-slate-200 overflow-hidden bg-cover bg-center" data-alt="Healthy home cooked meal on plate" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCIUl4kEcs4z7zlluIOG27ypzNB4QmEoWI93y_1TtAFkLHXIF9m7O2utIFM-AcBNrv9zq4_IWeh0PXWvptE5KdsyYF66wIG5g2L1_kGGjh_toODb-pQ4EALBMqhREJLESq8bp-mnC843bPnaueqAia5j9s0lmmhjJMaNGexlU9Vqj1DSXUCY-siZhsrfkCgl8_tNwstUTXEQGh6IlHI5-bzX8Ec5cqglkagkWf_ZGAl50usOAY_ApiP8u2RC7PcyoCyXHxhX-fng3HU')"></div>
+</div>
+<p class="text-[11px] font-medium">Foodie</p>
+</div>
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="p-0.5 rounded-full border border-slate-200 dark:border-slate-700">
+<div class="w-16 h-16 rounded-full border-2 border-white dark:border-background-dark bg-slate-200 overflow-hidden bg-cover bg-center" data-alt="Laptops and high tech gear gadgets" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCsnSJWaXPFaUc-I0xPrpJGutkyamOrWPbqfVVLPJ08t81CYPt2-JL5pPgPVI-uzEa4t5cENG5aN-v-RuMlwv34yY3vvGdfamH985fVQuz_sBylPiXaCEHZN6T4tiXknyNXJcRfiTDIC6on6Mq3DEp7JOiedlLERHInfv0_X2INNTiztVKcTAoPGFNwmrhsuov1u0ynvx2ZeR5eVjBBfEFldPWkjI7r1-F2Z3BEtae8pmBf19XbJKdbBpcA7t192llL0THEIfNQGMQB')"></div>
+</div>
+<p class="text-[11px] font-medium">Tech Gear</p>
+</div>
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="p-0.5 rounded-full border border-slate-200 dark:border-slate-700">
+<div class="w-16 h-16 rounded-full border-2 border-white dark:border-background-dark bg-slate-200 overflow-hidden bg-cover bg-center" data-alt="Eiffel tower and travel scene" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC6NnK21T6idMwHa3n-mEOdW9nX4cXEy4LL8ZkZSNA2U7kZVgpN9cCgH0qgmzZDEwhS5Vg-Q2RlP7h4B_e-j6Fvj53a2enaZ-wx7vQtPD1Xx1TvT4Qo1nFJdrh9iMs0JqrRdVBR56fDQA1fS4_phtiwIeYP6tIJ7jIi39Q2teP25yEgi3nDYfGDmSJqAjQs4j_kYGOSDZpXBSA6af-bq8-_KNY8Wwj966jfwAr_fhxVjQ-C6g9qxJmPYkpmr9l7W9loqtHx19hMmKs8')"></div>
+</div>
+<p class="text-[11px] font-medium">Traveling</p>
+</div>
+</div>
+<!-- Main Feed -->
+<main class="pb-24">
+<!-- Post 1 -->
+<article class="bg-white dark:bg-background-dark mb-2">
+<!-- Post Header -->
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-cover bg-center" data-alt="Avatar for Anisa Putri" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDw7uLmvq9dCmR1Y8R28Fh_6LyqIRpJC78-2mbOCpRcY5Tjhg1425MY5cGayYjwRiLzVDGe9Scy4r4zwJxVRcZFs2oEl9W3547Q2RaIHat5Lf1z9KDjxwi3yaG_3_1omHh3wmGN2OifGwqMQfltdxjS9d6IRtsOyEMs4P7bv6iVGfhA1aBcu0BCQAekfexWGyb5vuJ8ibPManD95hAIod02s4PBsNYespNe4gTfmP28sp7V7SIQ9YJ0I7SgMFtEdpVv15DLM1XUQgq3')"></div>
+<div>
+<div class="flex items-center gap-1">
+<p class="text-sm font-bold">anisa_putri</p>
+<span class="material-symbols-outlined text-blue-500 text-[14px] fill-current">verified</span>
+</div>
+<p class="text-xs text-slate-500">Jakarta Selatan • 2h ago</p>
+</div>
+</div>
+<button class="material-symbols-outlined text-slate-400">more_horiz</button>
+</div>
+<!-- Post Image -->
+<div class="relative aspect-square w-full bg-slate-100 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A shopping cart filled with fresh groceries" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoxQjtUdpVFW5XmJECFEoP_Q_oYkgBRv2oX0ReVYgp9NVrzI1OIPAw_8f9qFIA92HJB0foJO1kYOcAzXq5nHOW1lQ5jT2-xOSesUeTemAaGR3zDuu5wYogCx0qDNxs9ihbeArjAdhxquaOdEB5aXYhSj1LZxsMkdC5sF7r7v7TH-TT0NGt8Onj4EqBc4P60C1_z_QE9NpwkyOBUjxGHvKu2hQZU5Ui-O-GRHg3WoKpih17s-AS4icWwbBYlhJmDTSDbf6tsIhUoIxq"/>
+<!-- Validation Badge Overlay -->
+<div class="absolute top-4 right-4 bg-green-500/90 backdrop-blur-sm text-white px-3 py-1.5 rounded-full flex items-center gap-1 shadow-lg">
+<span class="material-symbols-outlined text-[16px] font-bold">verified_user</span>
+<span class="text-[11px] font-bold uppercase tracking-wider">Validated by Community</span>
+</div>
+</div>
+<!-- Post Actions -->
+<div class="p-4">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-slate-800 dark:text-slate-200 hover:text-primary transition-colors">favorite</button>
+<button class="material-symbols-outlined text-slate-800 dark:text-slate-200">chat_bubble</button>
+<button class="material-symbols-outlined text-slate-800 dark:text-slate-200">share</button>
+</div>
+<button class="material-symbols-outlined text-slate-800 dark:text-slate-200">bookmark</button>
+</div>
+<!-- Post Content -->
+<div class="space-y-2">
+<p class="text-sm font-bold">1,204 Likes</p>
+<p class="text-sm leading-relaxed">
+<span class="font-bold mr-2">anisa_putri</span>Weekly Grocery Budget: Success! 🍎 Managed to stay under Rp 500k by meal prepping and switching to local markets.
+                    </p>
+<!-- Budget Tags -->
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="inline-flex items-center gap-1 bg-primary/10 text-primary text-[11px] font-bold px-3 py-1 rounded-full uppercase">
+                            #FoodBudget
+                        </span>
+<span class="inline-flex items-center gap-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[11px] font-bold px-3 py-1 rounded-full uppercase">
+                            #SavingTips
+                        </span>
+<span class="inline-flex items-center gap-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[11px] font-bold px-3 py-1 rounded-full uppercase">
+                            #MoneyHacks
+                        </span>
+</div>
+<!-- CTA Button -->
+<div class="pt-3">
+<button class="w-full py-2.5 bg-primary text-white text-sm font-bold rounded-lg flex items-center justify-center gap-2 hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+                            Validate This Budget
+                        </button>
+</div>
+<button class="text-slate-500 text-xs mt-2 block">View all 42 comments</button>
+</div>
+</div>
+</article>
+<!-- Post 2 (Small Variant) -->
+<article class="bg-white dark:bg-background-dark mb-2">
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-cover bg-center" data-alt="Avatar for Hendra Wijaya" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDqoa_wOAIXW9sXUfVQSY_443bt61UyWNQdOky7LE8BjgH98lvQGdhzTzw-5w3vmHlFkBxmxh8wl8ofLELYLuVpXyNyEubhCjl0xcftg4CtObgwyh9Nhc33UMyo4zQ2pZVX63Ltgi1PTE-qre601lcY06SZTu3fC7-TUxMR6ps5qJgKKqPXRlOLinq9cw-rX9zKrCP2g9Ib96SQm4Qy1hSkOblkf0uLLL_N2p3NX4wy0xmk8FaG2nDV70NZqQ3yR1Kr6YCC_umOS5LJ')"></div>
+<div>
+<p class="text-sm font-bold">hendra.wijaya</p>
+<p class="text-xs text-slate-500">Bandung • 5h ago</p>
+</div>
+</div>
+<button class="material-symbols-outlined text-slate-400">more_horiz</button>
+</div>
+<div class="px-4 pb-4">
+<div class="bg-slate-50 dark:bg-slate-900/50 p-4 rounded-xl border border-slate-100 dark:border-slate-800">
+<div class="flex items-start gap-4">
+<div class="bg-primary/10 p-3 rounded-lg">
+<span class="material-symbols-outlined text-primary">analytics</span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">New Budget Plan: Tech Upgrade</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Goal: Rp 15.000.000 by December. Currently at 45% completion! 🚀</p>
+</div>
+</div>
+<div class="mt-4 w-full bg-slate-200 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[45%]"></div>
+</div>
+</div>
+<div class="flex items-center gap-4 mt-4">
+<button class="material-symbols-outlined text-slate-800 dark:text-slate-200">favorite</button>
+<button class="material-symbols-outlined text-slate-800 dark:text-slate-200">chat_bubble</button>
+<button class="material-symbols-outlined text-slate-800 dark:text-slate-200">share</button>
+</div>
+</div>
+</article>
+</main>
+<!-- Sticky Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 dark:bg-background-dark/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 px-6 pb-6 pt-3">
+<div class="flex items-center justify-between max-w-lg mx-auto">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-current">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-[10px] font-bold">Search</span>
+</a>
+<a class="flex flex-col items-center -mt-8" href="#">
+<div class="bg-primary text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg shadow-primary/40 border-4 border-white dark:border-background-dark">
+<span class="material-symbols-outlined text-3xl font-bold">add</span>
+</div>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">query_stats</span>
+<span class="text-[10px] font-bold">Stats</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-[10px] font-bold">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

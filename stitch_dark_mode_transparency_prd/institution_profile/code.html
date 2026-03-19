@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jaga Anggaran - Institution Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#E52B2B",
+                        "background-light": "#FAFAFA",
+                        "background-dark": "#1A1A1A",
+                        "surface": "#FFFFFF",
+                        "text-main": "#1A1A1A",
+                        "muted": "#737373",
+                        "verified": "#059669",
+                        "review": "#D97706",
+                        "disputed": "#DC2626",
+                        "border-color": "#E5E5E5"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "heading": ["Newsreader", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem", // 2px
+                        "sm": "0.125rem",
+                        "md": "0.25rem",
+                        "lg": "0.5rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'none': 'none',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #FAFAFA;
+            color: #1A1A1A;
+        }
+        h1, h2, h3, .font-heading {
+            font-family: 'Newsreader', serif;
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAFAFA;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #E5E5E5;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4D4D4;
+        }
+        
+        .grid-item-hover:hover .hover-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main antialiased min-h-screen flex justify-center">
+<div class="flex w-full max-w-[1200px] mx-auto min-h-screen relative">
+<!-- Left Sidebar Navigation (244px fixed) -->
+<aside class="hidden md:flex flex-col w-[244px] fixed h-screen border-r border-border-color bg-surface dark:bg-background-dark dark:border-muted px-4 py-8 z-10">
+<div class="mb-10 px-2">
+<h1 class="font-heading text-2xl font-bold tracking-tight text-text-main dark:text-white">Jaga Anggaran</h1>
+</div>
+<nav class="flex flex-col gap-2 flex-1">
+<a class="flex items-center gap-4 px-3 py-3 rounded hover:bg-background-light dark:hover:bg-muted/20 text-text-main dark:text-white transition-colors group" href="#">
+<span class="material-symbols-outlined text-[28px] group-hover:scale-105 transition-transform">home</span>
+<span class="text-base font-medium">Home</span>
+</a>
+<a class="flex items-center gap-4 px-3 py-3 rounded hover:bg-background-light dark:hover:bg-muted/20 text-text-main dark:text-white transition-colors group" href="#">
+<span class="material-symbols-outlined text-[28px] group-hover:scale-105 transition-transform">search</span>
+<span class="text-base font-medium">Explore</span>
+</a>
+<a class="flex items-center gap-4 px-3 py-3 rounded hover:bg-background-light dark:hover:bg-muted/20 text-text-main dark:text-white transition-colors group" href="#">
+<span class="material-symbols-outlined text-[28px] group-hover:scale-105 transition-transform">article</span>
+<span class="text-base font-medium">News</span>
+</a>
+<a class="flex items-center gap-4 px-3 py-3 rounded bg-background-light dark:bg-muted/30 text-text-main font-bold dark:text-white transition-colors group" href="#">
+<span class="material-symbols-outlined text-[28px] group-hover:scale-105 transition-transform" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+<span class="text-base">Profile</span>
+</a>
+</nav>
+<div class="mt-auto px-2">
+<button class="w-full bg-primary text-white font-bold py-3 px-4 rounded hover:bg-primary/90 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+                    Report Spending
+                </button>
+</div>
+</aside>
+<!-- Main Content Area (630px central feed) -->
+<main class="flex-1 w-full max-w-[630px] md:ml-[244px] border-r border-border-color bg-surface dark:bg-background-dark dark:border-muted min-h-screen pb-20 md:pb-0">
+<!-- Mobile Header -->
+<header class="md:hidden flex items-center justify-between p-4 border-b border-border-color bg-surface sticky top-0 z-20">
+<h1 class="font-heading text-xl font-bold">Jaga Anggaran</h1>
+<button class="material-symbols-outlined">menu</button>
+</header>
+<!-- Profile Header Section -->
+<section class="p-8 border-b border-border-color dark:border-muted">
+<div class="flex flex-col items-center text-center">
+<!-- Avatar (150px circular) -->
+<div class="w-[150px] h-[150px] rounded-full border border-border-color p-1 mb-6 bg-surface shrink-0">
+<img alt="Kementerian PUPR Official Logo" class="w-full h-full rounded-full object-cover" data-alt="Government institution official emblem" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqOFQ0bCO5fKmThKrCXzWlPtau5x0jZCAu2plIouF9dLRKeZCbO12TFh4loD92fdg4MLX43mpbqrtR6AKskfytPLj3AoEAE5b2QzlyrMcPyKBUL-kMFizWnXA4k6vh_NOOCh9JF9hGU6vXmQZMC8NkAOJYmirVRLZwKbksSG3DPfLOuvfsu1BiSsJuMuW9M-b6E_03N-gqnqOU1aQC8Imd0sC4Ny54U4EYkZmfnemxCHnllAJBeZyRNa9rno69VRSXiVU_E-fgBY9h"/>
+</div>
+<!-- Title & Description -->
+<h2 class="font-heading text-[28px] font-bold leading-tight mb-2 text-text-main dark:text-white">
+                        Kementerian PUPR
+                    </h2>
+<p class="text-muted dark:text-gray-400 text-[15px] max-w-[450px] mb-2 font-display">
+                        Kementerian Pekerjaan Umum dan Perumahan Rakyat Republik Indonesia. Membangun infrastruktur negeri.
+                    </p>
+<a class="text-primary font-medium text-[14px] hover:underline mb-6 flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">link</span>
+                        pu.go.id
+                    </a>
+<!-- Action Buttons -->
+<div class="flex gap-3 w-full max-w-[300px]">
+<button class="flex-1 bg-background-light dark:bg-muted/20 border border-border-color dark:border-muted text-text-main dark:text-white font-bold py-2 px-4 rounded hover:bg-gray-100 dark:hover:bg-muted/40 transition-colors text-[14px]">
+                            Track Updates
+                        </button>
+<button class="flex-1 bg-surface dark:bg-background-dark border border-border-color dark:border-muted text-text-main dark:text-white font-bold py-2 px-4 rounded hover:bg-gray-50 dark:hover:bg-muted/10 transition-colors text-[14px]">
+                            Submit Query
+                        </button>
+</div>
+</div>
+</section>
+<!-- Stats Row -->
+<section class="py-6 px-4 border-b border-border-color dark:border-muted bg-background-light/50 dark:bg-background-dark">
+<div class="grid grid-cols-3 gap-4 divide-x divide-border-color dark:divide-muted text-center">
+<div class="flex flex-col justify-center">
+<span class="text-[20px] font-bold text-text-main dark:text-white tracking-tight">Rp 146T</span>
+<span class="text-[13px] text-muted dark:text-gray-400 font-medium mt-1">Budget Tracked</span>
+</div>
+<div class="flex flex-col justify-center">
+<span class="text-[20px] font-bold text-verified tracking-tight">82%</span>
+<span class="text-[13px] text-muted dark:text-gray-400 font-medium mt-1">Verified Posts</span>
+</div>
+<div class="flex flex-col justify-center">
+<span class="text-[20px] font-bold text-review tracking-tight">14</span>
+<span class="text-[13px] text-muted dark:text-gray-400 font-medium mt-1">Active Disputes</span>
+</div>
+</div>
+</section>
+<!-- Tabs Navigation -->
+<div class="flex border-b border-border-color dark:border-muted sticky top-0 md:top-0 z-10 bg-surface dark:bg-background-dark">
+<button class="flex-1 py-4 text-[14px] font-bold text-text-main dark:text-white border-b-2 border-text-main dark:border-white flex items-center justify-center gap-2 uppercase tracking-wide">
+<span class="material-symbols-outlined text-[18px]">grid_on</span>
+                    Posts
+                </button>
+<button class="flex-1 py-4 text-[14px] font-medium text-muted hover:text-text-main dark:hover:text-white transition-colors flex items-center justify-center gap-2 uppercase tracking-wide">
+<span class="material-symbols-outlined text-[18px]">sell</span>
+                    Tagged
+                </button>
+<button class="flex-1 py-4 text-[14px] font-medium text-muted hover:text-text-main dark:hover:text-white transition-colors flex items-center justify-center gap-2 uppercase tracking-wide">
+<span class="material-symbols-outlined text-[18px]">summarize</span>
+                    Reports
+                </button>
+</div>
+<!-- Spending Grid (1:1 aspect ratio items) -->
+<section class="grid grid-cols-3 gap-1 p-1">
+<!-- Grid Item 1: Verified -->
+<div class="aspect-square relative group grid-item-hover cursor-pointer bg-gray-100 overflow-hidden">
+<img alt="Bridge construction project" class="w-full h-full object-cover" data-alt="Modern concrete bridge construction site" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSIc7_cXimsPq7UZIoYDqvWIJvrguXjrCPVLAa2HG8O-BiO9RFMBqTH4K4qEBcPhFw1tOHMcwJMNp5ABs4CDgku8m1-O_s30u-PV3HkpwHET1oQLrnYEi1n-TgG9sCXeMPWFf9fNAhyml75Kg171SZPiMM1Z7PGzmLa08M3DiNrw6qcW6lXVOmwWCGMJopu9LJrM7PkI128rO6YumnDP1BeNYeTBIfKBFo2TzncEUMojng7BMz81E5zx9_8qljdl-QBFR7xSxo_UsZ"/>
+<!-- Hover Overlay -->
+<div class="hover-overlay opacity-0 absolute inset-0 bg-black/60 transition-opacity flex flex-col items-center justify-center gap-2 p-2 text-center z-10">
+<span class="text-white font-bold text-[16px]">Rp 45.2M</span>
+<div class="bg-verified text-white text-[11px] font-bold px-2 py-1 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">check_circle</span>
+                            Verified
+                        </div>
+</div>
+</div>
+<!-- Grid Item 2: Under Review -->
+<div class="aspect-square relative group grid-item-hover cursor-pointer bg-gray-100 overflow-hidden">
+<img alt="Road paving machinery" class="w-full h-full object-cover" data-alt="Heavy machinery paving new asphalt road" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHWTJIIKh5q9KwBENByS3wgHpe2FLxS5KWqcGBuYqPdRLyqJtxZ5QhSGPzIWQeoBf7UWSLxwn2h0gecunjx2tkXOsKT6pOQipG6z84yRMym6sOWbrTtx24lktdr4TCFE1gXBn8CB_sDeynrHn3YodhudvIea8WN3g-gGG-ogX2gnnPE_H2h9UjJgYOMnC0v41iV4zLsju5mC3yxQIYaQ5BHFsz8cUNKqT3CkFL38fTaifxGWyOZW6ZWj4W835N656ZJgabQZMf81rp"/>
+<div class="hover-overlay opacity-0 absolute inset-0 bg-black/60 transition-opacity flex flex-col items-center justify-center gap-2 p-2 text-center z-10">
+<span class="text-white font-bold text-[16px]">Rp 12.5M</span>
+<div class="bg-review text-white text-[11px] font-bold px-2 py-1 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">pending</span>
+                            Review
+                        </div>
+</div>
+</div>
+<!-- Grid Item 3: Disputed -->
+<div class="aspect-square relative group grid-item-hover cursor-pointer bg-gray-100 overflow-hidden">
+<img alt="Dam infrastructure" class="w-full h-full object-cover" data-alt="Large concrete water dam structure" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgocjDHUSCZFMECVd0dpEPtKiBWKjFQPB1lNzCPOrdE6mGoLsmc4EHGf-FGflpSxdosczz3cP56fJh0aVMptjkjVla2mBwgqiknM4RETrRrDRYqK2zM6FHv2XY8HxfWhsrSqceSvhZ6VXUgqrGxJ2e3V3nnozOBmknMLe3h-J3i_uEzTOLor7Ac8iISB25vN80KU2nmEbKl0BsS2yilU6pYVEweitpBqoOFnRJjhC34K8sTGFsZhlWIjNYUvKwLDkGwvcA0S9183G5"/>
+<div class="hover-overlay opacity-0 absolute inset-0 bg-black/60 transition-opacity flex flex-col items-center justify-center gap-2 p-2 text-center z-10">
+<span class="text-white font-bold text-[16px]">Rp 890M</span>
+<div class="bg-disputed text-white text-[11px] font-bold px-2 py-1 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">warning</span>
+                            Disputed
+                        </div>
+</div>
+</div>
+<!-- Grid Item 4: Verified -->
+<div class="aspect-square relative group grid-item-hover cursor-pointer bg-gray-100 overflow-hidden">
+<img alt="Public housing complex" class="w-full h-full object-cover" data-alt="Rows of modern public housing apartments" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ9HLJN3JiUhu859tFEDMjjDEz3Ikpya9XuJzIYpAEiNQaJKt3pdQ09CrwaCHhfvacepKavyP6dyLZxPuAjLNPp5k4GH3bBMsecPsszkOls65NLSQlHOzNmMBOveF-nMyo23fy2igQcuGEY3OM9F4-FQoqjtEruX7pdUxhMMAGoIEdLMaya6-SQ3nVRfST3OgrYEy6IFckBFwv4so27NpWVgNVxQJyTySMclk29pxfliw9dKg_bsYBYiEP_6b25qn-JiJqabIxKFqf"/>
+<div class="hover-overlay opacity-0 absolute inset-0 bg-black/60 transition-opacity flex flex-col items-center justify-center gap-2 p-2 text-center z-10">
+<span class="text-white font-bold text-[16px]">Rp 210M</span>
+<div class="bg-verified text-white text-[11px] font-bold px-2 py-1 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">check_circle</span>
+                            Verified
+                        </div>
+</div>
+</div>
+<!-- Grid Item 5: Verified -->
+<div class="aspect-square relative group grid-item-hover cursor-pointer bg-gray-100 overflow-hidden">
+<img alt="Irrigation canal" class="w-full h-full object-cover" data-alt="Concrete agricultural irrigation water canal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS3On7NT7Szj_jMLJ_v4rWwJDNo_wRSYCtJ61zn0jus_SKPqpakQHzLU_WoImyT0qKQASvCA8I1xdXktie9HBkvgt4RhV58LeFzq_N6fmUqGcaSH4ANFg9-ppfqtzOa1pKjMPwVrNqp-YTOreMpFMDCttR0HA_xwmnXZ1-OZEtTGIcQxSfEkH7YOsTXYqamm6WgxLjLWDbkurTzwZpy8dCJIm4mFH0oiXlN2IZuDzQ0nt_1-7yT4dKWJ4g2qVZL38DXfnHQS2wDORe"/>
+<div class="hover-overlay opacity-0 absolute inset-0 bg-black/60 transition-opacity flex flex-col items-center justify-center gap-2 p-2 text-center z-10">
+<span class="text-white font-bold text-[16px]">Rp 8.2M</span>
+<div class="bg-verified text-white text-[11px] font-bold px-2 py-1 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">check_circle</span>
+                            Verified
+                        </div>
+</div>
+</div>
+<!-- Grid Item 6: Under Review -->
+<div class="aspect-square relative group grid-item-hover cursor-pointer bg-gray-100 overflow-hidden flex items-center justify-center border border-border-color">
+<!-- Example of a text/report based post if image is missing -->
+<div class="p-4 text-center">
+<span class="material-symbols-outlined text-[48px] text-muted mb-2">description</span>
+<p class="text-[12px] font-medium text-text-main line-clamp-3">Laporan Keuangan Kuartal III 2023 - APBN Infrastruktur</p>
+</div>
+<div class="hover-overlay opacity-0 absolute inset-0 bg-black/60 transition-opacity flex flex-col items-center justify-center gap-2 p-2 text-center z-10">
+<span class="text-white font-bold text-[16px]">Document</span>
+<div class="bg-review text-white text-[11px] font-bold px-2 py-1 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">pending</span>
+                            Review
+                        </div>
+</div>
+</div>
+</section>
+</main>
+<!-- Right Recommendations Panel (319px fixed) -->
+<aside class="hidden lg:block w-[319px] py-8 pl-8 pr-4">
+<div class="sticky top-8">
+<h3 class="text-muted font-bold text-[14px] uppercase tracking-wider mb-4">Related Institutions</h3>
+<div class="flex flex-col gap-4">
+<!-- Related Item 1 -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3 cursor-pointer group">
+<div class="w-10 h-10 rounded-full overflow-hidden border border-border-color shrink-0">
+<img alt="Bappenas Logo" class="w-full h-full object-cover" data-alt="Government agency logo emblem" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAehAgWV0tPDZOaI0sN8Ivr-g4bRn62reZUO33EcpDvUdOSsjUrPfF-troR3hTcm6R0dt02ioEhDTf01-ke411MVloV1u_qZ3q2hte7oJ35pIZSRzMG2wR-11TQm_D_FJGbZ4caqVkW0k8bUi8Rf-lE4Cv3UmXT2z6wnFmc-f8v1v0KA0r99D7AFDjSAzDHwhWQpnzI1npoNxIpybD6dPbMZAt0792YKDj1llIdZNtLXcS6gqfxydTMO8gjWjTbQGEks9-YMRbrGVDJ"/>
+</div>
+<div class="flex flex-col">
+<span class="text-[14px] font-bold text-text-main group-hover:underline">Bappenas</span>
+<span class="text-[12px] text-muted">National Planning</span>
+</div>
+</div>
+<button class="text-[12px] font-bold text-primary hover:text-primary/80">Track</button>
+</div>
+<!-- Related Item 2 -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3 cursor-pointer group">
+<div class="w-10 h-10 rounded-full overflow-hidden border border-border-color shrink-0">
+<img alt="Kemenkeu Logo" class="w-full h-full object-cover" data-alt="Ministry of finance official logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ4bo36BqltDASXLkgj543eAFD1kV0SWStEz3TI_gSLYTj4o5saRlnwgIe-C_d0pia_3E3ggvE0HMiWKBfpH55HVI8yXRb5HaYNR7n0NbNWDR8DDMlwv2zanVgb6eFozNoElTisU9BxeBKLcfagc9tcFHAcs4NhIus74gxMJBE1bBKG1hJFKh09zPWYmxcQ9uwVa1bBa1CNNVekE2rOG9BxX03sb4nZyHrkXaMD13ZBen6hKtoL7me9oiUmqVdvBJ24ZiB_fzWUQhG"/>
+</div>
+<div class="flex flex-col">
+<span class="text-[14px] font-bold text-text-main group-hover:underline">Kemenkeu</span>
+<span class="text-[12px] text-muted">Ministry of Finance</span>
+</div>
+</div>
+<button class="text-[12px] font-bold text-primary hover:text-primary/80">Track</button>
+</div>
+</div>
+<div class="mt-10">
+<h3 class="text-muted font-bold text-[14px] uppercase tracking-wider mb-4">Transparency Score</h3>
+<div class="p-4 border border-border-color rounded bg-surface">
+<div class="flex items-end gap-2 mb-2">
+<span class="text-[32px] font-heading font-bold leading-none text-verified">A-</span>
+<span class="text-[13px] text-muted pb-1">High Trust</span>
+</div>
+<p class="text-[12px] text-muted leading-relaxed">
+                            Based on public validation of 1,204 expenditure reports in the last 12 months.
+                        </p>
+<a class="text-[12px] font-bold text-text-main mt-3 block hover:underline" href="#">View Methodology</a>
+</div>
+</div>
+<footer class="mt-8 text-[12px] text-muted flex flex-wrap gap-x-3 gap-y-1">
+<a class="hover:underline" href="#">About</a>
+<a class="hover:underline" href="#">Methodology</a>
+<a class="hover:underline" href="#">API</a>
+<a class="hover:underline" href="#">Terms</a>
+<span class="w-full mt-2">© 2024 Jaga Anggaran</span>
+</footer>
+</div>
+</aside>
+<!-- Mobile Bottom Nav -->
+<nav class="md:hidden fixed bottom-0 w-full bg-surface border-t border-border-color flex justify-around p-3 z-20">
+<a class="flex flex-col items-center text-text-main" href="#">
+<span class="material-symbols-outlined text-[24px]">home</span>
+</a>
+<a class="flex flex-col items-center text-muted" href="#">
+<span class="material-symbols-outlined text-[24px]">search</span>
+</a>
+<a class="flex flex-col items-center text-muted" href="#">
+<span class="material-symbols-outlined text-[24px]">add_box</span>
+</a>
+<a class="flex flex-col items-center text-muted" href="#">
+<span class="material-symbols-outlined text-[24px]">article</span>
+</a>
+<a class="flex flex-col items-center text-text-main" href="#">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+</a>
+</nav>
+</div>
+</body></html>

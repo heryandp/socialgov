@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Newsreader:opsz,wght@6..72,400..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#E52B2B",
+                        "background-light": "#ffffff",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "sans": ["Manrope", "sans-serif"],
+                        "serif": ["Newsreader", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "2px",
+                        "sm": "2px",
+                        "md": "2px",
+                        "lg": "2px",
+                        "xl": "2px",
+                        "2xl": "2px",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        h1, h2, h3, h4, .title-font {
+            font-family: 'Newsreader', serif;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        /* Overriding tailwind rounded classes to ensure 2px sharp corners */
+        .rounded-lg, .rounded-xl, .rounded-2xl { border-radius: 2px !important; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-sans">
+<!-- Header -->
+<header class="sticky top-0 z-50 flex items-center bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-100 dark:border-slate-800 p-4 justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">account_balance_wallet</span>
+<h1 class="text-2xl font-extrabold tracking-tight text-slate-900 dark:text-white">Jaga Anggaran</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative flex items-center justify-center p-1">
+<span class="material-symbols-outlined text-slate-700 dark:text-slate-300">notifications</span>
+<span class="absolute top-1 right-1 flex h-2 w-2 rounded-full bg-primary"></span>
+</button>
+<button class="flex items-center justify-center p-1">
+<span class="material-symbols-outlined text-slate-700 dark:text-slate-300">send</span>
+</button>
+</div>
+</header>
+<!-- Story/Category Rail -->
+<div class="flex w-full overflow-x-auto no-scrollbar bg-white dark:bg-background-dark px-4 py-4 border-b border-slate-50 dark:border-slate-800 gap-6">
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="p-[2px] rounded-full bg-primary">
+<div class="w-16 h-16 rounded-full border-2 border-white dark:border-background-dark bg-slate-200 overflow-hidden bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDHagreKTUkOk74c7NTuTqAqW1U32zWKcNTPDN1U0QfSVCJ4FkjcG5Q8j6zKAfE3wN3rCsYvvtdCQPvdCSQztIa2GXuY0Htrn_GfJlWgtOIaZrOde2Q8emvKvc4Y4CAgPkZ3FZnSsMX2Fl1UQEW2GV-j4zXXw4YRWzgpXhmnMQFd55XySM5pK9FkYB9MKjpvHDrRFGr88eyR-aGt0DjkxRxHKerwuU-0FZnz7-MHzjqssVF_Zn-Ne7_tdJFwfSiwkIj0-QBXvtaVlnQ')"></div>
+</div>
+<p class="text-[11px] font-bold uppercase tracking-wider">You</p>
+</div>
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="p-[2px] rounded-full border border-slate-200 dark:border-slate-700">
+<div class="w-16 h-16 rounded-full border-2 border-white dark:border-background-dark bg-slate-200 overflow-hidden bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBBSthIFwZ32pyhg9vbfZKj-MuzEAAdTpolXdtrU3qFI0D7ajLB7Qvlu3k9tuWKMZ-EJ9kW6iFYcgzaoAb5HyVxMXZlYH9pTR4qsWS-2ZfxDIeGVFwdub-42S0-RfM_Hs0nt1DRjZfcEIwZfQVjby1Yaz5EVPzU7a_Og2Eviagg7qq_-3XNwlDYpq9rinJ1q5fozICNFjsHAKcnzPl1Lh0-9jAgj1rr6Md5iwa-1ioqWkHZ5DBXzwpR3IV-MvzucHZxUJCt1BWswn7c')"></div>
+</div>
+<p class="text-[11px] font-medium text-slate-500">Investasi</p>
+</div>
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="p-[2px] rounded-full border border-slate-200 dark:border-slate-700">
+<div class="w-16 h-16 rounded-full border-2 border-white dark:border-background-dark bg-slate-200 overflow-hidden bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCIUl4kEcs4z7zlluIOG27ypzNB4QmEoWI93y_1TtAFkLHXIF9m7O2utIFM-AcBNrv9zq4_IWeh0PXWvptE5KdsyYF66wIG5g2L1_kGGjh_toODb-pQ4EALBMqhREJLESq8bp-mnC843bPnaueqAia5j9s0lmmhjJMaNGexlU9Vqj1DSXUCY-siZhsrfkCgl8_tNwstUTXEQGh6IlHI5-bzX8Ec5cqglkagkWf_ZGAl50usOAY_ApiP8u2RC7PcyoCyXHxhX-fng3HU')"></div>
+</div>
+<p class="text-[11px] font-medium text-slate-500">Foodie</p>
+</div>
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="p-[2px] rounded-full border border-slate-200 dark:border-slate-700">
+<div class="w-16 h-16 rounded-full border-2 border-white dark:border-background-dark bg-slate-200 overflow-hidden bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCsnSJWaXPFaUc-I0xPrpJGutkyamOrWPbqfVVLPJ08t81CYPt2-JL5pPgPVI-uzEa4t5cENG5aN-v-RuMlwv34yY3vvGdfamH985fVQuz_sBylPiXaCEHZN6T4tiXknyNXJcRfiTDIC6on6Mq3DEp7JOiedlLERHInfv0_X2INNTiztVKcTAoPGFNwmrhsuov1u0ynvx2ZeR5eVjBBfEFldPWkjI7r1-F2Z3BEtae8pmBf19XbJKdbBpcA7t192llL0THEIfNQGMQB')"></div>
+</div>
+<p class="text-[11px] font-medium text-slate-500">Tech Gear</p>
+</div>
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="p-[2px] rounded-full border border-slate-200 dark:border-slate-700">
+<div class="w-16 h-16 rounded-full border-2 border-white dark:border-background-dark bg-slate-200 overflow-hidden bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC6NnK21T6idMwHa3n-mEOdW9nX4cXEy4LL8ZkZSNA2U7kZVgpN9cCgH0qgmzZDEwhS5Vg-Q2RlP7h4B_e-j6Fvj53a2enaZ-wx7vQtPD1Xx1TvT4Qo1nFJdrh9iMs0JqrRdVBR56fDQA1fS4_phtiwIeYP6tIJ7jIi39Q2teP25yEgi3nDYfGDmSJqAjQs4j_kYGOSDZpXBSA6af-bq8-_KNY8Wwj966jfwAr_fhxVjQ-C6g9qxJmPYkpmr9l7W9loqtHx19hMmKs8')"></div>
+</div>
+<p class="text-[11px] font-medium text-slate-500">Traveling</p>
+</div>
+</div>
+<!-- Main Feed -->
+<main class="pb-24">
+<!-- Post 1 -->
+<article class="bg-white dark:bg-background-dark mb-4">
+<!-- Post Header -->
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDw7uLmvq9dCmR1Y8R28Fh_6LyqIRpJC78-2mbOCpRcY5Tjhg1425MY5cGayYjwRiLzVDGe9Scy4r4zwJxVRcZFs2oEl9W3547Q2RaIHat5Lf1z9KDjxwi3yaG_3_1omHh3wmGN2OifGwqMQfltdxjS9d6IRtsOyEMs4P7bv6iVGfhA1aBcu0BCQAekfexWGyb5vuJ8ibPManD95hAIod02s4PBsNYespNe4gTfmP28sp7V7SIQ9YJ0I7SgMFtEdpVv15DLM1XUQgq3')"></div>
+<div>
+<div class="flex items-center gap-1">
+<p class="text-sm font-bold">anisa_putri</p>
+<span class="material-symbols-outlined text-blue-500 text-[14px] fill-current">verified</span>
+</div>
+<p class="text-[10px] uppercase tracking-widest text-slate-400">Jakarta Selatan • 2h ago</p>
+</div>
+</div>
+<button class="material-symbols-outlined text-slate-400">more_horiz</button>
+</div>
+<!-- Post Image -->
+<div class="relative aspect-square w-full bg-slate-50 overflow-hidden">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoxQjtUdpVFW5XmJECFEoP_Q_oYkgBRv2oX0ReVYgp9NVrzI1OIPAw_8f9qFIA92HJB0foJO1kYOcAzXq5nHOW1lQ5jT2-xOSesUeTemAaGR3zDuu5wYogCx0qDNxs9ihbeArjAdhxquaOdEB5aXYhSj1LZxsMkdC5sF7r7v7TH-TT0NGt8Onj4EqBc4P60C1_z_QE9NpwkyOBUjxGHvKu2hQZU5Ui-O-GRHg3WoKpih17s-AS4icWwbBYlhJmDTSDbf6tsIhUoIxq"/>
+<!-- Validation Badge Overlay -->
+<div class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-sm flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[14px] font-bold">verified_user</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Validated</span>
+</div>
+</div>
+<!-- Post Actions -->
+<div class="p-4">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-5">
+<button class="material-symbols-outlined text-slate-800 dark:text-slate-200 hover:text-primary transition-colors">favorite</button>
+<button class="material-symbols-outlined text-slate-800 dark:text-slate-200">chat_bubble</button>
+<button class="material-symbols-outlined text-slate-800 dark:text-slate-200">send</button>
+</div>
+<button class="material-symbols-outlined text-slate-800 dark:text-slate-200">bookmark</button>
+</div>
+<!-- Post Content -->
+<div class="space-y-3">
+<p class="text-xs font-black uppercase tracking-widest text-slate-900 dark:text-white">1,204 Likes</p>
+<p class="text-sm leading-relaxed">
+<span class="font-bold mr-2">anisa_putri</span>Weekly Grocery Budget: Success! 🍎 Managed to stay under Rp 500k by meal prepping and switching to local markets.
+                </p>
+<!-- Budget Tags -->
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="inline-flex items-center gap-1 border border-primary/20 bg-primary/5 text-primary text-[10px] font-bold px-2.5 py-1 rounded-sm uppercase tracking-wider">
+                        #FoodBudget
+                    </span>
+<span class="inline-flex items-center gap-1 border border-slate-200 dark:border-slate-800 text-slate-500 text-[10px] font-bold px-2.5 py-1 rounded-sm uppercase tracking-wider">
+                        #SavingTips
+                    </span>
+<span class="inline-flex items-center gap-1 border border-slate-200 dark:border-slate-800 text-slate-500 text-[10px] font-bold px-2.5 py-1 rounded-sm uppercase tracking-wider">
+                        #MoneyHacks
+                    </span>
+</div>
+<!-- CTA Button -->
+<div class="pt-2">
+<button class="w-full py-3 bg-primary text-white text-xs font-bold rounded-sm flex items-center justify-center gap-2 uppercase tracking-widest hover:brightness-110 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+                        Validate This Budget
+                    </button>
+</div>
+<button class="text-slate-400 text-[11px] font-medium uppercase tracking-wider mt-2">View all 42 comments</button>
+</div>
+</div>
+</article>
+<!-- Post 2 (Small Variant) -->
+<article class="bg-white dark:bg-background-dark mb-4 border-t border-slate-50 dark:border-slate-900">
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDqoa_wOAIXW9sXUfVQSY_443bt61UyWNQdOky7LE8BjgH98lvQGdhzTzw-5w3vmHlFkBxmxh8wl8ofLELYLuVpXyNyEubhCjl0xcftg4CtObgwyh9Nhc33UMyo4zQ2pZVX63Ltgi1PTE-qre601lcY06SZTu3fC7-TUxMR6ps5qJgKKqPXRlOLinq9cw-rX9zKrCP2g9Ib96SQm4Qy1hSkOblkf0uLLL_N2p3NX4wy0xmk8FaG2nDV70NZqQ3yR1Kr6YCC_umOS5LJ')"></div>
+<div>
+<p class="text-sm font-bold">hendra.wijaya</p>
+<p class="text-[10px] uppercase tracking-widest text-slate-400">Bandung • 5h ago</p>
+</div>
+</div>
+<button class="material-symbols-outlined text-slate-400">more_horiz</button>
+</div>
+<div class="px-4 pb-4">
+<div class="bg-slate-50 dark:bg-slate-900/40 p-5 rounded-sm border border-slate-100 dark:border-slate-800">
+<div class="flex items-start gap-4">
+<div class="bg-primary/10 p-2.5 rounded-sm">
+<span class="material-symbols-outlined text-primary">analytics</span>
+</div>
+<div>
+<h3 class="font-serif text-lg font-bold leading-tight text-slate-900 dark:text-white">New Budget Plan: Tech Upgrade</h3>
+<p class="text-sm text-slate-500 mt-1">Goal: Rp 15.000.000 by December. Currently at 45% completion! 🚀</p>
+</div>
+</div>
+<div class="mt-5 w-full bg-slate-200 dark:bg-slate-700 h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[45%]"></div>
+</div>
+</div>
+<div class="flex items-center gap-5 mt-4 px-1">
+<button class="material-symbols-outlined text-slate-800 dark:text-slate-200">favorite</button>
+<button class="material-symbols-outlined text-slate-800 dark:text-slate-200">chat_bubble</button>
+<button class="material-symbols-outlined text-slate-800 dark:text-slate-200">send</button>
+</div>
+</div>
+</article>
+</main>
+<!-- Sticky Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 dark:bg-background-dark/95 backdrop-blur-md border-t border-slate-100 dark:border-slate-800 px-6 pb-6 pt-3">
+<div class="flex items-center justify-between max-w-lg mx-auto">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-current">home</span>
+<span class="text-[10px] font-black uppercase tracking-tighter">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Search</span>
+</a>
+<a class="flex flex-col items-center -mt-8" href="#">
+<div class="bg-primary text-white w-14 h-14 rounded-sm flex items-center justify-center shadow-lg shadow-primary/20 border-2 border-white dark:border-background-dark">
+<span class="material-symbols-outlined text-3xl font-bold">add</span>
+</div>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">query_stats</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Stats</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jaga Anggaran - Post Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Newsreader:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#E52B2B",
+                        "background-light": "#FAFAFA",
+                        "background-dark": "#1A1A1A",
+                        "surface": "#FFFFFF",
+                        "text-main": "#1A1A1A",
+                        "muted": "#737373",
+                        "verified": "#059669",
+                        "review": "#D97706",
+                        "disputed": "#DC2626",
+                        "border-color": "#E5E5E5"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "heading": ["Newsreader", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "2px",
+                        "sm": "2px",
+                        "md": "2px",
+                        "lg": "2px",
+                        "xl": "2px",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Newsreader', serif;
+        }
+        /* Custom scrollbar for the comment section */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #E5E5E5;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main antialiased h-screen overflow-hidden">
+<!-- Background context (simulating the feed behind the modal) -->
+<div class="fixed inset-0 z-0 bg-background-light opacity-50 flex items-center justify-center p-8 blur-sm pointer-events-none">
+<div class="w-full max-w-2xl bg-surface border border-border-color h-full shadow-sm rounded"></div>
+</div>
+<!-- Modal Backdrop -->
+<div aria-modal="true" class="fixed inset-0 z-10 bg-black/65 flex items-center justify-center p-4 md:p-10" role="dialog">
+<!-- Close Button (Top Right) -->
+<button aria-label="Close modal" class="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-50 p-2">
+<span class="material-symbols-outlined text-3xl">close</span>
+</button>
+<!-- Modal Container -->
+<div class="bg-surface w-full max-w-[1200px] h-full max-h-[850px] rounded flex flex-col md:flex-row overflow-hidden relative shadow-2xl">
+<!-- Left Section: Media Gallery -->
+<div class="w-full md:w-[55%] lg:w-[60%] bg-black relative flex items-center justify-center group flex-shrink-0">
+<!-- Image -->
+<div class="w-full h-full bg-center bg-no-repeat bg-contain" data-alt="Bridge construction repair site with heavy machinery" data-location="Bandung" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAO4_7lQo5gkeEQ538Tk0kg58blyWheKqHbz3G2qcWLH9fVa2A_DNz8YgSWQGIZ3fCyQDqnGLICUE_TlMpZ19wSpPrC5W6rMHeumoWre9wrkvbJiJkmD7Ve0gF63liLhxGeUYa4fDuShoMkJkmoCTWXUYiMPk-0LaCIaMgtNiKTWvgfJpNorZV3DTwJ4H7xefznjFqtXRX49mUp5thfElU_KiYIOF4032UKWE23ofmlnlzv48QRrg4PJZ8uEbQJncI6B0JE-T-FnYjh');"></div>
+<!-- Navigation Chevrons -->
+<button aria-label="Previous image" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center h-8 w-8">
+<span class="material-symbols-outlined text-sm">arrow_back_ios_new</span>
+</button>
+<button aria-label="Next image" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center h-8 w-8">
+<span class="material-symbols-outlined text-sm">arrow_forward_ios</span>
+</button>
+<!-- Image Indicators -->
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-1.5">
+<div class="w-1.5 h-1.5 rounded-full bg-white"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-white/50"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-white/50"></div>
+</div>
+</div>
+<!-- Right Section: Context, Details, Comments -->
+<div class="w-full md:w-[45%] lg:w-[40%] flex flex-col h-full bg-surface border-l border-border-color">
+<!-- Header (Sticky) -->
+<div class="flex items-center justify-between p-4 border-b border-border-color shrink-0 bg-surface">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-gray-200 bg-cover bg-center border border-border-color shrink-0" data-alt="Official government institution logo avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD3W2iNzVHl1fi72yo-TmRmnrjQ2cVtDCUEpgARS2K5RrGHIpYMObDERsBtWmvL2WVTXvl6a3oDpbi3BBWr3ai2_PrFlGAGvZsY-Dy0RUmlw6FU28Ih9nsBl5wml2VOlBcn0-detc6KTHg09QvKZvY_KxekBvig6HLZnL3g8M_dpoyrq3ELkNVN-y36UTn9fRofBe49XJh3vqzV9ta0bhalSUnyiioYQhSLmvve5JOLLN5-KjL7MugFgeTR609xUZfKUbeGKkDDO_4o');"></div>
+<div class="flex flex-col">
+<span class="text-[15px] font-bold text-text-main leading-tight hover:underline cursor-pointer">Kementerian PUPR</span>
+<span class="text-[13px] text-muted leading-tight">Bandung, Jawa Barat</span>
+</div>
+</div>
+<button class="text-text-main hover:text-muted p-1">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<!-- Scrollable Content Area -->
+<div class="flex-1 overflow-y-auto custom-scrollbar p-4 flex flex-col gap-4">
+<!-- Budget Tags & Status -->
+<div class="flex flex-wrap gap-2 items-center">
+<div class="bg-background-light border border-border-color px-3 py-1.5 rounded text-[14px] font-bold text-text-main flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-muted">payments</span>
+                            Rp 500.000.000
+                        </div>
+<div class="bg-review px-3 py-1.5 rounded text-[12px] font-bold text-white uppercase tracking-wider flex items-center gap-1 cursor-help group relative">
+<span class="material-symbols-outlined text-[14px]">pending_actions</span>
+                            Under Review
+                            <!-- Tooltip -->
+<div class="absolute hidden group-hover:block bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 bg-text-main text-white text-[11px] normal-case font-normal rounded z-20 text-center shadow-lg pointer-events-none">
+                                Currently gathering evidence to verify this local expenditure.
+                            </div>
+</div>
+</div>
+<!-- Description -->
+<div class="text-[15px] text-text-main leading-relaxed border-b border-border-color pb-4">
+<p class="mb-2"><span class="font-bold mr-1">Kementerian PUPR</span> Pengalokasian dana APBD untuk perbaikan struktural Jembatan Pasupati di Bandung. Proyek ini mencakup perkuatan pilar utama dan pengaspalan ulang sepanjang 500 meter. Target penyelesaian Q3 2024.</p>
+<p class="text-[13px] text-muted mt-2 uppercase tracking-wide">12 HOURS AGO</p>
+</div>
+<!-- Comment Thread -->
+<div class="flex flex-col gap-4">
+<!-- Comment 1 -->
+<div class="flex gap-3">
+<div class="w-8 h-8 rounded-full bg-gray-200 shrink-0 bg-cover bg-center" data-alt="User profile avatar portrait" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCod8hEAumJLuQPUp0pvaHdGoGDFSFO6PmuzeBk4zE6aJ_hQij_jlDYC_d4JCvjMFuOI5OApYqiGY5G6r86MuFLibSkgyTQlgZ073FMX9Q0ELStjr59lrZ-ihISkhBz10tIGBzuQ3Gz_O1AKx7W4-HarNJeq93Z9yn7piaILsAScRfq3KU7TF6BBsiIgA0cYovH1_Yr2rUUaqO4jrZAFGWq2MJlrsKf3wZ9es6wztZtrKt2EYUCNBxyTzzpBCI-60S3QI1oM3t77LFO');"></div>
+<div class="flex flex-col">
+<span class="text-[14px] leading-snug"><span class="font-bold mr-1 cursor-pointer hover:underline">budi_santoso</span>Saya lewat sana kemarin, alat berat sudah mulai bekerja tapi sepertinya progresnya lambat. Ada yang punya foto terbaru?</span>
+<div class="flex gap-3 text-[12px] text-muted mt-1 font-medium">
+<span>2h</span>
+<button class="hover:text-text-main">Reply</button>
+</div>
+</div>
+</div>
+<!-- Comment 2 (Evidence Link) -->
+<div class="flex gap-3">
+<div class="w-8 h-8 rounded-full bg-gray-200 shrink-0 bg-cover bg-center" data-alt="User profile avatar female" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAwhWSKnjCCiPeMF7d9E3v5qhvN8NS-cPL6DJBlDDmk5ostajQVvsUKHAMfLxqCs7l0voVwfwW2PE7H8h9qQaLhoMYOOpgVkfmeSuWEFD5ssxC3hMaSfk1yv5sfYa_vZNAaO-nfBMQZVCiuP957zJzv7prHwvZ0m2EREnp-zsMf4piWzEGJKVHr9wb7m0VQ-xwcDdXIAcmiqArHuuD2DMw5kzMo_LjcABGdYhX05PaviPWA4T5Ou6sliE6hJ0xl8lGE3OlB95dqECOd');"></div>
+<div class="flex flex-col w-full">
+<span class="text-[14px] leading-snug"><span class="font-bold mr-1 cursor-pointer hover:underline">warga_jabar</span>Menyertakan bukti liputan berita lokal dari Pikiran Rakyat. Dana sudah cair tapi kontraktor belum dibayar penuh.</span>
+<!-- Evidence Attachment -->
+<div class="mt-2 border border-border-color rounded p-2 bg-background-light flex items-center gap-3 cursor-pointer hover:bg-gray-100 transition-colors">
+<div class="w-12 h-12 bg-gray-300 rounded shrink-0 bg-cover bg-center" data-alt="News article thumbnail paper" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDhi8POK_Qdofc8mHY7DhTu_Qktq2jKfFrHYNWJuGrzy7qyvBVDIC0uLqL--O6ZaeFUG6h2VNFMzzoExbNREw53pmPNOes3MsQ82YOCnLvZsLxuPuEheF0v9-mcnfZk8CWZk0f3NjtvcTJcglF9gmMif5j-UheAIPnG1QG813x1471f7j5CV2IW_4bTFAS6QAvyKGxvNQZKU0vW5HPkv-uE_YYCVm55xj3KB8QL94hN-qxpSZZZHj4lZT8ceXUMJAsSSF8I0bAp3VXA');"></div>
+<div class="flex flex-col overflow-hidden">
+<span class="text-[13px] font-bold truncate">Pikiran Rakyat: Progres Jembatan Pasupati...</span>
+<span class="text-[11px] text-muted truncate">pikiran-rakyat.com/bandung/news</span>
+</div>
+<span class="material-symbols-outlined text-muted ml-auto mr-1">open_in_new</span>
+</div>
+<div class="flex gap-3 text-[12px] text-muted mt-1 font-medium">
+<span>45m</span>
+<button class="hover:text-text-main">Reply</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Bar & Comment Input (Sticky Bottom) -->
+<div class="mt-auto border-t border-border-color bg-surface shrink-0">
+<!-- Social Actions -->
+<div class="flex items-center justify-between p-3 border-b border-border-color">
+<div class="flex items-center gap-4">
+<button class="text-text-main hover:text-primary transition-colors flex items-center gap-1 group">
+<span class="material-symbols-outlined text-[26px]">arrow_upward</span>
+<span class="text-[14px] font-bold group-hover:text-primary">1.2k</span>
+</button>
+<button class="text-text-main hover:text-muted transition-colors flex items-center gap-1 group">
+<span class="material-symbols-outlined text-[26px]">arrow_downward</span>
+<span class="text-[14px] font-bold">42</span>
+</button>
+<button class="text-text-main hover:text-muted transition-colors ml-2">
+<span class="material-symbols-outlined text-[24px]">chat_bubble_outline</span>
+</button>
+<button class="text-text-main hover:text-muted transition-colors">
+<span class="material-symbols-outlined text-[24px]">send</span>
+</button>
+</div>
+<button class="text-text-main hover:text-muted transition-colors">
+<span class="material-symbols-outlined text-[26px]">bookmark_border</span>
+</button>
+</div>
+<!-- Dispute Action Area -->
+<div class="p-3 bg-background-light border-b border-border-color flex items-center justify-between">
+<span class="text-[13px] text-muted font-medium">Have evidence contrary to this report?</span>
+<button class="bg-primary hover:bg-red-700 text-white px-4 py-1.5 rounded text-[14px] font-bold transition-colors shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">gavel</span>
+                            Dispute
+                        </button>
+</div>
+<!-- Comment Input Form -->
+<form class="flex items-center p-3 gap-3">
+<button aria-label="Add attachment" class="text-text-main hover:text-muted p-1 rounded-full hover:bg-background-light transition-colors" type="button">
+<span class="material-symbols-outlined text-[24px]">attach_file</span>
+</button>
+<input autocomplete="off" class="flex-1 bg-transparent border-none focus:ring-0 p-0 text-[14px] placeholder:text-muted" placeholder="Add a comment or paste evidence link..." type="text"/>
+<button class="text-primary font-bold text-[14px] opacity-50 hover:opacity-100 transition-opacity disabled:cursor-not-allowed" type="submit">Post</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</body></html>

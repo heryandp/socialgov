@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e32636",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#211112",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased font-display">
+<!-- Top Header -->
+<header class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-primary/10">
+<div class="flex items-center justify-between px-4 py-3">
+<div class="flex items-center gap-2">
+<div class="bg-primary text-white p-1 rounded">
+<span class="material-symbols-outlined text-2xl font-bold">account_balance</span>
+</div>
+<h1 class="text-xl font-extrabold tracking-tighter text-primary">JAGA <span class="text-slate-900 dark:text-slate-100">ANGGARAN</span></h1>
+</div>
+<div class="flex gap-3">
+<button class="text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</div>
+<!-- Category Tabs -->
+<div class="flex overflow-x-auto hide-scrollbar px-4 gap-6 border-b border-primary/5">
+<a class="flex-none py-3 border-b-2 border-primary text-primary font-bold text-sm tracking-wide" href="#">TERBARU</a>
+<a class="flex-none py-3 border-b-2 border-transparent text-slate-500 dark:text-slate-400 font-bold text-sm tracking-wide" href="#">ANGGARAN</a>
+<a class="flex-none py-3 border-b-2 border-transparent text-slate-500 dark:text-slate-400 font-bold text-sm tracking-wide" href="#">PENGADAAN</a>
+<a class="flex-none py-3 border-b-2 border-transparent text-slate-500 dark:text-slate-400 font-bold text-sm tracking-wide" href="#">AUDIT</a>
+<a class="flex-none py-3 border-b-2 border-transparent text-slate-500 dark:text-slate-400 font-bold text-sm tracking-wide" href="#">DAERAH</a>
+</div>
+</header>
+<main class="pb-24">
+<!-- Breaking News Ticker -->
+<div class="bg-primary/5 dark:bg-primary/10 px-4 py-2 flex items-center gap-3 overflow-hidden">
+<span class="bg-primary text-white text-[10px] font-black px-1.5 py-0.5 rounded-sm shrink-0">BREAKING</span>
+<p class="text-xs font-semibold truncate text-slate-700 dark:text-slate-300">Revisi UU APBN 2024 Disahkan: Fokus Infrastruktur Digital &amp; IKN...</p>
+</div>
+<!-- Featured Story (Large Grid) -->
+<section class="p-4 border-b border-primary/10">
+<div class="relative rounded-xl overflow-hidden mb-3 aspect-video group">
+<img class="w-full h-full object-cover" data-alt="Modern government building architecture with glass windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEpFUW8H0fNLY9H_sbgBDqBSKDNU30W2O1umRPl1QkpQMlAo-IJovWebKNR6bQtYcr6Dj8vQEy44znOhDnjRVWVfOz_FA99IVHoCwpWo9KzZcLoXqZmd5nxjcE38HzyWUZUsvYjeu3BgY2uS33I8SuX8iG7gLBouVNutbCu_Rg-gsaHr0FSatZhhD_CL3Dazdt8-Uo5qqJ51byHOrGfX-6jO6nuKSjQ9_tmU-cVqVre6TSZozSoZ5Y-N9SBjUtdXY-x_9-KjDYY_pl"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3">
+<span class="bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded-full mb-2 inline-block">UTAMA</span>
+<h2 class="text-white text-lg font-bold leading-tight line-clamp-2">Laporan Audit 2023: Temuan Selisih Anggaran Infrastruktur di 5 Provinsi Utama</h2>
+</div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">
+<div class="flex items-center gap-2">
+<span class="text-primary">BPK RI</span>
+<span>•</span>
+<span>12 Menit Lalu</span>
+</div>
+<button class="material-symbols-outlined text-lg">bookmark</button>
+</div>
+</section>
+<!-- High Density Data Grid -->
+<section class="p-4 space-y-4">
+<h3 class="text-xs font-black text-primary tracking-[0.2em] border-l-4 border-primary pl-2 mb-4">DATA-RICH UPDATES</h3>
+<!-- Grid Card 1 -->
+<div class="grid grid-cols-12 gap-3 items-start border-b border-primary/5 pb-4">
+<div class="col-span-8 flex flex-col gap-1">
+<span class="text-[10px] font-bold text-primary uppercase">Anggaran Pendidikan</span>
+<h4 class="font-bold text-sm leading-snug dark:text-slate-100">Kenaikan Dana BOS Tahap II Resmi Cair untuk 45.000 Sekolah</h4>
+<div class="flex items-center gap-2 mt-1">
+<div class="flex -space-x-1">
+<div class="w-4 h-4 rounded-full bg-slate-200 dark:bg-slate-700 border border-background-light dark:border-background-dark"></div>
+<div class="w-4 h-4 rounded-full bg-slate-300 dark:bg-slate-600 border border-background-light dark:border-background-dark"></div>
+</div>
+<span class="text-[10px] text-slate-500">2.4k views • 56 Comments</span>
+</div>
+</div>
+<div class="col-span-4 aspect-square rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Children in a classroom learning" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoRgBUiAPzV6H1B50nj-_FtqYVTZlmdqlERJXO4aPU4ESCpEFWoR1ND38Rle74cxl5W0WfML757IFxynv2S0gZv_73vBW-uEPEayywf-RQudZUKSF9AfgpRNNtVYGqiUnBjaZmq-sYA_F7al1Orx7JEGMoA0UwHaW6FR7Xhs0_xU2nZ60gM47fQG4lKi3fVwjMTDTuZHdDIn1Agw6QA74mR5mt75iJx6Tx7lRKyrrRarlvLIfOyq7g0BLz2DgKEfdSTQYsl6j-VsGv"/>
+</div>
+</div>
+<!-- Grid Card 2 (Document Style) -->
+<div class="bg-primary/5 dark:bg-slate-800/50 p-3 rounded-xl border border-primary/10">
+<div class="flex justify-between items-start mb-2">
+<span class="text-[10px] font-bold bg-white dark:bg-slate-900 px-2 py-0.5 rounded shadow-sm text-slate-700 dark:text-slate-300">DOKUMEN PUBLIK</span>
+<span class="material-symbols-outlined text-primary text-sm">download</span>
+</div>
+<h4 class="font-bold text-sm mb-2">Rincian Alokasi Belanja Modal Kemenhub Semester I 2024</h4>
+<div class="grid grid-cols-2 gap-2 text-[10px]">
+<div class="bg-white/50 dark:bg-slate-900/50 p-2 rounded">
+<p class="text-slate-500">TOTAL PAGU</p>
+<p class="font-bold text-slate-900 dark:text-white">Rp 12.4 Triliun</p>
+</div>
+<div class="bg-white/50 dark:bg-slate-900/50 p-2 rounded">
+<p class="text-slate-500">REALISASI</p>
+<p class="font-bold text-primary">42.5%</p>
+</div>
+</div>
+</div>
+<!-- Grid Card 3 -->
+<div class="grid grid-cols-12 gap-3 items-start border-b border-primary/5 pb-4">
+<div class="col-span-8 flex flex-col gap-1">
+<span class="text-[10px] font-bold text-primary uppercase">Infrastruktur</span>
+<h4 class="font-bold text-sm leading-snug dark:text-slate-100">Evaluasi Proyek Strategis Nasional: 12 Proyek Dibatalkan karena Efisiensi</h4>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-[10px] text-slate-500">Liputan Khusus • 2 Jam Lalu</span>
+</div>
+</div>
+<div class="col-span-4 aspect-square rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Construction site crane in the city" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2J3SMWpwv5BetD6EPzAPyV_qGtxu4Kx87XT5bUWHlGhkOxHnqqsvNqK-KMfH7eByutrHrZprdCduZ7zIkmznh8YYJqoL98ahxb3mWuyNFNHqj9Ql2ggfHuUuq73P4g7CkJDV-MZbi4cp9khhpZNOFljajPGzQfx8DAKr2wKo40RZQH1s4VPvL4OdYhIAlRd394XmH_5cx6YUB_MzQWWhuJFgvdzGvv7F_DG3T9twgjZZR9B4DOzc8lXoFhajQG8pyKufilQQU4hGB"/>
+</div>
+</div>
+<!-- Horizontal Mini Feed -->
+<div class="space-y-3">
+<div class="flex gap-3 items-center">
+<div class="w-2 h-2 rounded-full bg-primary shrink-0"></div>
+<p class="text-xs font-medium line-clamp-1">KPK Selidiki Dugaan Mark-up Pengadaan Alat Kesehatan di DIY</p>
+</div>
+<div class="flex gap-3 items-center">
+<div class="w-2 h-2 rounded-full bg-slate-300 dark:bg-slate-600 shrink-0"></div>
+<p class="text-xs font-medium line-clamp-1">Kemenkeu Rilis Panduan Pelaporan Keuangan Digital bagi UMKM</p>
+</div>
+<div class="flex gap-3 items-center">
+<div class="w-2 h-2 rounded-full bg-slate-300 dark:bg-slate-600 shrink-0"></div>
+<p class="text-xs font-medium line-clamp-1">Surplus Neraca Dagang Mei 2024 Capai $3.5 Miliar</p>
+</div>
+</div>
+</section>
+<!-- Sponsored / PSA -->
+<section class="mx-4 mt-2 p-4 bg-slate-900 dark:bg-primary/20 rounded-xl text-white">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+<span class="text-[10px] font-black tracking-widest uppercase">Public Service Announcement</span>
+</div>
+<p class="text-sm font-bold leading-tight italic">"Transparansi anggaran adalah hak rakyat. Laporkan kejanggalan pengadaan di kanal resmi LAPOR!"</p>
+</section>
+<!-- Load More -->
+<div class="px-4 py-8 text-center">
+<button class="w-full py-3 border border-primary/20 rounded-xl text-primary font-bold text-sm hover:bg-primary/5">
+                LIHAT BERITA LAINNYA
+            </button>
+</div>
+</main>
+<!-- Sticky Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-background-light dark:bg-background-dark border-t border-primary/10 pb-safe shadow-[0_-4px_10px_rgba(0,0,0,0.05)] z-50">
+<div class="flex justify-around items-center h-16">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-1">newspaper</span>
+<span class="text-[10px] font-bold tracking-tight">BERITA</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="text-[10px] font-bold tracking-tight">ANGGARAN</span>
+</a>
+<a class="flex flex-col items-center gap-1" href="#">
+<div class="bg-primary text-white p-2 rounded-full -mt-8 border-4 border-background-light dark:border-background-dark shadow-lg">
+<span class="material-symbols-outlined text-2xl">add</span>
+</div>
+<span class="text-[10px] font-bold tracking-tight text-slate-400 dark:text-slate-500">LAPOR</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="text-[10px] font-bold tracking-tight">STATISTIK</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">person_outline</span>
+<span class="text-[10px] font-bold tracking-tight">PROFIL</span>
+</a>
+</div>
+</nav>
+<!-- Safe area spacing for mobile browsers -->
+<div class="h-16 w-full"></div>
+</body></html>

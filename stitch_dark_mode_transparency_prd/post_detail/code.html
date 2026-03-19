@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jaga Anggaran - Post Detail</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0095F6",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#000000",
+                        "surface": "#121212",
+                        "surface-hover": "#1A1A1A",
+                        "border-color": "#262626",
+                        "text-primary": "#F5F5F5",
+                        "text-muted": "#A8A8A8",
+                        "verified": "#00E676",
+                        "review": "#FFEA00",
+                        "disputed": "#FF1744"
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "4px",
+                        "sm": "4px",
+                        "md": "4px",
+                        "lg": "4px",
+                        "xl": "4px",
+                        "2xl": "4px",
+                        "3xl": "4px",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #262626;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #A8A8A8;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-text-primary min-h-screen flex items-center justify-center p-4 sm:p-8 relative">
+<!-- Post Detail Modal Container -->
+<div class="flex flex-col md:flex-row w-full max-w-[950px] bg-white dark:bg-surface border border-gray-200 dark:border-border-color rounded overflow-hidden max-h-[90vh] shadow-2xl relative z-10">
+<!-- Left Column: Media Carousel -->
+<div class="w-full md:w-[600px] bg-black relative flex flex-col group min-h-[400px] md:min-h-full border-b md:border-b-0 md:border-r border-gray-200 dark:border-border-color shrink-0">
+<!-- Main Image -->
+<div class="flex-1 w-full bg-cover bg-center bg-no-repeat relative" data-alt="Close up of a road repair construction site" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDhn4FpR0nGKV9zKNwYD40qkTB_zuKKYztOn3uw-gxKg8XjGDxQj6pBLYXYCn7BENOXsMXmTfRloD6oqV7bgYCVEYe6jRRcR0PSUhBHMsW_aM8JmVlglSIgggb4o50B91g06xeNzZ5tKuC1C8PVypoiHxBwD0KCHcPyiGoLSU2IjWl_KWXxGTQtTRuv_BAmH5YQQUL5uIBt-0r5pVRALH1Gkw7rHTuhXy6St3E4Gy7aOi8eFbldrRGXyhWVWsEXfatuxx7WHR44Uxf-");'>
+<!-- Navigation Arrows (appear on hover) -->
+<button class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity hover:bg-black/80">
+<span class="material-symbols-outlined text-xl">chevron_left</span>
+</button>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity hover:bg-black/80">
+<span class="material-symbols-outlined text-xl">chevron_right</span>
+</button>
+</div>
+<!-- Pagination Dots -->
+<div class="absolute bottom-4 left-0 right-0 flex justify-center gap-1.5 z-10">
+<div class="w-1.5 h-1.5 rounded-full bg-white opacity-100"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-white opacity-50"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-white opacity-50"></div>
+</div>
+</div>
+<!-- Right Column: Details & Comments -->
+<div class="w-full md:w-[350px] flex flex-col h-[500px] md:h-[800px] md:max-h-[90vh] bg-white dark:bg-surface shrink-0">
+<!-- Header (Sticky) -->
+<div class="p-4 border-b border-gray-200 dark:border-border-color flex items-center justify-between shrink-0 bg-white dark:bg-surface z-10">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-cover bg-center border border-gray-200 dark:border-border-color" data-alt="Official institution logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDx5jHeUn078PLaY4sBYP1xIvO-ghJ3d_6nr5Vr4cA2JPukM1R_PzV8ot_9OdgywihkVKXhTceWU3WoAKwYGpxoEmrCGN6Gs6lHM2Os3QB94YN7DvpiIdvYjx5M3hYDZGZsRjqn552_HONDPRC2HO7CwqTkRPotsLIZPMaFKWA2WVGAE2S-D05QWfuF0x_GAWmRLReZKi43SkX_l-juIcMEZwAqHpIiuRgYpOxOl5sNrHghaqvZGGU30JW5Tjt0I1HfyYaZBUl64hOg");'></div>
+<div class="flex flex-col">
+<span class="font-display font-bold text-sm leading-tight text-slate-900 dark:text-text-primary">Dinas PUPR Provinsi</span>
+<span class="text-[11px] text-gray-500 dark:text-text-muted">Jakarta • 2d ago</span>
+</div>
+</div>
+<button class="text-gray-500 dark:text-text-primary hover:text-gray-700 dark:hover:text-text-muted">
+<span class="material-symbols-outlined text-xl">more_horiz</span>
+</button>
+</div>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto overflow-x-hidden p-4 flex flex-col gap-6">
+<!-- Budget Info -->
+<div class="flex flex-col gap-2">
+<h2 class="font-display font-bold text-2xl text-slate-900 dark:text-text-primary">Rp 12.500.000.000</h2>
+<h3 class="font-bold text-sm text-slate-800 dark:text-text-primary">Perbaikan Jalan Sudirman - Thamrin (Tahap 2)</h3>
+<p class="text-sm text-gray-600 dark:text-text-primary/90 leading-relaxed mt-1">
+                        Anggaran dialokasikan untuk pengaspalan ulang sepanjang 5km, perbaikan drainase, dan marka jalan. Dokumen RAB terlampir pada slide berikutnya.
+                    </p>
+<div class="flex gap-2 mt-2">
+<span class="text-xs px-2 py-1 bg-gray-100 dark:bg-surface-hover text-gray-700 dark:text-text-primary rounded border border-gray-200 dark:border-border-color">APBD 2024</span>
+<span class="text-xs px-2 py-1 bg-gray-100 dark:bg-surface-hover text-gray-700 dark:text-text-primary rounded border border-gray-200 dark:border-border-color">Infrastruktur</span>
+</div>
+</div>
+<!-- Validation Section -->
+<div class="flex flex-col gap-3 p-4 bg-gray-50 dark:bg-surface-hover rounded border border-gray-200 dark:border-border-color">
+<div class="flex justify-between items-center">
+<span class="font-display font-bold text-sm tracking-wide uppercase text-slate-900 dark:text-text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">how_to_vote</span> Consensus
+                        </span>
+<span class="text-xs font-bold px-2 py-0.5 rounded text-black bg-[#FFEA00]">UNDER REVIEW</span>
+</div>
+<!-- Progress Bar -->
+<div class="h-2 w-full flex rounded overflow-hidden mt-1">
+<div class="h-full bg-[#00E676] w-[20%]" title="Verified: 20%"></div>
+<div class="h-full bg-[#FFEA00] w-[65%]" title="Under Review: 65%"></div>
+<div class="h-full bg-[#FF1744] w-[15%]" title="Disputed: 15%"></div>
+</div>
+<div class="flex justify-between text-[11px] text-gray-500 dark:text-text-muted mt-1">
+<span>20% Verified</span>
+<span>65% Review</span>
+<span>15% Disputed</span>
+</div>
+<div class="text-[11px] text-center text-gray-500 dark:text-text-muted border-t border-gray-200 dark:border-border-color pt-2 mt-1">
+                        Based on 1,204 civic reports
+                    </div>
+<button class="w-full mt-2 bg-primary hover:bg-primary/90 text-white font-display font-bold text-sm py-2 rounded transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">gavel</span> Cast Validation Vote
+                    </button>
+</div>
+<hr class="border-gray-200 dark:border-border-color"/>
+<!-- Comments Section -->
+<div class="flex flex-col gap-4">
+<h4 class="font-display font-bold text-sm text-slate-900 dark:text-text-primary">Civic Discussion (142)</h4>
+<!-- Comment 1 -->
+<div class="flex gap-3">
+<div class="w-8 h-8 rounded-full bg-cover bg-center shrink-0 border border-gray-200 dark:border-border-color" data-alt="User avatar male" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAT4VDia6Q7VCQebGJ5UH_bd-EGqOxmdip_GGsBtHUaGu8w0nuu3XlwqOOtTOJak2PxYTPr-PTvwrVd5p-J_6nTffAahWJCDTGAB7XwvuHrUkAcpzmWz1QnN95rvkvhVt7H-9R86Pfm1vZcGue8X1WHFu2u5fYQMkEGdPog1goaB0kvaGGamd2GhBU8Mtkg7oD-oHHsOdQ2Ti7qlDmtYV8p6LlA6ivg2NeebF15580bRxqwHXUPZzWhRH9M3QUswLAxTqNZtKuyksvi");'></div>
+<div class="flex flex-col gap-1">
+<div class="flex items-baseline gap-2">
+<span class="font-bold text-sm text-slate-900 dark:text-text-primary">budi_watchdog</span>
+<span class="text-[11px] text-gray-500 dark:text-text-muted">4h</span>
+<span class="text-[10px] px-1.5 py-0.5 rounded text-white bg-[#FF1744] ml-auto">Disputed</span>
+</div>
+<p class="text-sm text-gray-700 dark:text-text-primary/90">Harga aspal per meter persegi di dokumen RAB lebih tinggi 40% dari standar e-Katalog LKPP regional Jakarta. Mohon dicek ulang.</p>
+<a class="text-xs text-primary hover:underline flex items-center gap-1 mt-1" href="#">
+<span class="material-symbols-outlined text-[14px]">link</span> e-katalog.lkpp.go.id/ref...
+                            </a>
+<div class="flex items-center gap-4 mt-2 text-xs text-gray-500 dark:text-text-muted font-bold">
+<button class="hover:text-gray-700 dark:hover:text-text-primary">Reply</button>
+<button class="flex items-center gap-1 hover:text-gray-700 dark:hover:text-text-primary"><span class="material-symbols-outlined text-[14px]">thumb_up</span> 45</button>
+</div>
+</div>
+</div>
+<!-- Comment 2 -->
+<div class="flex gap-3">
+<div class="w-8 h-8 rounded-full bg-cover bg-center shrink-0 border border-gray-200 dark:border-border-color" data-alt="User avatar female" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuARhElj0jnBfOo_lW8fQLvkud8CJnhuZteDDSk30jQJN30VASCe9MLSa_vV7YmlJloGj9vGEljpvGr1L8Z-iB5faGthYgsQGQLwWl-e5y1995aJaeHJ3Ywr8BVtnu-iZILDIRYpvkj-QAKENI5d3F5rnKdH7ct4an1-LWgoZamSD7ZI8Roe87HyxOLkBeHF0vFt78n5N3RNtA-U_wko-whSt4zvaXE9wDEwi7OBp5uReMm8JnDRZW3SIERoOChb6gqZ8qIOchwTqkqx");'></div>
+<div class="flex flex-col gap-1">
+<div class="flex items-baseline gap-2">
+<span class="font-bold text-sm text-slate-900 dark:text-text-primary">siti_sipil</span>
+<span class="text-[11px] text-gray-500 dark:text-text-muted">6h</span>
+<span class="text-[10px] px-1.5 py-0.5 rounded text-black bg-[#FFEA00] ml-auto">Reviewing</span>
+</div>
+<p class="text-sm text-gray-700 dark:text-text-primary/90">Saya melintas di lokasi kemarin, memang ada alat berat tapi belum ada pengerjaan fisik signifikan. Foto terlampir.</p>
+<div class="mt-2 w-24 h-16 bg-cover bg-center rounded border border-gray-200 dark:border-border-color cursor-pointer" data-alt="Empty construction site" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAVJ42ugA0mZiXTVqm8Q-zhnabbpwVtVHvWMfKYTGw7myn4lOfk8vDzFoW7So2nNJMZ3pL7mlCV82xezLQWfu8H8eCz97zKU72rR2w5Ok_WjVFx1DZA22dWd9EuT5oSA0046dDQCmI4nfMtdzGZ6TpM6IR7ny0jTO-PDng8zw9Huzs6K3q6lI15ekRVEd0q88u32CZfBJrS0kbP3fwlmtO63sk8aLIIi3G7S_FKo4cknA0IAklbMNtt8OWMW0t1uExcPWsFz_fBSyBw");'></div>
+<div class="flex items-center gap-4 mt-2 text-xs text-gray-500 dark:text-text-muted font-bold">
+<button class="hover:text-gray-700 dark:hover:text-text-primary">Reply</button>
+<button class="flex items-center gap-1 hover:text-gray-700 dark:hover:text-text-primary"><span class="material-symbols-outlined text-[14px]">thumb_up</span> 12</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Comment Input (Sticky Bottom) -->
+<div class="p-4 border-t border-gray-200 dark:border-border-color shrink-0 bg-white dark:bg-surface flex items-center gap-3">
+<span class="material-symbols-outlined text-gray-400 dark:text-text-muted cursor-pointer hover:text-gray-600 dark:hover:text-text-primary">attach_file</span>
+<input class="flex-1 bg-transparent text-sm text-slate-900 dark:text-text-primary placeholder:text-gray-400 dark:placeholder:text-text-muted border-none focus:ring-0 p-0" placeholder="Add civic evidence or comment..." type="text"/>
+<button class="text-primary font-display font-bold text-sm hover:text-primary/80 disabled:opacity-50" disabled="">Post</button>
+</div>
+</div>
+<!-- Close Button (Absolute on desktop, relative on mobile if needed) -->
+<button class="absolute top-4 right-4 md:-right-12 md:top-0 text-white hover:text-gray-300 hidden md:block z-50">
+<span class="material-symbols-outlined text-3xl">close</span>
+</button>
+</div>
+</body></html>

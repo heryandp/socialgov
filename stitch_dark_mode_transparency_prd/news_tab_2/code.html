@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jaga Anggaran - News</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e52a2a",
+                        "background-light": "#FAFAFA",
+                        "background-dark": "#121212",
+                        "surface": "#FFFFFF",
+                        "text-main": "#1A1A1A",
+                        "text-muted": "#737373",
+                        "border-color": "#E5E5E5"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "heading": ["Newsreader", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "2px", "sm": "2px", "lg": "4px", "xl": "6px", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: theme('colors.background-light');
+            color: theme('colors.text-main');
+        }
+        h1, h2, h3, h4, h5, h6, .font-heading {
+            font-family: 'Newsreader', serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased min-h-screen">
+<div class="flex max-w-[1200px] mx-auto w-full">
+<!-- Left Sidebar -->
+<aside class="w-[244px] hidden md:flex flex-col h-screen sticky top-0 py-6 px-4 border-r border-border-color shrink-0">
+<div class="flex items-center gap-3 mb-10 px-2">
+<div class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center font-heading font-bold text-lg">J</div>
+<h1 class="font-heading font-bold text-2xl tracking-tight">Jaga Anggaran</h1>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-4 px-3 py-3 rounded hover:bg-black/5 transition-colors group" href="#">
+<span class="material-symbols-outlined text-text-main group-hover:text-primary transition-colors">home</span>
+<span class="text-[15px] font-medium">Home</span>
+</a>
+<a class="flex items-center gap-4 px-3 py-3 rounded hover:bg-black/5 transition-colors group" href="#">
+<span class="material-symbols-outlined text-text-main group-hover:text-primary transition-colors">search</span>
+<span class="text-[15px] font-medium">Explore</span>
+</a>
+<a class="flex items-center gap-4 px-3 py-3 rounded bg-primary/10 text-primary font-bold" href="#">
+<span class="material-symbols-outlined fill">newspaper</span>
+<span class="text-[15px]">News</span>
+</a>
+<a class="flex items-center gap-4 px-3 py-3 rounded hover:bg-black/5 transition-colors group" href="#">
+<span class="material-symbols-outlined text-text-main group-hover:text-primary transition-colors">person</span>
+<span class="text-[15px] font-medium">Profile</span>
+</a>
+</nav>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex justify-center w-full max-w-[630px] mx-auto border-r border-border-color min-h-screen bg-surface">
+<div class="w-full">
+<!-- Header -->
+<div class="sticky top-0 bg-surface/90 backdrop-blur-md z-10 border-b border-border-color px-4 py-4 md:px-6">
+<h2 class="font-heading font-bold text-[24px]">News &amp; Updates</h2>
+<p class="text-[13px] text-text-muted mt-1 font-medium">Editorial context on APBN and APBD policies</p>
+</div>
+<!-- News Feed -->
+<div class="flex flex-col px-4 md:px-6 py-6">
+<!-- News Item 1 -->
+<article class="flex flex-col sm:flex-row gap-5 pb-6 mb-6 border-b border-border-color group cursor-pointer">
+<div class="w-full sm:w-[120px] h-[120px] shrink-0 overflow-hidden rounded bg-gray-100">
+<img alt="Construction site" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Building construction scaffolding" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDohavLOQPmObx2TFPYcFwJjBQspgFido5d4v4FXolJBwq33opTPAYB81PB9rlVfVISTVI2CJXoz5oeIShS2Cb6QeWhHgggb_NOHK2Z2J8GtsfkJTmiCfSZlTgBDnnew9jNALnM8fF4tYnoYidbWDCTLRVRrAFRim64gpoijG-hWWdmfYc8dnZj18hZhyuqEMk1Dc8Bvno4wdfYvfgxwecX37Zy-PitqbEuErIL65-OrnjZyXvUwuqNYLm-PHxQK-rkMV_69r3tRvyR"/>
+</div>
+<div class="flex flex-col justify-between flex-1 py-1">
+<div>
+<h3 class="font-heading font-bold text-[18px] leading-snug group-hover:text-primary transition-colors mb-2">
+                                    New APBN Allocation: 15 Trillion IDR Shifted to Regional Infrastructure
+                                </h3>
+<p class="text-[15px] text-text-main line-clamp-2 leading-relaxed">
+                                    The Ministry of Finance has announced a major reallocation of the 2024 budget, prioritizing underdeveloped regions in Eastern Indonesia to accelerate structural connectivity.
+                                </p>
+</div>
+<div class="flex items-center gap-3 mt-3 text-[13px] text-text-muted font-medium">
+<span class="text-text-main font-semibold">Kemenkeu Release</span>
+<span>•</span>
+<span>2 hours ago</span>
+</div>
+</div>
+</article>
+<!-- News Item 2 -->
+<article class="flex flex-col sm:flex-row gap-5 pb-6 mb-6 border-b border-border-color group cursor-pointer">
+<div class="w-full sm:w-[120px] h-[120px] shrink-0 overflow-hidden rounded bg-gray-100">
+<img alt="Data charts" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Financial charts on screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPm52jWBtE0Ur0P08KfeCTadzXLIvPuxJSFY_uokvqKta92v-WwL7mtVelsFVaCZRYuvzqfq9VHpZjTbPDxjcBhvwnUwK5AcvzQYlW0fFrv1VfxzLuzyKawa3SPG04G3_EjF7-wQVeBXDU5n-P9jj9IalvlD1FdkYeLUydw-dCYq5mrzgeNSCyLOvovZ8fbos3f7PdR6k7TrPjlIxL117kQYlynJklK0O6n_MDtKHejy09jqXQJfB8R_oFIbLtCGzz8l0vaJPg8yCK"/>
+</div>
+<div class="flex flex-col justify-between flex-1 py-1">
+<div>
+<h3 class="font-heading font-bold text-[18px] leading-snug group-hover:text-primary transition-colors mb-2">
+                                    Audit Finds Discrepancies in Jakarta's Flood Mitigation Budget
+                                </h3>
+<p class="text-[15px] text-text-main line-clamp-2 leading-relaxed">
+                                    An independent review of the 2023 APBD reveals that nearly 12% of allocated funds for flood wall constructions remain unaccounted for, prompting calls for an KPK investigation.
+                                </p>
+</div>
+<div class="flex items-center gap-3 mt-3 text-[13px] text-text-muted font-medium">
+<span class="text-text-main font-semibold">Kompas</span>
+<span>•</span>
+<span>5 hours ago</span>
+</div>
+</div>
+</article>
+<!-- News Item 3 -->
+<article class="flex flex-col sm:flex-row gap-5 pb-6 mb-6 border-b border-border-color group cursor-pointer">
+<div class="w-full sm:w-[120px] h-[120px] shrink-0 overflow-hidden rounded bg-gray-100">
+<img alt="Healthcare setting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Medical hospital hallway" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU2DcxiMHnFWmCvtDsk5L5Kq4rCtADkJg-kCzKoWe-4tbSqD-rMH9lTFXtF7igHSUhgDf-mc8-1CyKmw2DJxNZsokIpVR1RUwaDEnJ7wqyLsr2sv6M5hUhy_-mHX-XeJ85ADVqCxNvbontDUOh8DtzTYPXu1LUIFjPv1EESsLxXScpFKB6TfaVeOAOW0jQyV-zKbD8lUN9vyWKXMjYAnJaIhIm-9Ftxy87i8J5f5Uh5xrzw5e7GRdDlgw3BoY_Y3Rd9a6yJqz6Y9_X"/>
+</div>
+<div class="flex flex-col justify-between flex-1 py-1">
+<div>
+<h3 class="font-heading font-bold text-[18px] leading-snug group-hover:text-primary transition-colors mb-2">
+                                    Healthcare Spending Surges: Focus on Rural Clinics
+                                </h3>
+<p class="text-[15px] text-text-main line-clamp-2 leading-relaxed">
+                                    The revised budget dictates a mandate for all provinces to allocate a minimum of 10% of their APBD towards upgrading Puskesmas facilities before the end of the fiscal year.
+                                </p>
+</div>
+<div class="flex items-center gap-3 mt-3 text-[13px] text-text-muted font-medium">
+<span class="text-text-main font-semibold">Jakarta Post</span>
+<span>•</span>
+<span>Yesterday</span>
+</div>
+</div>
+</article>
+<!-- Load More (Simplified) -->
+<div class="py-4 text-center">
+<button class="text-[14px] font-semibold text-primary hover:underline">Load older updates</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Right Panel (Empty for this screen to maintain balance) -->
+<aside class="w-[319px] hidden lg:block h-screen sticky top-0 py-6 px-6 shrink-0">
+<!-- Reserved for recommendations or trending tags in other views -->
+</aside>
+</div>
+</body></html>
