@@ -15,10 +15,10 @@ const displayFont = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: {
-    default: "socialgov",
-    template: "%s | socialgov",
+    default: "SocialGov",
+    template: "%s | SocialGov",
   },
-  description: "Social media untuk memantau kinerja APBN dan APBD daerah.",
+  description: "Pantau transparansi anggaran pemerintah Indonesia.",
 }
 
 export default function RootLayout({
@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" className={`${bodyFont.variable} ${displayFont.variable}`}>
-      <body>
+      <body suppressHydrationWarning>
         <AppChrome>{children}</AppChrome>
       </body>
     </html>

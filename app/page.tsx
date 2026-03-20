@@ -1,54 +1,123 @@
+import Image from "next/image"
+import Link from "next/link"
 import { FeedCard } from "./_components/feed-card"
-import { budgetPosts } from "./lib/mock-data"
-
-const stories = [
-  { id: "pupr", name: "PUPR", avatar: "PU", hasLive: false },
-  { id: "kemenkes", name: "Kemenkes", avatar: "KS", hasLive: false },
-  { id: "kemendikbud", name: "Kemendik..", avatar: "KB", hasLive: false },
-  { id: "kemenhub", name: "Kemenhub", avatar: "KH", hasLive: true },
-  { id: "dpr", name: "DPR RI", avatar: "DR", hasLive: false },
-  { id: "bappenas", name: "Bappenas", avatar: "BP", hasLive: false },
-  { id: "dki", name: "Pemprov DKI", avatar: "DK", hasLive: false },
-] as const
+import { StoriesBar } from "./_components/stories-bar"
+import { VerifiedBadge } from "./_components/verified-badge"
+import { currentUser, feedPosts, stories, suggestedUsers } from "./lib/mock-data"
 
 export default function Home() {
   return (
-    <main className="mx-auto max-w-[47rem] lg:max-w-none">
-      <section className="overflow-x-auto border-b border-[var(--line)] bg-[var(--surface)] py-3">
-        <div className="flex gap-4 px-4">
-          {stories.map((story) => (
-            <article key={story.id} className="flex flex-col items-center gap-1.5">
-              <div
-                className={`relative grid h-16 w-16 place-items-center rounded-full ${
-                  story.hasLive
-                    ? "bg-gradient-to-br from-[#f09433] via-[#e6683c] to-[#bc1888] p-[2px]"
-                    : "bg-gradient-to-br from-[#833ab4] via-[#fd1d1d] to-[#fcb045] p-[2px]"
-                }`}
-              >
-                <div className="grid h-full w-full place-items-center rounded-full border-2 border-[var(--surface)] bg-[var(--bg)]">
-                  <span className="text-[0.7rem] font-extrabold text-[var(--muted)]">
-                    {story.avatar}
-                  </span>
-                </div>
-                {story.hasLive && (
-                  <span className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 rounded-sm bg-[var(--accent)] px-1 py-0.5 text-[0.5rem] font-bold uppercase text-white">
-                    Live
-                  </span>
-                )}
-              </div>
-              <span className="max-w-[4rem] truncate text-[0.7rem] text-[var(--ink-soft)]">
-                {story.name}
-              </span>
-            </article>
-          ))}
-        </div>
-      </section>
+    <div className="mx-auto w-full max-w-[82rem] px-4 py-6 md:px-6 lg:px-8 lg:py-8">
+      <div className="xl:grid xl:grid-cols-[30%_minmax(0,40%)_30%] xl:gap-10">
+        <div className="hidden xl:block" aria-hidden="true" />
 
-      <section className="divide-y divide-[var(--line)] bg-[var(--surface)]">
-        {budgetPosts.map((post) => (
-          <FeedCard key={post.id} post={post} />
-        ))}
-      </section>
-    </main>
+        {/* Main Feed */}
+        <main className="mx-auto w-full max-w-[29.375rem] xl:max-w-none">
+          <StoriesBar stories={stories} />
+          {feedPosts.map((post) => (
+            <FeedCard key={post.id} post={post} />
+          ))}
+        </main>
+
+        {/* Right Sidebar */}
+        <aside className="sticky top-8 hidden h-fit w-full max-w-[20rem] justify-self-end self-start pt-4 xl:block">
+          {/* Current user */}
+          <div className="mb-5 flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <Image
+                src={currentUser.avatarUrl}
+                alt={currentUser.displayName}
+                width={44}
+                height={44}
+                unoptimized
+                className="h-11 w-11 rounded-full object-cover"
+              />
+              <div className="flex flex-col">
+                <span className="text-sm font-bold text-[var(--ink-strong)]">
+                  {currentUser.username}
+                </span>
+                <span className="text-sm text-[var(--muted)]">{currentUser.displayName}</span>
+              </div>
+            </div>
+            <button
+              type="button"
+              className="text-[0.75rem] font-bold text-[var(--accent)] hover:text-[var(--accent-deep)]"
+            >
+              Switch
+            </button>
+          </div>
+
+          {/* Suggested */}
+          <div className="mb-4 flex items-center justify-between">
+            <span className="text-sm font-bold text-[var(--muted)]">Suggested for you</span>
+            <button
+              type="button"
+              className="text-[0.75rem] font-bold text-[var(--ink-strong)] hover:opacity-70"
+            >
+              See All
+            </button>
+          </div>
+
+          <div className="flex flex-col gap-3">
+            {suggestedUsers.map((user) => (
+              <div key={user.username} className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <Image
+                    src={user.avatarUrl}
+                    alt={user.displayName}
+                    width={32}
+                    height={32}
+                    unoptimized
+                    className="h-8 w-8 rounded-full object-cover"
+                  />
+                  <div className="flex flex-col">
+                    <Link
+                      href={`/regions/${user.username}`}
+                      className="flex items-center gap-1 text-[0.82rem] font-bold text-[var(--ink-strong)] hover:opacity-70"
+                    >
+                      {user.username}
+                      {user.verified && <VerifiedBadge size={11} />}
+                    </Link>
+                    <span className="text-[0.7rem] text-[var(--muted)]">{user.reason}</span>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  className="text-[0.75rem] font-bold text-[var(--accent)] hover:text-[var(--accent-deep)]"
+                >
+                  Follow
+                </button>
+              </div>
+            ))}
+          </div>
+
+          {/* Footer */}
+          <div className="mt-6 flex flex-wrap gap-x-1.5 gap-y-1 text-[0.7rem] text-[var(--muted)] opacity-50">
+            {[
+              "About",
+              "Help",
+              "Press",
+              "API",
+              "Jobs",
+              "Privacy",
+              "Terms",
+              "Locations",
+              "Language",
+              "Meta Verified",
+            ].map((link) => (
+              <span
+                key={link}
+                className="cursor-pointer after:content-['·'] after:mx-0.5 last:after:content-none"
+              >
+                {link}
+              </span>
+            ))}
+          </div>
+          <p className="mt-4 text-[0.7rem] font-medium tracking-wider text-[var(--muted)] opacity-40">
+            © 2026 SocialGov
+          </p>
+        </aside>
+      </div>
+    </div>
   )
 }
